@@ -1,0 +1,3 @@
+<Addins host-reference="/opt/boat/bin/OpenSim.exe">
+  <Directory shared="false">/opt/boat/bin</Directory>
+</Addins>

@@ -1,0 +1,437 @@
+; Enable OSSL functions.
+; Including this file in a region's set of INI files, causes the OpenSimulator
+;   specific functions to be enabled.
+; See http://opensimulator.org/wiki/Category:OSSL_Functions for a description of OSSL functions
+
+[OSSL]
+  ; Allow the use of os* functions (some are always available)
+  AllowOSFunctions = true
+
+
+  ; Allow the user of mod* functions.  This allows a script to pass messages
+  ;   to a region module via the modSendCommand() function and is used by some
+  ;   modules to extend the scripting language.
+  AllowMODFunctions = true
+
+  ; Allow the use of LightShare functions.
+  ; The setting enable_windlight = true must also be enabled in the [LightShare] section.
+  AllowLightShareFunctions = true
+
+  ; Send function permission error to owner if true, to all if false
+  PermissionErrorToOwner = false
+    ScriptDistanceLimitFactor = 20
+    MinTimerInterval = 0,2
+  ; Function Threat level
+  ; Several functions have a predefined threat level, one of:  None, VeryLow, Low, Moderate, High, VeryHigh, Severe.
+  ; See http://opensimulator.org/wiki/Threat_level for more information on these levels.
+  ; Blanket enabling the ossl functions is dangerous and we do not recommend setting higher
+  ;   than 'Low' unless you have a high level of trust in all the users that can run scripts
+  ;   in your simulator.  It is safer to explicitly allow certain types of user to run
+  ;   higher threat level OSSL functions, as detailed later on.
+  ; This setting defines the highest level allowed to execute
+  OSFunctionThreatLevel = VeryHigh
+
+  ; The threat level can be replaced by more detailed rules by lines of the form
+  ; Allow_FunctionName = parameters
+  ; To use the default threat level coment the respective line
+  ; parameters can be:
+  ; 'false' disables the function.
+  ; 'true' enables for everyone
+  ;  or to enable for individuals or groups, set it to a comma separated list. This checks
+  ;    against the owner of the object containing the script.
+  ;    The comma separated entries in the list may be one of:
+  ;           "GRID_GOD" -- enable for users with UserLevel >= 200
+  ;           "GOD" -- enable for users with rights to be god (local or grid)
+  ;           "ACTIVE_GOD" -- enable for users that are present and with active god power
+  ;           "ESTATE_MANAGER" -- enable for estate manager
+  ;           "ESTATE_OWNER" -- enable for estate owner
+  ;           "PARCEL_OWNER" -- enable for parcel owner
+  ;           "PARCEL_GROUP_MEMBER" -- enable for any member of the parcel group
+  ;           uuid -- enable for specified ID (may be avatar or group ID)
+  ;    from this we can also create macros that can be include in the list as
+  ;    ${OSSL|macroname} see examples below
+
+  ; parcel macros
+  ; Allowing ossl functions for anyone owning a parcel can be dangerous especially if
+  ;    a region is selling or otherwise giving away parcel ownership. By default, parcel
+  ;    ownership or group membership does not enable OSSL functions. Uncomment the
+  ;    appropriate line below to allow parcel ownership and groups to do restricted
+  ;    OSSL functions. It might be better to check the list below and edit the ones
+  ;    to enable individually.
+  osslParcelO = ""
+  osslParcelOG = ""
+  ; osslParcelO = "PARCEL_OWNER,"
+  ; osslParcelOG = "PARCEL_GROUP_MEMBER,PARCEL_OWNER,"
+
+  ; NPC macros
+  ; These can be mis-used so limit use to those you can trust.
+  osslNPC = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  
+  ; The threat level also can be replaced by lines of the form
+  ; Creators__FunctionName = comma separated list of UUIDs
+  ; this will enable the function for users that are the script creators and owners of the prim
+
+
+; *************************************************
+
+  ; ThreatLevel  None
+  Allow_osGetAgents =               PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetAvatarList =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  ;Allow_osGetGender =               true
+  ;Allow_osGetHealth =               true
+  ;Allow_osGetHealRate =             true
+  Allow_osGetNPCList =              PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  ;Allow_osGetRezzingObject =        true
+  ;Allow_osGetSunParam =             true
+  Allow_osNpcGetOwner =             ${OSSL|osslNPC}
+  Allow_osSetSunParam =             ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osTeleportOwner =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  ;Allow_osWindActiveModelPluginName = true
+
+  ; ThreatLevel  Nuisance
+  Allow_osSetEstateSunSettings =    ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetRegionSunSettings =    ESTATE_MANAGER,ESTATE_OWNER
+
+  ; ThreatLevel  VeryLow
+  Allow_osEjectFromGroup =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceBreakAllLinks =      PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceBreakLink =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetWindParam =            true
+  Allow_osInviteToGroup =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osReplaceString =           true
+  Allow_osSetDynamicTextureData =       PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureDataFace =   PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureDataBlend =  PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureDataBlendFace = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetParcelMediaURL =       PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetParcelSIPAddress =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetPrimFloatOnWater =     true
+  Allow_osSetWindParam =            PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osTerrainFlush =            ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osUnixTimeToTimestamp =     true
+
+  ; ThreatLevel  Low
+  Allow_osAvatarName2Key =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osFormatString =            true
+  Allow_osKey2Name =                PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osListenRegex =             true
+  Allow_osLoadedCreationDate =      PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osLoadedCreationID =        PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osLoadedCreationTime =      PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osMessageObject =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osRegexIsMatch =            true
+  Allow_osGetAvatarHomeURI =        PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osNpcSetProfileAbout =      ${OSSL|osslNPC}
+  Allow_osNpcSetProfileImage =      ${OSSL|osslNPC}
+  Allow_osDie =                     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+
+  ; ThreatLevel  Moderate
+  Allow_osDetectedCountry =         PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osDropAttachment =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osDropAttachmentAt =        PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetAgentCountry =         PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridCustom =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridGatekeeperURI =    PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridHomeURI =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridLoginURI =         PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridName =             PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetGridNick =             true
+  Allow_osGetNumberOfAttachments =  PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetRegionStats =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetSimulatorMemory =      PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetSimulatorMemoryKB =    PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osMessageAttachments =      PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetSpeed =                PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetOwnerSpeed =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osRequestURL =              PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osRequestSecureURL =        PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+
+  ; ThreatLevel High
+  Allow_osCauseDamage =             PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osCauseHealing =            PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetHealth =               PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetHealRate =             PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceAttachToAvatar =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceAttachToAvatarFromInventory = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceCreateLink =         PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceDropAttachment =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osForceDropAttachmentAt =   PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetLinkPrimitiveParams =  PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetPhysicsEngineType =    true
+  Allow_osGetRegionMapTexture =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetScriptEngineName =     true
+  Allow_osGetSimulatorVersion =     true
+  Allow_osMakeNotecard =            PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osMatchString =             true
+  Allow_osNpcCreate =               ${OSSL|osslNPC}
+  Allow_osNpcGetPos =               ${OSSL|osslNPC}
+  Allow_osNpcGetRot =               ${OSSL|osslNPC}
+  Allow_osNpcLoadAppearance =       ${OSSL|osslNPC}
+  Allow_osNpcMoveTo =               ${OSSL|osslNPC}
+  Allow_osNpcMoveToTarget =         ${OSSL|osslNPC}
+  Allow_osNpcPlayAnimation =        ${OSSL|osslNPC}
+  Allow_osNpcRemove =               ${OSSL|osslNPC}
+  Allow_osNpcSaveAppearance =       ${OSSL|osslNPC}
+  Allow_osNpcSay =                  ${OSSL|osslNPC}
+  Allow_osNpcSayTo =                ${OSSL|osslNPC}
+  Allow_osNpcSetRot =               ${OSSL|osslNPC}
+  Allow_osNpcShout =                ${OSSL|osslNPC}
+  Allow_osNpcSit =                  ${OSSL|osslNPC}
+  Allow_osNpcStand =                ${OSSL|osslNPC}
+  Allow_osNpcStopAnimation =        ${OSSL|osslNPC}
+  Allow_osNpcStopMoveToTarget =     ${OSSL|osslNPC}
+  Allow_osNpcTouch =                ${OSSL|osslNPC}
+  Allow_osNpcWhisper =              ${OSSL|osslNPC}
+  Allow_osOwnerSaveAppearance =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osParcelJoin =              ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osParcelSubdivide =         ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osRegionRestart =           ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osRegionNotice =            ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetProjectionParams =     PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetRegionWaterHeight =    ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetStateEvents =          false   ; deprecated
+  Allow_osSetTerrainHeight =        ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetTerrainTexture =       ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetTerrainTextureHeight = ESTATE_MANAGER,ESTATE_OWNER
+
+  ; ThreatLevel  VeryHigh
+  Allow_osAgentSaveAppearance =     ESTATE_MANAGER,ESTATE_OWNER
+  ; Warning: The next function allows scripts to force animations on avatars without the user giving permission.
+  ;   Enabling this can allow forced animations which can trigger traumatic episodes in vulnerable populations.
+  ;   Similar things can be said for several of the 'force' functions. Enable with care and control.
+  ; Some of these were added as early functionality for NPCs. This has been replaced with the NPC functions.
+  Allow_osAvatarPlayAnimation =     true
+  Allow_osAvatarStopAnimation =     true
+  Allow_osForceAttachToOtherAvatarFromInventory = true
+  Allow_osForceDetachFromAvatar =   false
+  Allow_osForceOtherSit =           true
+  ; The notecard functions can cause a lot of load on the region if over used
+  Allow_osGetNotecard =             PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetNotecardLine =         PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osGetNumberOfNotecardLines = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureURL =    ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureURLBlend = ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetDynamicTextureURLBlendFace = ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osSetRot  =                 true
+  Allow_osSetParcelDetails =        PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osGetSimulatorVersion = ESTATE_OWNER,PARCEL_OWNER
+    Allow_osTeleportAgent = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osAvatarName2Key = ESTATE_OWNER
+    Allow_osSetSpeed = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osGetNotecard = true
+    Allow_osGetNotecardLine = true
+    Allow_osGetNumberOfNotecardLines = true
+    Allow_osMakeNotecard = true
+    Allow_osNpcCreate = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcMoveTo = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcMoveToTarget = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcStopMoveToTarget = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcSetRot = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcGetRot = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcGetPos = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcRemove = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcSay = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcSit = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcStand = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osOwnerSaveAppearance = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osAgentSaveAppearance = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcLoadAppearance = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcSaveAppearance = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osAvatarPlayAnimation = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osAvatarStopAnimation = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+	Allow_osNpcPlayAnimation = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcShout = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcStopAnimation = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcTouch = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osNpcWhisper = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+	Allow_osMessageObject = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osSetDynamicTextureDataBlendFace = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER	
+    Allow_osFormatString = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osKey2Name = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osListenRegex = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osLoadedCreationDate = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osLoadedCreationID = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osLoadedCreationTime = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osGetAgents = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osGetGridName =  PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osGetMapTexture = PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+    Allow_osRegexIsMatch = true
+    osSetPrimitiveParams = true
+    osSetProjectionParams = true
+    osAgentSaveAppearance = true
+    osAvatarPlayAnimation = true
+    osAvatarStopAnimation = true
+    osForceOtherSit = true
+    osGetNotecard = true
+    osGetNotecardLine = true
+    osTeleportAgent = true
+    Allow_osDrawText = true
+    Allow_osGetAgents = true
+    Allow_osMovePen = true
+    Allow_osSetFontSize = true
+    Allow_osSetPenColor = true
+    Allow_osSetDynamicTextureDataBlendFace = true
+
+  ; ThreatLevel  Severe
+  Allow_osConsoleCommand =          false
+  Allow_osKickAvatar =              PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osTeleportAgent =           PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+  Allow_osTeleportObject =          PARCEL_GROUP_MEMBER,PARCEL_OWNER,ESTATE_MANAGER,ESTATE_OWNER
+
+  ; ThreatLevel  Severe with additional internal restrictions
+  Allow_osGetAgentIP =              false   ; always restricted to Administrators (true or false to disable)
+  Allow_osSetContentType =          false
+
+
+; Always available
+; see http://opensimulator.org/wiki/Category:OSSL_Functions
+
+    ;; ========== OSSL FUNCTION BLOCK ==========
+    ;; OS FUNCTIONS as of 8:23 AM February-01-12  
+    ;; Extracted from OpenSimulator DEV 0.7.3 OpenSim-003bd9f-r/17959
+    ;; 
+    ;; ADJUST as needed or desired 
+    ;; ========================================
+    ;;
+    ;; *** Threat-Level=None 
+    ;Allow_osDrawEllipse = true
+    ;Allow_osDrawFilledPolygon = true
+    Allow_osDrawFilledRectangle = true
+    ;Allow_osDrawImage = true
+    ;Allow_osDrawLine = true
+    ;Allow_osDrawPolygon = true
+    Allow_osDrawRectangle = true
+
+    ;Allow_osGetAvatarList = true
+    ;Allow_osGetCurrentSunHour = true
+    ;Allow_osGetHealth = true
+    ;Allow_osGetInventoryDesc = true 
+    Allow_osGetMapTexture = true
+    ;Allow_osGetRezzingObject = true
+    ;Allow_osGetSunParam = true
+    ;Allow_osGetTerrainHeight = true
+    ;Allow_osIsNpc = true
+    ;Allow_osList2Double = true
+    ;Allow_osMax = true
+    ;Allow_osMin = true
+
+    ;Allow_osNpcGetOwner = true
+    ;Allow_osParseJSON = true
+    ;Allow_osParseJSONNew = true
+    Allow_osSetFontName = true
+
+    ;Allow_osSetPenCap = true
+
+    ;Allow_osSetPenColour = true
+    Allow_osSetPenSize = true
+    ;Allow_osSetSunParam = true
+    ;Allow_osTeleportOwner = true
+    ;Allow_osWindActiveModelPluginName = true
+    ;;
+    ;; *** Threat-Level=Nuisance
+    ;Allow_osSetEstateSunSettings = false
+    ;Allow_osSetRegionSunSettings = false
+    ;;
+    ;; *** Threat-Level=VeryLow
+    Allow_osGetDrawStringSize = true
+    ;Allow_osGetWindParam = true
+    ;Allow_osNpcStopMoveToTarget = true
+    ;Allow_osReplaceString = true
+    ;Allow_osSetDynamicTextureData = true
+    ;Allow_osSetDynamicTextureDataBlend = true
+
+    ;Allow_osSetDynamicTextureURL = true
+    ;Allow_osSetDynamicTextureURLBlend = true
+    ;Allow_osSetDynamicTextureURLBlendFace = true
+    ;Allow_osSetParcelMediaURL = true
+    ;Allow_osSetParcelSIPAddress = true
+    ;Allow_osSetPrimFloatOnWater = true
+    ;Allow_osSetWindParam = true
+    ;Allow_osTerrainFlush = true
+    ;Allow_osUnixTimeToTimestamp = true
+    ;;    
+    ;; *** Threat-Level=Low
+    ;Allow_osAvatarName2Key = true
+    ;Allow_osFormatString = true
+    Allow_osKey2Name = true
+    ;Allow_osListenRegex = true
+    ;Allow_osLoadedCreationDate = true
+    ;Allow_osLoadedCreationID = true
+    ;Allow_osLoadedCreationTime = true
+    ;Allow_osMessageObject = true
+    ;Allow_osRegexIsMatch = true
+    ;;    
+    ;; *** Threat-Level=Moderate
+    ;Allow_osDropAttachment = true
+    ;Allow_osDropAttachmentAt = true
+    ;Allow_osGetGridCustom = true
+    ;Allow_osGetGridCustom = true
+    Allow_osGetGridGatekeeperURI = true
+    ;Allow_osGetGridHomeURI = true
+    ;Allow_osGetGridLoginURI = true
+    Allow_osGetGridName = true
+    ;Allow_osGetGridNick = true
+    ;Allow_osGetRegionStats = true
+    ;Allow_osGetSimulatorMemory = true
+    ;Allow_osSetSpeed = true
+    ;;    
+    ;; *** Threat-Level=High
+ 
+    ;Allow_osCauseDamage = false
+    ;Allow_osCauseHealing = false
+    ;Allow_osForceDropAttachment = false
+    ;Allow_osForceDropAttachmentAt = false
+    ;Allow_osGetAgentIP = false
+    ;Allow_osGetLinkPrimitiveParams = false
+    ;Allow_osGetPhysicsEngineType = false
+    ;Allow_osGetPrimitiveParams = false
+    ;Allow_osGetRegionMapTexture = false
+    ;Allow_osGetScriptEngineName = false
+    ;Allow_osGetSimulatorVersion = false
+    ;Allow_osMakeNotecard = false
+    ;Allow_osMatchString = false
+    ;Allow_osNpcCreate = false
+    ;Allow_osNpcGetPos = false
+    ;Allow_osNpcGetRot = false
+    ;Allow_osNpcLoadAppearance = false
+    ;Allow_osNpcMoveTo = false
+    ;Allow_osNpcMoveToTarget = false
+    ;Allow_osNpcPlayAnimation = false
+    ;Allow_osNpcRemove = false
+    ;Allow_osNpcSaveAppearance = false
+    ;Allow_osNpcSay = false
+    ;Allow_osNpcSetRot = false
+    ;Allow_osNpcShout = false
+    ;Allow_osNpcSit = false
+    ;Allow_osNpcStand = false
+    ;Allow_osNpcStopAnimation = false
+    ;Allow_osNpcTouch = false
+    ;Allow_osNpcWhisper = false
+    ;Allow_osOwnerSaveAppearance = false
+    ;Allow_osParcelJoin = false
+    ;Allow_osParcelSubdivide = false
+    ;Allow_osRegionRestart = false
+    ;Allow_osSetContentType = false
+    ;Allow_osSetParcelDetails = false
+    ;Allow_osSetPrimitiveParams = false
+    ;Allow_osSetProjectionParams = false
+    ;Allow_osSetRegionWaterHeight = false
+    ;Allow_osSetStateEvents = false
+    ;Allow_osSetTerrainHeight = false
+    ;;    
+    ;; *** Threat-Level=VeryHigh
+    ;Allow_osAgentSaveAppearance = false   
+    ;Allow_osAvatarPlayAnimation = false
+    ;Allow_osAvatarStopAnimation = false
+    ;Allow_osGetNotecard = false
+    ;Allow_osGetNotecardLine = false
+    ;Allow_osGetNumberOfNotecardLines = false
+    ;Allow_osRegionNotice = false
+    ;Allow_osSetRot = false    
+    ;Allow_osSetParcelDetails = false
+    ;;    
+    ;; *** Threat-Level=Severe
+    ;Allow_osConsoleCommand = false
+    ;Allow_osKickAvatar = false
+    Allow_osTeleportAgent = true
+
