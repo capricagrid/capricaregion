@@ -29,7 +29,7 @@ in line 48 find  http_listener_port and port number, and change it to your port 
 Save and exit
 
 Step 4
-Make sure that ports 9000, 8003, the port you specified in OpenSim.ini configuration file and the port of your region are accessible from outside.
+Make sure that ports 9000, 8003, 8002, the port you specified in OpenSim.ini configuration file and the port of your region are accessible from outside.
 Make sure the settings specified in the "hosts" file are correct:
 127.0.0.1   localhost
 [your external IP]   localhost
