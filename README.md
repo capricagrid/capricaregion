@@ -1,4 +1,4 @@
-# caprica
+# Caprica Hypergrid
 Caprica Hypergrid Opensimulator distro.
 
 Opensimulator server distribution kit for connecting regions to the Caprica Hypergrid.
