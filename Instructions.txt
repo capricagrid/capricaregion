@@ -9,6 +9,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 sudo apt install screen
 sudo apt install mono-complete
+sudo ufw allow 9000,8003,8002 proto tcp  (+ your 'http_listener_port' and port of your region)
 cd /opt
 git clone https://github.com/capricagrid/capricaregion.git
 
