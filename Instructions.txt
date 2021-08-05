@@ -18,7 +18,8 @@ git clone https://github.com/capricagrid/capricaregion.git
 -----------------------------------
 
 Step 1.
-Open /opt/capricaregion/bin/Regions/Regions.ini 
+Open /opt/capricaregion/bin/Regions/Regions.ini
+Please, check the Map first, before enter region location! https://caprica.1studi.ru/simple-map/
 Change Region name, RegionUUID, Location, SizeX;Y, InternalPort and ExternalHostName to your values.
 To generate a UUID for your region, use the Gridlist UUID generator: https://gridlist.ru/uuid/
 Save and exit
