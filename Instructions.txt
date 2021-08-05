@@ -1,4 +1,6 @@
 Instructions for Linux Ubuntu 18-20
+For additional info or help, please send IM to Sam Adama resident in-world.
+Or use our contact form on Caprica Hypergrid website: https://caprica.1studi.ru/contact-us/
 -----------------------------------
 
 Preparing:
@@ -9,10 +11,11 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 sudo apt install screen
 sudo apt install mono-complete
-sudo ufw allow 9000,8003,8002 proto tcp  (+ your 'http_listener_port' and port of your region)
+sudo ufw allow 9000,8003,8002 (+ your 'http_listener_port' and port of your region)
 cd /opt
 git clone https://github.com/capricagrid/capricaregion.git
 
+-----------------------------------
 
 Step 1.
 Open /opt/capricaregion/bin/Regions/Regions.ini 
@@ -57,5 +60,4 @@ Login to Caprica Hypergrid with your avatar and find your region on the map by e
 
 Step 8
 Enjoy your Virtual World!
-
 
