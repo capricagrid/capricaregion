@@ -1,6 +1,18 @@
 Instructions for Linux Ubuntu 18-20
 For additional info or help, please send IM to Sam Adama resident in-world.
 Or use our contact form on Caprica Hypergrid website: https://caprica.1studi.ru/contact-us/
+
+Important points.
+
+It is advisable to raise the server to a VPS of one of the hosters.
+All listed ports must be accessible from the outside
+If the server goes up on a home computer, you must have a static IP. It 
+must be accessible from the external network.
+Access from some grids is permanently blocked on Caprica (see website).
+You can get help with server settings from Caprica Hypergrid support. 
+(https://caprica.1studi.ru/support/)
+
+
 -----------------------------------
 
 Preparing:
@@ -11,7 +23,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 sudo apt install screen
 sudo apt install mono-complete
-sudo ufw allow 9000,8003,8002 (+ your 'http_listener_port' and port of your region)
+sudo ufw allow 9000,8003,8002 (+ port of your region)
 cd /opt
 git clone https://github.com/capricagrid/capricaregion.git
 
@@ -24,12 +36,12 @@ Change Region name, RegionUUID, Location, SizeX;Y, InternalPort and ExternalHost
 To generate a UUID for your region, use the Gridlist UUID generator: https://gridlist.ru/uuid/
 Save and exit
 
-Step 2.
+Step 2.  (optional!)
 Open /opt/capricaregion/bin/config-include/GridCommon.ini
 [DatabaseService] Select your preferred database server. By default, Caprica Hypergrid regions use the MySQL database server. Create a MySQL database, and provide a username and password in this config file. 
 Save and exit
 
-Step 3
+Step 3   (optional!)
 Open  /opt/capricaregion/bin/OpenSim.ini
 in line 48 find  http_listener_port and port number, and change it to your port number. Don't forget, this port must be accessible and not blocked by a firewall.
 Save and exit
