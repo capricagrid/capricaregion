@@ -1,3 +1,0 @@
-<Addins host-reference="/opt/caprica/bin/caprica.exe">
-  <Directory shared="false">/opt/caprica/bin</Directory>
-</Addins>

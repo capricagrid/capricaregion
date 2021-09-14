@@ -1,0 +1,2091 @@
+﻿2021-09-14 05:59:43,834 INFO  [OPENSIM MAIN]: configured log4net using default OpenSim.exe.config
+2021-09-14 05:59:43,983 INFO  [OPENSIM MAIN]: System Locale is en-US
+2021-09-14 05:59:44,034 INFO  [UTIL] TimeStamp clock with period of 0.0001ms
+2021-09-14 05:59:44,039 INFO  [OPENSIM MAIN]: Environment variable MONO_THREADS_PER_CPU is unset
+2021-09-14 05:59:44,040 INFO  [OPENSIM MAIN]: Runtime gave us 2 min worker threads and 2 min IOCP threads
+2021-09-14 05:59:44,040 INFO  [OPENSIM MAIN]: Runtime gave us 200 max worker threads and 200 max IOCP threads
+2021-09-14 05:59:44,040 INFO  [OPENSIM MAIN]: Bumping up max worker threads to 500
+2021-09-14 05:59:44,041 INFO  [OPENSIM MAIN]: Bumping up max IOCP threads to 1000
+2021-09-14 05:59:44,041 INFO  [OPENSIM MAIN]: Threadpool set to 500 max worker threads and 1000 max IOCP threads
+2021-09-14 05:59:44,041 INFO  [OPENSIM MAIN]: Environment is supported by OpenSimulator.
+2021-09-14 05:59:44,042 INFO  Default culture changed to English (United States)
+2021-09-14 05:59:44,058 INFO  [CONFIG]: Reading configuration settings
+2021-09-14 05:59:44,059 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSimDefaults.ini
+2021-09-14 05:59:44,222 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSim.ini
+2021-09-14 05:59:44,231 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/osslDefaultEnable.ini
+2021-09-14 05:59:44,236 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 05:59:44,237 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridHypergrid.ini
+2021-09-14 05:59:44,242 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 05:59:44,243 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridCommon.ini
+2021-09-14 05:59:44,247 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 05:59:44,249 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/FlotsamCache.ini
+2021-09-14 05:59:44,253 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 05:59:44,255 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/storage/SQLiteStandalone.ini
+2021-09-14 05:59:44,259 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 05:59:44,265 INFO  [CONFIG]: Loading environment variables for Config
+2021-09-14 05:59:44,370 INFO  [OPENSIM MAIN]: Using async_call_method SmartThreadPool
+2021-09-14 05:59:44,371 INFO  [OPENSIM MAIN] Running GC in workstation mode
+2021-09-14 05:59:44,375 INFO  [STARTUP]: Beginning startup processing
+2021-09-14 05:59:44,375 INFO  [STARTUP]: version: OpenSim 0.9.2.0 Yeti Dev   
+
+2021-09-14 05:59:44,377 INFO  [STARTUP]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+
+2021-09-14 05:59:44,387 INFO  ====================================================================
+2021-09-14 05:59:44,387 INFO  ========================= STARTING OPENSIM =========================
+2021-09-14 05:59:44,388 INFO  ====================================================================
+2021-09-14 05:59:44,404 INFO  [LOCAL CONSOLE]: Persistent command line history is Enabled, up to 100 lines from file /opt/dev/bin/OpenSimConsoleHistory.txt without timestamps
+2021-09-14 05:59:44,405 INFO  [LOCAL CONSOLE]: Creating new empty command line history file /opt/dev/bin/OpenSimConsoleHistory.txt
+2021-09-14 05:59:44,416 INFO  [SERVER BASE]: Logging started to file /opt/dev/bin/OpenSim.log
+2021-09-14 05:59:44,442 INFO  [SERVER BASE]: Stats Logging started to file /opt/dev/bin/OpenSimStats.log
+2021-09-14 05:59:44,443 INFO  [SERVER BASE]: Starting in /opt/dev/bin
+2021-09-14 05:59:44,446 INFO  [SERVER BASE]: OpenSimulator version: OpenSim 0.9.2.0 Yeti Dev   
+2021-09-14 05:59:44,447 INFO  [SERVER BASE]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+2021-09-14 05:59:44,701 INFO  [SQLITE REGION DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 05:59:45,062 INFO  [MIGRATIONS]: Creating migrations at version 1
+2021-09-14 05:59:45,087 INFO  [MIGRATIONS]: Upgrading RegionStore to latest revision 39.
+2021-09-14 05:59:45,087 INFO  [MIGRATIONS]: NOTE - this may take a while, don't interrupt this process!
+2021-09-14 05:59:45,128 INFO  [MIGRATIONS]: Creating RegionStore at version 31
+2021-09-14 05:59:45,167 INFO  [MIGRATIONS]: Updating RegionStore to version 32
+2021-09-14 05:59:45,173 INFO  [MIGRATIONS]: Updating RegionStore to version 33
+2021-09-14 05:59:45,201 INFO  [MIGRATIONS]: Updating RegionStore to version 34
+2021-09-14 05:59:45,216 INFO  [MIGRATIONS]: Updating RegionStore to version 35
+2021-09-14 05:59:45,235 INFO  [MIGRATIONS]: Updating RegionStore to version 36
+2021-09-14 05:59:45,243 INFO  [MIGRATIONS]: Updating RegionStore to version 37
+2021-09-14 05:59:45,252 INFO  [MIGRATIONS]: Updating RegionStore to version 38
+2021-09-14 05:59:45,262 INFO  [MIGRATIONS]: Updating RegionStore to version 39
+2021-09-14 05:59:45,429 INFO  [ESTATE DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 05:59:45,440 INFO  [MIGRATIONS]: Upgrading EstateStore to latest revision 12.
+2021-09-14 05:59:45,440 INFO  [MIGRATIONS]: NOTE - this may take a while, don't interrupt this process!
+2021-09-14 05:59:45,487 INFO  [MIGRATIONS]: Creating EstateStore at version 10
+2021-09-14 05:59:45,493 INFO  [MIGRATIONS]: Updating EstateStore to version 11
+2021-09-14 05:59:45,518 INFO  [MIGRATIONS]: Updating EstateStore to version 12
+2021-09-14 05:59:45,566 INFO  [BASE HTTP SERVER]: Starting HTTP server on port 9000
+2021-09-14 05:59:45,616 DEBUG [WATCHDOG]: Started tracking thread PollServiceWatcherThread, ID 41
+2021-09-14 05:59:45,649 INFO  [PLUGINS]: Initializing addin manager
+2021-09-14 05:59:47,939 INFO  [PLUGINS]: Plugin Loaded: OpenSim
+2021-09-14 05:59:47,942 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.Framework
+2021-09-14 05:59:47,943 INFO  [PLUGINS]: Plugin Loaded: Robust
+2021-09-14 05:59:47,949 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Data
+2021-09-14 05:59:47,969 INFO  [PLUGINS]: Loading extension point /OpenSim/Startup
+2021-09-14 05:59:47,998 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 05:59:48,000 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RegionModulesController
+2021-09-14 05:59:48,003 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 05:59:48,004 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RemoteController
+2021-09-14 05:59:48,007 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 05:59:48,008 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.LoadRegions
+2021-09-14 05:59:48,024 INFO  [PLUGINS]: Plugin Loaded: YEngine
+2021-09-14 05:59:48,028 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.CoreModules
+2021-09-14 05:59:48,038 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.Meshing
+2021-09-14 05:59:48,041 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BasicPhysics
+2021-09-14 05:59:48,042 INFO  [PLUGINS]: Plugin Loaded: OpenSim.OfflineIM
+2021-09-14 05:59:48,043 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOde
+2021-09-14 05:59:48,045 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Groups
+2021-09-14 05:59:48,046 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.OptionalModules
+2021-09-14 05:59:48,050 INFO  [PLUGINS]: Plugin Loaded: LindenCaps
+2021-09-14 05:59:48,052 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.ScriptEngine.XEngine
+2021-09-14 05:59:48,053 INFO  [PLUGINS]: Plugin Loaded: LindenUDP
+2021-09-14 05:59:48,054 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BulletS
+2021-09-14 05:59:48,057 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOdeMeshing
+2021-09-14 05:59:48,058 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ODE
+2021-09-14 05:59:48,060 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.POS
+2021-09-14 05:59:48,062 INFO  [REGIONMODULES]: From plugin YEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,063 INFO  [REGIONMODULES]: From plugin OpenSim.Region.CoreModules, (version 0.9.2.0), loaded 114 modules, 74 shared, 40 non-shared 0 unknown
+2021-09-14 05:59:48,064 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.Meshing, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 05:59:48,065 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BasicPhysics, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,066 INFO  [REGIONMODULES]: From plugin OpenSim.OfflineIM, (version 0.9.2.0), loaded 1 modules, 1 shared, 0 non-shared 0 unknown
+2021-09-14 05:59:48,067 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOde, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,068 INFO  [REGIONMODULES]: From plugin OpenSim.Groups, (version 0.9.2.0), loaded 5 modules, 5 shared, 0 non-shared 0 unknown
+2021-09-14 05:59:48,069 INFO  [REGIONMODULES]: From plugin OpenSim.Region.OptionalModules, (version 0.9.2.0), loaded 39 modules, 20 shared, 19 non-shared 0 unknown
+2021-09-14 05:59:48,070 INFO  [REGIONMODULES]: From plugin LindenCaps, (version 0.9.2.0), loaded 16 modules, 5 shared, 11 non-shared 0 unknown
+2021-09-14 05:59:48,071 INFO  [REGIONMODULES]: From plugin OpenSim.Region.ScriptEngine.XEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,072 INFO  [REGIONMODULES]: From plugin LindenUDP, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,073 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BulletS, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 05:59:48,074 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOdeMeshing, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,075 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ODE, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,076 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.POS, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 05:59:48,084 INFO  [Serialiser] Enabled, using save dir "exports"
+2021-09-14 05:59:48,168 INFO  [USER CONNECTOR]: Remote users enabled
+2021-09-14 05:59:48,177 INFO  [REMOTE SIMULATION CONNECTOR]: Remote simulation enabled.
+2021-09-14 05:59:48,181 INFO  [REMOTE PRESENCE CONNECTOR]: Remote presence enabled
+2021-09-14 05:59:48,183 INFO  [NEIGHBOUR CONNECTOR]: Neighbour out connector enabled
+2021-09-14 05:59:48,211 INFO  [MAP IMAGE SERVICE MODULE]: enabled with no refresh and service object OpenSim.Services.Connectors.dll:MapImageServicesConnector
+2021-09-14 05:59:48,214 INFO  [LAND CONNECTOR]: Remote Land connector enabled
+2021-09-14 05:59:48,228 INFO  [HG INVENTORY CONNECTOR]: HG inventory broker enabled with inner connector of type OpenSim.Region.CoreModules.ServiceConnectorsOut.Inventory.RemoteXInventoryServicesConnector
+2021-09-14 05:59:48,234 DEBUG [ACTIVITY DETECTOR]: starting 
+2021-09-14 05:59:48,235 INFO  [REMOTE GRID USER CONNECTOR]: Remote grid user enabled
+2021-09-14 05:59:48,245 DEBUG [GRID SERVICE]: Starting...
+2021-09-14 05:59:48,250 DEBUG [HYPERGRID LINKER]: Starting with db OpenSim.Data.Null.NullRegionData
+2021-09-14 05:59:48,260 DEBUG [HYPERGRID LINKER]: Local Gatekeeper: http://cg.1studi.ru:8022/
+2021-09-14 05:59:48,261 DEBUG [HYPERGRID LINKER]: Loaded all services...
+2021-09-14 05:59:48,268 INFO  [REGION GRID CONNECTOR]: enabled in Grid mode
+2021-09-14 05:59:48,272 INFO  [AVATAR CONNECTOR]: Remote avatars enabled
+2021-09-14 05:59:48,276 INFO  [AUTH CONNECTOR]: Remote Authentication enabled
+2021-09-14 05:59:48,280 INFO  [HG ASSET SERVICE]: HG asset service enabled
+2021-09-14 05:59:48,283 INFO  [REGIONASSETCONNECTOR]: enabled
+2021-09-14 05:59:48,288 INFO  [AGENT PREFERENCES CONNECTOR]: Remote agent preferences enabled
+2021-09-14 05:59:48,291 INFO  [SIM SERVICE]: SimulationService IN connector enabled
+2021-09-14 05:59:48,293 INFO  [NEIGHBOUR IN CONNECTOR]: NeighbourServiceInConnector enabled
+2021-09-14 05:59:48,296 INFO  [LAND IN CONNECTOR]: LandServiceInConnector enabled
+2021-09-14 05:59:48,306 DEBUG [VECTORRENDERMODULE]: using font "Arial" for text rendering.
+2021-09-14 05:59:48,577 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script dynamic texture image module is []
+2021-09-14 05:59:48,578 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script dynamic texture image module is []
+2021-09-14 05:59:48,596 DEBUG [USER MANAGEMENT MODULE]: HGUserManagementModule is enabled
+2021-09-14 05:59:48,599 DEBUG [BASIC SEARCH MODULE]: BasicSearchModule is enabled
+2021-09-14 05:59:48,600 DEBUG [LIBRARY MODULE]: Library service dll is OpenSim.Services.InventoryService.dll:LibraryService
+2021-09-14 05:59:48,604 DEBUG [LIBRARY]: Starting library service...
+2021-09-14 05:59:48,608 INFO  [LIBRARY INVENTORY]: Loading library control file ./inventory/Libraries.xml
+2021-09-14 05:59:48,771 DEBUG [HG IM SERVICE]: Starting... InRobust? False
+2021-09-14 05:59:48,790 DEBUG [FRIENDS MODULE]: HGFriendsModule enabled.
+2021-09-14 05:59:48,800 INFO  [FLOTSAM ASSET CACHE]: FlotsamAssetCache enabled
+2021-09-14 05:59:48,812 INFO  [FLOTSAM ASSET CACHE]: Cache Directory /opt/dev/bin/assetcache
+2021-09-14 05:59:48,822 DEBUG [OfflineIM.V2.RemoteConnector]: Offline IM server at http://cg.1studi.ru:9000 with auth None
+2021-09-14 05:59:48,824 DEBUG [OfflineIM.V2]: Offline messages enabled by Offline Message Module V2
+2021-09-14 05:59:48,829 ERROR [Groups.Messaging]: GroupsMessagingModule V2 requires MessageOnlineUsersOnly = true
+2021-09-14 05:59:48,832 INFO  [Groups]: Initializing Groups Module V2
+2021-09-14 05:59:48,835 DEBUG [Groups]: Initializing Groups HG Service Connector with LocalService remote
+2021-09-14 05:59:48,910 DEBUG [RADMIN]: Creating default avatar entries
+2021-09-14 05:59:48,912 DEBUG [RADMIN]: No default avatar information available
+2021-09-14 05:59:48,913 INFO  [RADMIN]: Default avatars not loaded
+2021-09-14 05:59:48,915 INFO  [LOAD REGIONS PLUGIN]: Loading region configurations from filesystem
+2021-09-14 05:59:48,924 INFO  [REGION LOADER FILE SYSTEM]: Loading config files from ./Regions
+2021-09-14 05:59:48,924 INFO  [REGION LOADER FILE SYSTEM]: Loading config file ./Regions/Regions.ini
+2021-09-14 05:59:48,950 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Dev
+2021-09-14 05:59:48,951 INFO  [LOAD REGIONS PLUGIN]: Loading specific shared modules...
+2021-09-14 05:59:48,951 INFO  [LOAD REGIONS PLUGIN]: Done.
+2021-09-14 05:59:48,953 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Dev (ThreadID: 1)
+2021-09-14 05:59:48,973 WARN  [ESTATE] Region Dev is not part of an estate.
+2021-09-14 05:59:48,976 DEBUG [RegionInfo] Could not locate value for parameter TargetEstate
+2021-09-14 05:59:48,977 INFO  [ESTATE]: No existing estates found.  You must create a new one.
+2021-09-14 05:59:53,077 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 05:59:53,078 INFO  [SCENE]: Region Dev, WORLD MAP refresh time set to 0 seconds
+2021-09-14 05:59:53,078 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 05:59:53,084 WARN  [SQLITE REGION DB]: No terrain found for region
+2021-09-14 05:59:53,084 INFO  [TERRAIN]: No default terrain. Generating a new terrain flat.
+2021-09-14 05:59:53,152 DEBUG [TERRAIN DATA] V2DGzip 296 bytes
+2021-09-14 05:59:53,152 DEBUG [REGION DB SQLITE] Storing terrain format 23
+2021-09-14 05:59:53,178 DEBUG [TERRAIN DATA] V2DGzip 296 bytes
+2021-09-14 05:59:53,178 DEBUG [REGION DB SQLITE] Storing bakedterrain format 23
+2021-09-14 05:59:53,180 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 05:59:53,477 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/presence. Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:53,478 DEBUG [PRESENCE CONNECTOR]: Exception when contacting presence server at http://cg.1studi.ru:8023/presence: Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:53,478 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Dev
+2021-09-14 05:59:53,481 DEBUG [HG INVENTORY BROKER]: Manually setting scene in RemoteXInventoryServicesConnector to Dev
+2021-09-14 05:59:53,482 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Dev
+2021-09-14 05:59:53,512 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 05:59:53,523 INFO  [CHAT]: Initialized for Dev w:10 s:20 S:100
+2021-09-14 05:59:53,528 DEBUG [Groups]: Registering Groups HG Service Connector with Dev
+2021-09-14 05:59:53,566 INFO  [YEngine]: config enabled=False
+2021-09-14 05:59:53,586 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 05:59:53,586 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 05:59:53,587 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 05:59:53,590 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 05:59:53,598 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 05:59:53,599 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 05:59:53,605 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script HTTP request module is []
+2021-09-14 05:59:53,605 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script HTTP request module is []
+2021-09-14 05:59:53,609 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 05:59:53,613 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 05:59:53,618 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 05:59:54,057 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 05:59:54,071 DEBUG [Materials]: Initialized
+2021-09-14 05:59:54,132 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 05:59:54,139 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 05:59:54,156 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImage204c6bc7117640889f335cdd89c8bd30
+2021-09-14 05:59:54,160 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Dev), ID 45
+2021-09-14 05:59:54,185 INFO  L ... GenericSystemDrawing
+2021-09-14 05:59:54,185 INFO  L ... JPEG
+2021-09-14 05:59:54,185 INFO  L ... LLRAW
+2021-09-14 05:59:54,186 INFO  L ... RAW32
+2021-09-14 05:59:54,186 INFO  E ... ChannelDigger
+2021-09-14 05:59:54,187 INFO  E ... DefaultTerrainGenerator
+2021-09-14 05:59:54,228 DEBUG [RegionReady]: Enabled for region Dev
+2021-09-14 05:59:54,235 INFO  [XEngine]: Initializing scripts in region Dev
+2021-09-14 05:59:54,282 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 05:59:54,282 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000123ms
+2021-09-14 05:59:54,369 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 05:59:54,486 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 05:59:54,487 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Dev), ID 46
+2021-09-14 05:59:54,503 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Dev
+2021-09-14 05:59:54,504 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Dev
+2021-09-14 05:59:54,506 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Dev
+2021-09-14 05:59:54,506 INFO  [SIM SERVICE]: Starting...
+2021-09-14 05:59:55,326 DEBUG [Groups.RemoteConnector]: Groups server at http://cg.1studi.ru:8003/, authentication None
+2021-09-14 05:59:55,401 DEBUG [AuthorizationService]: Region Dev access restrictions: None
+2021-09-14 05:59:55,401 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Dev
+2021-09-14 05:59:55,402 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 05:59:55,425 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/grid. Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:55,426 DEBUG [GRID CONNECTOR]: GetExtraFeatures - Exception when contacting grid server at http://cg.1studi.ru:8023/grid: Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:55,461 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 05:59:55,462 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 05:59:55,464 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 05:59:55,469 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Dev), ID 47
+2021-09-14 05:59:55,474 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 05:59:55,475 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 05:59:55,475 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Dev), ID 48
+2021-09-14 05:59:55,483 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 05:59:55,578 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Dev/<0, 0, 0> created with Heightmap
+2021-09-14 05:59:59,938 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/accounts. Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:59,939 DEBUG [ACCOUNT CONNECTOR]: Exception when contacting user accounts server at http://cg.1studi.ru:8023/accounts: Error: ConnectFailure (Connection refused)
+2021-09-14 05:59:59,947 ERROR [OPENSIM]: Unable to store account. If this simulator is connected to a grid, you must create the estate owner account first at the grid level.
+2021-09-14 06:00:11,621 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/accounts. Error: ConnectFailure (Connection refused)
+2021-09-14 06:00:11,621 DEBUG [ACCOUNT CONNECTOR]: Exception when contacting user accounts server at http://cg.1studi.ru:8023/accounts: Error: ConnectFailure (Connection refused)
+2021-09-14 06:00:11,621 ERROR [OPENSIM]: Unable to store account. If this simulator is connected to a grid, you must create the estate owner account first at the grid level.
+2021-09-14 06:00:36,621 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/accounts. Error: ConnectFailure (Connection refused)
+2021-09-14 06:00:36,622 DEBUG [ACCOUNT CONNECTOR]: Exception when contacting user accounts server at http://cg.1studi.ru:8023/accounts: Error: ConnectFailure (Connection refused)
+2021-09-14 06:00:36,622 ERROR [OPENSIM]: Unable to store account. If this simulator is connected to a grid, you must create the estate owner account first at the grid level.
+2021-09-14 06:01:40,513 INFO  [FORMS]: Error sending POST request to: http://cg.1studi.ru:8023/accounts. Error: ConnectFailure (Connection refused)
+2021-09-14 06:01:40,515 DEBUG [ACCOUNT CONNECTOR]: Exception when contacting user accounts server at http://cg.1studi.ru:8023/accounts: Error: ConnectFailure (Connection refused)
+2021-09-14 06:01:40,515 ERROR [OPENSIM]: Unable to store account. If this simulator is connected to a grid, you must create the estate owner account first at the grid level.
+2021-09-14 06:01:42,871 INFO  [SHUTDOWN]: Closing all threads
+2021-09-14 06:01:42,875 INFO  [SHUTDOWN]: Killing listener thread
+2021-09-14 06:01:42,878 INFO  [SHUTDOWN]: Killing clients
+2021-09-14 06:01:42,880 INFO  [SHUTDOWN]: Closing console and terminating
+2021-09-14 06:01:42,905 DEBUG [JobEngine] Stopping ServiceThrottle
+2021-09-14 06:01:43,581 DEBUG [JobEngine] Stopping Non-blocking non-critical job engine
+2021-09-14 06:01:43,599 INFO  [SHUTDOWN]: Shutdown processing on main thread complete.  Exiting...
+2021-09-14 06:01:43,590 ERROR [LLUDPSERVER]: OutgoingPacketHandler loop threw an exception: Thread was being aborted.
+System.Threading.ThreadAbortException: Thread was being aborted.
+  at (wrapper managed-to-native) System.Threading.Thread.SleepInternal(int)
+  at System.Threading.Thread.Sleep (System.Int32 millisecondsTimeout) [0x00019] in <533173d24dae460899d2b10975534bb0>:0 
+  at OpenSim.Region.ClientStack.LindenUDP.LLUDPServer.OutgoingPacketHandler () [0x000ec] in <07bb9279f3214520ba6ba7c059d1ecb9>:0 
+2021-09-14 06:01:49,869 INFO  [OPENSIM MAIN]: configured log4net using default OpenSim.exe.config
+2021-09-14 06:01:49,958 INFO  [OPENSIM MAIN]: System Locale is en-US
+2021-09-14 06:01:49,997 INFO  [UTIL] TimeStamp clock with period of 0.0001ms
+2021-09-14 06:01:50,003 INFO  [OPENSIM MAIN]: Environment variable MONO_THREADS_PER_CPU is unset
+2021-09-14 06:01:50,003 INFO  [OPENSIM MAIN]: Runtime gave us 2 min worker threads and 2 min IOCP threads
+2021-09-14 06:01:50,004 INFO  [OPENSIM MAIN]: Runtime gave us 200 max worker threads and 200 max IOCP threads
+2021-09-14 06:01:50,004 INFO  [OPENSIM MAIN]: Bumping up max worker threads to 500
+2021-09-14 06:01:50,005 INFO  [OPENSIM MAIN]: Bumping up max IOCP threads to 1000
+2021-09-14 06:01:50,005 INFO  [OPENSIM MAIN]: Threadpool set to 500 max worker threads and 1000 max IOCP threads
+2021-09-14 06:01:50,006 INFO  [OPENSIM MAIN]: Environment is supported by OpenSimulator.
+2021-09-14 06:01:50,006 INFO  Default culture changed to English (United States)
+2021-09-14 06:01:50,028 INFO  [CONFIG]: Reading configuration settings
+2021-09-14 06:01:50,030 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSimDefaults.ini
+2021-09-14 06:01:50,091 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSim.ini
+2021-09-14 06:01:50,100 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/osslDefaultEnable.ini
+2021-09-14 06:01:50,105 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:01:50,106 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridHypergrid.ini
+2021-09-14 06:01:50,109 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:01:50,110 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridCommon.ini
+2021-09-14 06:01:50,115 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:01:50,116 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/FlotsamCache.ini
+2021-09-14 06:01:50,120 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:01:50,122 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/storage/SQLiteStandalone.ini
+2021-09-14 06:01:50,126 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:01:50,129 INFO  [CONFIG]: Loading environment variables for Config
+2021-09-14 06:01:50,224 INFO  [OPENSIM MAIN]: Using async_call_method SmartThreadPool
+2021-09-14 06:01:50,226 INFO  [OPENSIM MAIN] Running GC in workstation mode
+2021-09-14 06:01:50,227 INFO  [STARTUP]: Beginning startup processing
+2021-09-14 06:01:50,228 INFO  [STARTUP]: version: OpenSim 0.9.2.0 Yeti Dev   
+
+2021-09-14 06:01:50,229 INFO  [STARTUP]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+
+2021-09-14 06:01:50,234 INFO  ====================================================================
+2021-09-14 06:01:50,234 INFO  ========================= STARTING OPENSIM =========================
+2021-09-14 06:01:50,235 INFO  ====================================================================
+2021-09-14 06:01:50,249 INFO  [LOCAL CONSOLE]: Persistent command line history is Enabled, up to 100 lines from file /opt/dev/bin/OpenSimConsoleHistory.txt without timestamps
+2021-09-14 06:01:50,250 INFO  [LOCAL CONSOLE]: Read 9 lines of command line history from file /opt/dev/bin/OpenSimConsoleHistory.txt
+2021-09-14 06:01:50,264 INFO  [SERVER BASE]: Logging started to file /opt/dev/bin/OpenSim.log
+2021-09-14 06:01:50,285 INFO  [SERVER BASE]: Stats Logging started to file /opt/dev/bin/OpenSimStats.log
+2021-09-14 06:01:50,286 INFO  [SERVER BASE]: Starting in /opt/dev/bin
+2021-09-14 06:01:50,286 INFO  [SERVER BASE]: OpenSimulator version: OpenSim 0.9.2.0 Yeti Dev   
+2021-09-14 06:01:50,287 INFO  [SERVER BASE]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+2021-09-14 06:01:50,322 INFO  [SQLITE REGION DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:01:50,397 DEBUG [MIGRATIONS]: RegionStore data tables already up to date at revision 39
+2021-09-14 06:01:50,597 INFO  [ESTATE DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:01:50,601 DEBUG [MIGRATIONS]: EstateStore data tables already up to date at revision 12
+2021-09-14 06:01:50,633 INFO  [BASE HTTP SERVER]: Starting HTTP server on port 9000
+2021-09-14 06:01:50,671 DEBUG [WATCHDOG]: Started tracking thread PollServiceWatcherThread, ID 41
+2021-09-14 06:01:50,695 INFO  [PLUGINS]: Initializing addin manager
+2021-09-14 06:01:50,789 INFO  [PLUGINS]: Plugin Loaded: OpenSim
+2021-09-14 06:01:50,790 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.Framework
+2021-09-14 06:01:50,791 INFO  [PLUGINS]: Plugin Loaded: Robust
+2021-09-14 06:01:50,797 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Data
+2021-09-14 06:01:50,859 INFO  [PLUGINS]: Loading extension point /OpenSim/Startup
+2021-09-14 06:01:50,893 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:01:50,894 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RegionModulesController
+2021-09-14 06:01:50,899 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:01:50,900 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RemoteController
+2021-09-14 06:01:50,901 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:01:50,902 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.LoadRegions
+2021-09-14 06:01:50,916 INFO  [PLUGINS]: Plugin Loaded: YEngine
+2021-09-14 06:01:50,921 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.CoreModules
+2021-09-14 06:01:50,933 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.Meshing
+2021-09-14 06:01:50,935 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BasicPhysics
+2021-09-14 06:01:50,936 INFO  [PLUGINS]: Plugin Loaded: OpenSim.OfflineIM
+2021-09-14 06:01:50,937 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOde
+2021-09-14 06:01:50,938 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Groups
+2021-09-14 06:01:50,940 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.OptionalModules
+2021-09-14 06:01:50,944 INFO  [PLUGINS]: Plugin Loaded: LindenCaps
+2021-09-14 06:01:50,947 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.ScriptEngine.XEngine
+2021-09-14 06:01:50,948 INFO  [PLUGINS]: Plugin Loaded: LindenUDP
+2021-09-14 06:01:50,950 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BulletS
+2021-09-14 06:01:50,951 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOdeMeshing
+2021-09-14 06:01:50,952 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ODE
+2021-09-14 06:01:50,954 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.POS
+2021-09-14 06:01:50,955 INFO  [REGIONMODULES]: From plugin YEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,956 INFO  [REGIONMODULES]: From plugin OpenSim.Region.CoreModules, (version 0.9.2.0), loaded 114 modules, 74 shared, 40 non-shared 0 unknown
+2021-09-14 06:01:50,956 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.Meshing, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:01:50,956 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BasicPhysics, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,956 INFO  [REGIONMODULES]: From plugin OpenSim.OfflineIM, (version 0.9.2.0), loaded 1 modules, 1 shared, 0 non-shared 0 unknown
+2021-09-14 06:01:50,957 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOde, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,957 INFO  [REGIONMODULES]: From plugin OpenSim.Groups, (version 0.9.2.0), loaded 5 modules, 5 shared, 0 non-shared 0 unknown
+2021-09-14 06:01:50,957 INFO  [REGIONMODULES]: From plugin OpenSim.Region.OptionalModules, (version 0.9.2.0), loaded 39 modules, 20 shared, 19 non-shared 0 unknown
+2021-09-14 06:01:50,958 INFO  [REGIONMODULES]: From plugin LindenCaps, (version 0.9.2.0), loaded 16 modules, 5 shared, 11 non-shared 0 unknown
+2021-09-14 06:01:50,958 INFO  [REGIONMODULES]: From plugin OpenSim.Region.ScriptEngine.XEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,958 INFO  [REGIONMODULES]: From plugin LindenUDP, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,958 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BulletS, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:01:50,959 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOdeMeshing, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,959 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ODE, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,959 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.POS, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:01:50,966 INFO  [Serialiser] Enabled, using save dir "exports"
+2021-09-14 06:01:50,991 INFO  [USER CONNECTOR]: Remote users enabled
+2021-09-14 06:01:50,996 INFO  [REMOTE SIMULATION CONNECTOR]: Remote simulation enabled.
+2021-09-14 06:01:50,999 INFO  [REMOTE PRESENCE CONNECTOR]: Remote presence enabled
+2021-09-14 06:01:51,000 INFO  [NEIGHBOUR CONNECTOR]: Neighbour out connector enabled
+2021-09-14 06:01:51,006 INFO  [MAP IMAGE SERVICE MODULE]: enabled with no refresh and service object OpenSim.Services.Connectors.dll:MapImageServicesConnector
+2021-09-14 06:01:51,008 INFO  [LAND CONNECTOR]: Remote Land connector enabled
+2021-09-14 06:01:51,022 INFO  [HG INVENTORY CONNECTOR]: HG inventory broker enabled with inner connector of type OpenSim.Region.CoreModules.ServiceConnectorsOut.Inventory.RemoteXInventoryServicesConnector
+2021-09-14 06:01:51,028 DEBUG [ACTIVITY DETECTOR]: starting 
+2021-09-14 06:01:51,028 INFO  [REMOTE GRID USER CONNECTOR]: Remote grid user enabled
+2021-09-14 06:01:51,037 DEBUG [GRID SERVICE]: Starting...
+2021-09-14 06:01:51,041 DEBUG [HYPERGRID LINKER]: Starting with db OpenSim.Data.Null.NullRegionData
+2021-09-14 06:01:51,053 DEBUG [HYPERGRID LINKER]: Local Gatekeeper: http://cg.1studi.ru:9000/
+2021-09-14 06:01:51,054 DEBUG [HYPERGRID LINKER]: Loaded all services...
+2021-09-14 06:01:51,065 INFO  [REGION GRID CONNECTOR]: enabled in Grid mode
+2021-09-14 06:01:51,068 INFO  [AVATAR CONNECTOR]: Remote avatars enabled
+2021-09-14 06:01:51,072 INFO  [AUTH CONNECTOR]: Remote Authentication enabled
+2021-09-14 06:01:51,077 INFO  [HG ASSET SERVICE]: HG asset service enabled
+2021-09-14 06:01:51,080 INFO  [REGIONASSETCONNECTOR]: enabled
+2021-09-14 06:01:51,083 INFO  [AGENT PREFERENCES CONNECTOR]: Remote agent preferences enabled
+2021-09-14 06:01:51,085 INFO  [SIM SERVICE]: SimulationService IN connector enabled
+2021-09-14 06:01:51,086 INFO  [NEIGHBOUR IN CONNECTOR]: NeighbourServiceInConnector enabled
+2021-09-14 06:01:51,091 INFO  [LAND IN CONNECTOR]: LandServiceInConnector enabled
+2021-09-14 06:01:51,097 DEBUG [VECTORRENDERMODULE]: using font "Arial" for text rendering.
+2021-09-14 06:01:51,122 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script dynamic texture image module is []
+2021-09-14 06:01:51,122 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script dynamic texture image module is []
+2021-09-14 06:01:51,140 DEBUG [USER MANAGEMENT MODULE]: HGUserManagementModule is enabled
+2021-09-14 06:01:51,142 DEBUG [BASIC SEARCH MODULE]: BasicSearchModule is enabled
+2021-09-14 06:01:51,143 DEBUG [LIBRARY MODULE]: Library service dll is OpenSim.Services.InventoryService.dll:LibraryService
+2021-09-14 06:01:51,147 DEBUG [LIBRARY]: Starting library service...
+2021-09-14 06:01:51,150 INFO  [LIBRARY INVENTORY]: Loading library control file ./inventory/Libraries.xml
+2021-09-14 06:01:51,204 DEBUG [HG IM SERVICE]: Starting... InRobust? False
+2021-09-14 06:01:51,220 DEBUG [FRIENDS MODULE]: HGFriendsModule enabled.
+2021-09-14 06:01:51,227 INFO  [FLOTSAM ASSET CACHE]: FlotsamAssetCache enabled
+2021-09-14 06:01:51,239 INFO  [FLOTSAM ASSET CACHE]: Cache Directory /opt/dev/bin/assetcache
+2021-09-14 06:01:51,246 DEBUG [OfflineIM.V2.RemoteConnector]: Offline IM server at http://cg.1studi.ru:9000 with auth None
+2021-09-14 06:01:51,246 DEBUG [OfflineIM.V2]: Offline messages enabled by Offline Message Module V2
+2021-09-14 06:01:51,248 ERROR [Groups.Messaging]: GroupsMessagingModule V2 requires MessageOnlineUsersOnly = true
+2021-09-14 06:01:51,249 INFO  [Groups]: Initializing Groups Module V2
+2021-09-14 06:01:51,251 DEBUG [Groups]: Initializing Groups HG Service Connector with LocalService remote
+2021-09-14 06:01:51,308 DEBUG [RADMIN]: Creating default avatar entries
+2021-09-14 06:01:51,308 DEBUG [RADMIN]: No default avatar information available
+2021-09-14 06:01:51,309 INFO  [RADMIN]: Default avatars not loaded
+2021-09-14 06:01:51,310 INFO  [LOAD REGIONS PLUGIN]: Loading region configurations from filesystem
+2021-09-14 06:01:51,314 INFO  [REGION LOADER FILE SYSTEM]: Loading config files from ./Regions
+2021-09-14 06:01:51,314 INFO  [REGION LOADER FILE SYSTEM]: Loading config file ./Regions/Regions.ini
+2021-09-14 06:01:51,334 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Dev
+2021-09-14 06:01:51,334 INFO  [LOAD REGIONS PLUGIN]: Loading specific shared modules...
+2021-09-14 06:01:51,334 INFO  [LOAD REGIONS PLUGIN]: Done.
+2021-09-14 06:01:51,335 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Dev (ThreadID: 1)
+2021-09-14 06:01:51,447 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 06:01:51,448 INFO  [SCENE]: Region Dev, WORLD MAP refresh time set to 0 seconds
+2021-09-14 06:01:51,449 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 06:01:51,461 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:01:51,488 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:01:51,489 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:01:51,492 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:01:51,499 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:01:51,500 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:01:51,500 DEBUG [SQLITE REGION DB]: Loaded terrain revision r23
+2021-09-14 06:01:51,500 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 06:01:51,744 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Dev
+2021-09-14 06:01:51,750 DEBUG [HG INVENTORY BROKER]: Manually setting scene in RemoteXInventoryServicesConnector to Dev
+2021-09-14 06:01:51,754 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Dev
+2021-09-14 06:01:51,792 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 06:01:51,800 INFO  [CHAT]: Initialized for Dev w:10 s:20 S:100
+2021-09-14 06:01:51,805 DEBUG [Groups]: Registering Groups HG Service Connector with Dev
+2021-09-14 06:01:51,844 INFO  [YEngine]: config enabled=False
+2021-09-14 06:01:51,871 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 06:01:51,871 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 06:01:51,872 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 06:01:51,875 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 06:01:51,884 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 06:01:51,885 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 06:01:51,893 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script HTTP request module is []
+2021-09-14 06:01:51,893 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script HTTP request module is []
+2021-09-14 06:01:51,900 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 06:01:51,906 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 06:01:51,912 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 06:01:52,243 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 06:01:52,257 DEBUG [Materials]: Initialized
+2021-09-14 06:01:52,307 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 06:01:52,310 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 06:01:52,320 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImage204c6bc7117640889f335cdd89c8bd30
+2021-09-14 06:01:52,323 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Dev), ID 44
+2021-09-14 06:01:52,337 INFO  L ... GenericSystemDrawing
+2021-09-14 06:01:52,338 INFO  L ... JPEG
+2021-09-14 06:01:52,338 INFO  L ... LLRAW
+2021-09-14 06:01:52,338 INFO  L ... RAW32
+2021-09-14 06:01:52,339 INFO  E ... ChannelDigger
+2021-09-14 06:01:52,339 INFO  E ... DefaultTerrainGenerator
+2021-09-14 06:01:52,381 DEBUG [RegionReady]: Enabled for region Dev
+2021-09-14 06:01:52,387 INFO  [XEngine]: Initializing scripts in region Dev
+2021-09-14 06:01:52,435 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 06:01:52,435 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000133ms
+2021-09-14 06:01:52,513 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 06:01:52,539 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 06:01:52,540 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Dev), ID 45
+2021-09-14 06:01:52,551 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Dev
+2021-09-14 06:01:52,552 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Dev
+2021-09-14 06:01:52,554 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Dev
+2021-09-14 06:01:52,554 INFO  [SIM SERVICE]: Starting...
+2021-09-14 06:01:52,764 DEBUG [Groups.RemoteConnector]: Groups server at http://cg.1studi.ru:8003/, authentication None
+2021-09-14 06:01:52,823 DEBUG [AuthorizationService]: Region Dev access restrictions: None
+2021-09-14 06:01:52,823 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Dev
+2021-09-14 06:01:52,823 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 06:01:52,880 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 06:01:52,881 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 06:01:52,941 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 06:01:52,944 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Dev), ID 46
+2021-09-14 06:01:52,945 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 06:01:52,945 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 06:01:52,945 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Dev), ID 47
+2021-09-14 06:01:52,955 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 06:01:53,006 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Dev/<0, 0, 0> created with Heightmap
+2021-09-14 06:01:57,127 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 06:01:57,133 DEBUG [LAND MANAGEMENT MODULE] Creating default parcel for region Dev
+2021-09-14 06:01:57,207 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 06:01:57,211 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 06:01:57,215 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Dev (0 objects)...
+2021-09-14 06:01:57,229 DEBUG [WORLD MAP]: Generating map image for Dev
+2021-09-14 06:01:57,272 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 06:01:57,275 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 06:01:57,312 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 06:01:57,323 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 06:01:57,334 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 06:01:57,484 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 212 ms
+2021-09-14 06:01:57,515 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 06:01:57,518 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 4 ms
+2021-09-14 06:01:57,569 DEBUG [WORLD MAP]: Storing map image a13b73d9-cf68-4983-945d-b9120f5aadd3 for Dev
+2021-09-14 06:01:57,782 DEBUG [WORLD MAP]: Region Dev has no parcels for sale, not generating overlay
+2021-09-14 06:01:57,820 DEBUG [MAP IMAGE SERVICE MODULE]: Upload maptile for Dev
+2021-09-14 06:01:58,166 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 336ms
+2021-09-14 06:01:58,187 DEBUG [GRID SERVICE]: Region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30, 256x256) registered at 1030,1030 with flags RegionOnline
+2021-09-14 06:01:58,337 INFO  [SCENE]: Initializing script instances in Dev
+2021-09-14 06:01:58,337 INFO  [SCENE]: Initialized 0 script instances in Dev
+2021-09-14 06:03:52,634 DEBUG [AGENT HANDLER]: QueryAccess returned True (). Version=0, 0.8/0.8
+2021-09-14 06:03:52,722 DEBUG [SCENE]: Region Dev told of incoming child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 619638739, IP 144.91.119.25, viewer Firestorm-Releasex64 6.0.2.56680, teleportflags (ViaLocation, Godlike), position <128, 128, 1.5>. From region Capitolium (5729d57a-5ee0-11e9-8647-d663bd873d93) @ http://cg.1studi.ru:9000/
+2021-09-14 06:03:52,753 INFO  [SCENE Dev]: authorized child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 619638739)
+2021-09-14 06:03:52,767 DEBUG [CreateCaps]: new caps agent d3045d90-817f-441d-b446-5293ea959dee, circuit 619638739, path 065e449c-d3dd-491d-9980-0080d6fb6df3, time 8 
+2021-09-14 06:03:53,199 WARN  [CHILDAGENTDATAUPDATE] got packed appearance
+2021-09-14 06:03:53,571 DEBUG [SCENE]: Incoming child agent update for d3045d90-817f-441d-b446-5293ea959dee in Dev
+2021-09-14 06:03:53,670 DEBUG [LLUDPSERVER]: Handling UseCircuitCode request for circuit 619638739 to Dev from IP 178.67.197.173:34560
+2021-09-14 06:03:53,714 DEBUG [CAPS]: Received SEED caps request in Dev for agent d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:03:53,850 DEBUG [SCENE]: Adding new child scene presence Sam Adama d3045d90-817f-441d-b446-5293ea959dee to scene Dev at pos <128, 128, 1.5>, tpflags: ViaLocation, Godlike
+2021-09-14 06:03:54,183 DEBUG [LLUDPSERVER]: Client created
+2021-09-14 06:03:54,189 DEBUG [LLUDPSERVER]: processing UseCircuitCode pending queue, 1 entries
+2021-09-14 06:03:54,229 INFO  [SCENE PRESENCE]: Complete movement of Sam Adama into Dev <128, 128, 1.5>
+2021-09-14 06:03:54,969 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData for d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:03:54,972 DEBUG [SCENE PRESENCE]: Closing 1 child agents
+2021-09-14 06:03:54,974 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData at parcel 2d38edba-7e6f-48e8-93d6-7ba736b1c852
+2021-09-14 06:03:55,021 DEBUG [SCENE COMMUNICATION SERVICE]: Sending close agent ID d3045d90-817f-441d-b446-5293ea959dee to Capitolium
+2021-09-14 06:03:55,041 DEBUG [REMOTE SIMULATION CONNECTOR]: CloseAgent http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/?auth=3542da96-b5e8-437a-81cc-7c8f66ab7a50
+2021-09-14 06:03:59,145 DEBUG [CompleteMovement] end: 4916ms
+2021-09-14 06:03:59,151 DEBUG [AVFACTORY]: Received texture update for Sam Adama d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:03:59,160 DEBUG [UpdateBakedCache] cache hits: 5 changed entries: 0 rebakes 0
+2021-09-14 06:04:07,060 DEBUG [WATCHDOG]: Started tracking thread AsyncLSLCmdHandlerThread, ID 54
+2021-09-14 06:04:29,183 DEBUG [ENTITY TRANSFER MODULE]: Request to teleport Sam Adama d3045d90-817f-441d-b446-5293ea959dee home
+2021-09-14 06:04:29,281 DEBUG [HG ENTITY TRANSFER MODULE]: region Capitolium flags: 1031
+2021-09-14 06:04:29,297 DEBUG [ENTITY TRANSFER MODULE]: Teleporting Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev to http://62.171.135.148:9010/ (http://62.171.135.148:9010/) Capitolium/<128, 128, 2550.066>
+2021-09-14 06:04:29,325 DEBUG [REMOTE SIMULATION CONNECTOR]: QueryAccess to http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/ returned True, reason , version 0.8/0.8
+2021-09-14 06:04:29,329 DEBUG [ENTITY TRANSFER MODULE]: Dev transfer protocol version to Capitolium is 0.8 / 0.8
+2021-09-14 06:04:29,335 DEBUG [ENTITY TRANSFER MODULE]: Determined that region Capitolium at 1000,1000 size 256,256 needs new child agent for agent Sam Adama from Dev
+2021-09-14 06:04:29,346 DEBUG [HG ENTITY TRANSFER MODULE]: CreateAgent http://62.171.135.148:9010/ http://62.171.135.148:9010/
+2021-09-14 06:04:29,363 DEBUG [REMOTE SIMULATION CONNECTOR]: Creating agent at http://62.171.135.148:9010/
+2021-09-14 06:04:29,408 DEBUG [ENTITY TRANSFER MODULE]: Sending new CAPS seed url http://62.171.135.148:9010/CAPS/629e4499-28f5-4ac6-82d4-2b5c5f7d3a740000/ from Dev to Sam Adama
+2021-09-14 06:04:29,563 DEBUG [ENTITY TRANSFER MODULE]: Set release callback URL to http://144.91.119.25:9000/agent/d3045d90-817f-441d-b446-5293ea959dee/204c6bc7-1176-4088-9f33-5cdd89c8bd30/release/ in Dev
+2021-09-14 06:04:30,130 DEBUG [SCENE PRESENCE]: Making Sam Adama a child agent in Dev from root region 1099511628032000
+2021-09-14 06:04:30,498 DEBUG [AGENT HANDLER]: Release d3045d90-817f-441d-b446-5293ea959dee to RegionID: 204c6bc7-1176-4088-9f33-5cdd89c8bd30
+2021-09-14 06:04:30,673 DEBUG [ENTITY TRANSFER MODULE]: Closing agent Sam Adama in Dev after teleport 
+2021-09-14 06:04:30,678 DEBUG [CLIENT]: Close has been called for Sam Adama attached to scene Dev
+2021-09-14 06:04:30,690 DEBUG [JobEngine] Stopping AsyncInUDP-d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:04:30,708 DEBUG [SCENE]: Removing child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev
+2021-09-14 06:04:30,759 DEBUG [Scene] The avatar has left the building
+2021-09-14 06:04:30,774 DEBUG [CAPS]: Remove caps for agent d3045d90-817f-441d-b446-5293ea959dee in region Dev
+2021-09-14 06:04:31,495 ERROR [XEngine]: Failure in DoOnRezScriptQueue() for item ffe5e47b-e6a0-4161-9b7f-4519d303f9b5 in Dev.  Continuing.  Exception  
+System.Collections.Generic.KeyNotFoundException: The given key 'ffe5e47b-e6a0-4161-9b7f-4519d303f9b5' was not present in the dictionary.
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item (TKey key) [0x0001e] in <533173d24dae460899d2b10975534bb0>:0 
+  at OpenSim.Region.ScriptEngine.XEngine.XEngine.DoOnRezScript (System.Object[] parms) [0x0098a] in <46129bbbd1a143048b5a4abc1a8108b2>:0 
+  at OpenSim.Region.ScriptEngine.XEngine.XEngine.DoOnRezScriptQueue (System.Object dummy) [0x00032] in <46129bbbd1a143048b5a4abc1a8108b2>:0 
+2021-09-14 06:04:39,863 INFO  [SHUTDOWN]: Closing all threads
+2021-09-14 06:04:39,864 INFO  [SHUTDOWN]: Killing listener thread
+2021-09-14 06:04:39,865 INFO  [SHUTDOWN]: Killing clients
+2021-09-14 06:04:39,865 INFO  [SHUTDOWN]: Closing console and terminating
+2021-09-14 06:04:39,867 INFO  [SCENE]: Closing down the single simulator: Dev
+2021-09-14 06:04:39,871 DEBUG [GRID SERVICE]: Deregistering region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30) at 1030-1030
+2021-09-14 06:04:39,931 DEBUG [WATCHDOG]: Removing thread Heartbeat-(Dev), ID 48
+2021-09-14 06:04:40,390 DEBUG [SCENE]: TriggerSceneShuttingDown
+2021-09-14 06:04:40,391 INFO  [EVENT MANAGER]: TriggerSceneShuttingDown done
+2021-09-14 06:04:40,391 DEBUG [SCENE]: Persisting changed objects
+2021-09-14 06:04:40,391 DEBUG [SCENE]: Closing scene
+2021-09-14 06:04:40,395 DEBUG [SHUTDOWN]: Shutting down region Dev
+2021-09-14 06:04:40,446 DEBUG [WATCHDOG]: Removing thread MapBlocks (Dev), ID 44
+2021-09-14 06:04:40,477 DEBUG [JobEngine] Stopping ScriptsHttpReq
+2021-09-14 06:04:40,484 DEBUG [JobEngine] Stopping HG Incoming Scene Object Engine (Dev)
+2021-09-14 06:04:40,505 INFO  [XEngine]: Shutting down 1 scripts in Dev
+2021-09-14 06:04:40,524 INFO  [LLUDPSERVER]: Shutting down the LLUDP server for Dev
+2021-09-14 06:04:40,525 DEBUG [UDPBASE]: Stopping outbound UDP loop
+2021-09-14 06:04:40,526 DEBUG [UDPBASE]: Stopping inbound UDP loop
+2021-09-14 06:04:40,526 DEBUG [WATCHDOG]: Removing thread Outgoing Packets (Dev), ID 47
+2021-09-14 06:04:40,527 DEBUG [JobEngine] Stopping Outgoing Queue Refill Engine (Dev)
+2021-09-14 06:04:40,534 DEBUG [SCENE]: Dispose Physics
+2021-09-14 06:04:40,552 DEBUG [JobEngine] Stopping ServiceThrottle
+2021-09-14 06:04:40,612 DEBUG [WATCHDOG]: Removing thread bulletunmanaged (Dev), ID 45
+2021-09-14 06:04:41,183 DEBUG [JobEngine] Stopping Non-blocking non-critical job engine
+2021-09-14 06:04:41,185 WARN  [WATCHDOG]: Requested to remove thread with ID 46 but this is not being monitored
+2021-09-14 06:04:41,185 INFO  [SHUTDOWN]: Shutdown processing on main thread complete.  Exiting...
+2021-09-14 06:05:14,989 INFO  [OPENSIM MAIN]: configured log4net using default OpenSim.exe.config
+2021-09-14 06:05:15,111 INFO  [OPENSIM MAIN]: System Locale is en-US
+2021-09-14 06:05:15,156 INFO  [UTIL] TimeStamp clock with period of 0.0001ms
+2021-09-14 06:05:15,162 INFO  [OPENSIM MAIN]: Environment variable MONO_THREADS_PER_CPU is unset
+2021-09-14 06:05:15,162 INFO  [OPENSIM MAIN]: Runtime gave us 2 min worker threads and 2 min IOCP threads
+2021-09-14 06:05:15,163 INFO  [OPENSIM MAIN]: Runtime gave us 200 max worker threads and 200 max IOCP threads
+2021-09-14 06:05:15,163 INFO  [OPENSIM MAIN]: Bumping up max worker threads to 500
+2021-09-14 06:05:15,163 INFO  [OPENSIM MAIN]: Bumping up max IOCP threads to 1000
+2021-09-14 06:05:15,164 INFO  [OPENSIM MAIN]: Threadpool set to 500 max worker threads and 1000 max IOCP threads
+2021-09-14 06:05:15,164 INFO  [OPENSIM MAIN]: Environment is supported by OpenSimulator.
+2021-09-14 06:05:15,165 INFO  Default culture changed to English (United States)
+2021-09-14 06:05:15,186 INFO  [CONFIG]: Reading configuration settings
+2021-09-14 06:05:15,187 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSimDefaults.ini
+2021-09-14 06:05:15,254 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSim.ini
+2021-09-14 06:05:15,305 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/osslDefaultEnable.ini
+2021-09-14 06:05:15,314 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:05:15,316 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridHypergrid.ini
+2021-09-14 06:05:15,323 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:05:15,326 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridCommon.ini
+2021-09-14 06:05:15,333 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:05:15,337 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/FlotsamCache.ini
+2021-09-14 06:05:15,344 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:05:15,347 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/storage/SQLiteStandalone.ini
+2021-09-14 06:05:15,354 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:05:15,358 INFO  [CONFIG]: Loading environment variables for Config
+2021-09-14 06:05:15,494 INFO  [OPENSIM MAIN]: Using async_call_method SmartThreadPool
+2021-09-14 06:05:15,495 INFO  [OPENSIM MAIN] Running GC in workstation mode
+2021-09-14 06:05:15,496 INFO  [STARTUP]: Beginning startup processing
+2021-09-14 06:05:15,496 INFO  [STARTUP]: version: OpenSim 0.9.2.0 Yeti Dev   
+
+2021-09-14 06:05:15,498 INFO  [STARTUP]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+
+2021-09-14 06:05:15,509 INFO  ====================================================================
+2021-09-14 06:05:15,509 INFO  ========================= STARTING OPENSIM =========================
+2021-09-14 06:05:15,509 INFO  ====================================================================
+2021-09-14 06:05:15,526 INFO  [LOCAL CONSOLE]: Persistent command line history is Enabled, up to 100 lines from file /opt/dev/bin/OpenSimConsoleHistory.txt without timestamps
+2021-09-14 06:05:15,548 INFO  [LOCAL CONSOLE]: Read 11 lines of command line history from file /opt/dev/bin/OpenSimConsoleHistory.txt
+2021-09-14 06:05:15,564 INFO  [SERVER BASE]: Logging started to file /opt/dev/bin/OpenSim.log
+2021-09-14 06:05:15,594 INFO  [SERVER BASE]: Stats Logging started to file /opt/dev/bin/OpenSimStats.log
+2021-09-14 06:05:15,595 INFO  [SERVER BASE]: Starting in /opt/dev/bin
+2021-09-14 06:05:15,595 INFO  [SERVER BASE]: OpenSimulator version: OpenSim 0.9.2.0 Yeti Dev   
+2021-09-14 06:05:15,595 INFO  [SERVER BASE]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+2021-09-14 06:05:15,646 INFO  [SQLITE REGION DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:05:15,759 DEBUG [MIGRATIONS]: RegionStore data tables already up to date at revision 39
+2021-09-14 06:05:16,028 INFO  [ESTATE DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:05:16,035 DEBUG [MIGRATIONS]: EstateStore data tables already up to date at revision 12
+2021-09-14 06:05:16,080 INFO  [BASE HTTP SERVER]: Starting HTTP server on port 9000
+2021-09-14 06:05:16,132 DEBUG [WATCHDOG]: Started tracking thread PollServiceWatcherThread, ID 41
+2021-09-14 06:05:16,159 INFO  [PLUGINS]: Initializing addin manager
+2021-09-14 06:05:16,276 INFO  [PLUGINS]: Plugin Loaded: OpenSim
+2021-09-14 06:05:16,279 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.Framework
+2021-09-14 06:05:16,280 INFO  [PLUGINS]: Plugin Loaded: Robust
+2021-09-14 06:05:16,287 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Data
+2021-09-14 06:05:16,341 INFO  [PLUGINS]: Loading extension point /OpenSim/Startup
+2021-09-14 06:05:16,363 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:05:16,364 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RegionModulesController
+2021-09-14 06:05:16,367 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:05:16,368 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RemoteController
+2021-09-14 06:05:16,370 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:05:16,370 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.LoadRegions
+2021-09-14 06:05:16,390 INFO  [PLUGINS]: Plugin Loaded: YEngine
+2021-09-14 06:05:16,395 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.CoreModules
+2021-09-14 06:05:16,404 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.Meshing
+2021-09-14 06:05:16,406 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BasicPhysics
+2021-09-14 06:05:16,407 INFO  [PLUGINS]: Plugin Loaded: OpenSim.OfflineIM
+2021-09-14 06:05:16,408 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOde
+2021-09-14 06:05:16,409 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Groups
+2021-09-14 06:05:16,410 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.OptionalModules
+2021-09-14 06:05:16,412 INFO  [PLUGINS]: Plugin Loaded: LindenCaps
+2021-09-14 06:05:16,414 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.ScriptEngine.XEngine
+2021-09-14 06:05:16,416 INFO  [PLUGINS]: Plugin Loaded: LindenUDP
+2021-09-14 06:05:16,417 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BulletS
+2021-09-14 06:05:16,419 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOdeMeshing
+2021-09-14 06:05:16,420 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ODE
+2021-09-14 06:05:16,421 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.POS
+2021-09-14 06:05:16,423 INFO  [REGIONMODULES]: From plugin YEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,423 INFO  [REGIONMODULES]: From plugin OpenSim.Region.CoreModules, (version 0.9.2.0), loaded 114 modules, 74 shared, 40 non-shared 0 unknown
+2021-09-14 06:05:16,423 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.Meshing, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:05:16,423 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BasicPhysics, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,424 INFO  [REGIONMODULES]: From plugin OpenSim.OfflineIM, (version 0.9.2.0), loaded 1 modules, 1 shared, 0 non-shared 0 unknown
+2021-09-14 06:05:16,424 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOde, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,425 INFO  [REGIONMODULES]: From plugin OpenSim.Groups, (version 0.9.2.0), loaded 5 modules, 5 shared, 0 non-shared 0 unknown
+2021-09-14 06:05:16,425 INFO  [REGIONMODULES]: From plugin OpenSim.Region.OptionalModules, (version 0.9.2.0), loaded 39 modules, 20 shared, 19 non-shared 0 unknown
+2021-09-14 06:05:16,426 INFO  [REGIONMODULES]: From plugin LindenCaps, (version 0.9.2.0), loaded 16 modules, 5 shared, 11 non-shared 0 unknown
+2021-09-14 06:05:16,426 INFO  [REGIONMODULES]: From plugin OpenSim.Region.ScriptEngine.XEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,426 INFO  [REGIONMODULES]: From plugin LindenUDP, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,427 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BulletS, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:05:16,427 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOdeMeshing, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,427 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ODE, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,428 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.POS, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:05:16,437 INFO  [Serialiser] Enabled, using save dir "exports"
+2021-09-14 06:05:16,567 INFO  [USER CONNECTOR]: Remote users enabled
+2021-09-14 06:05:16,574 INFO  [REMOTE SIMULATION CONNECTOR]: Remote simulation enabled.
+2021-09-14 06:05:16,579 INFO  [REMOTE PRESENCE CONNECTOR]: Remote presence enabled
+2021-09-14 06:05:16,581 INFO  [NEIGHBOUR CONNECTOR]: Neighbour out connector enabled
+2021-09-14 06:05:16,592 INFO  [MAP IMAGE SERVICE MODULE]: enabled with no refresh and service object OpenSim.Services.Connectors.dll:MapImageServicesConnector
+2021-09-14 06:05:16,596 INFO  [LAND CONNECTOR]: Remote Land connector enabled
+2021-09-14 06:05:16,617 INFO  [HG INVENTORY CONNECTOR]: HG inventory broker enabled with inner connector of type OpenSim.Region.CoreModules.ServiceConnectorsOut.Inventory.RemoteXInventoryServicesConnector
+2021-09-14 06:05:16,626 DEBUG [ACTIVITY DETECTOR]: starting 
+2021-09-14 06:05:16,626 INFO  [REMOTE GRID USER CONNECTOR]: Remote grid user enabled
+2021-09-14 06:05:16,637 DEBUG [GRID SERVICE]: Starting...
+2021-09-14 06:05:16,640 DEBUG [HYPERGRID LINKER]: Starting with db OpenSim.Data.Null.NullRegionData
+2021-09-14 06:05:16,653 DEBUG [HYPERGRID LINKER]: Local Gatekeeper: http://cg.1studi.ru:9000/
+2021-09-14 06:05:16,654 DEBUG [HYPERGRID LINKER]: Loaded all services...
+2021-09-14 06:05:16,668 INFO  [REGION GRID CONNECTOR]: enabled in Grid mode
+2021-09-14 06:05:16,671 INFO  [AVATAR CONNECTOR]: Remote avatars enabled
+2021-09-14 06:05:16,675 INFO  [AUTH CONNECTOR]: Remote Authentication enabled
+2021-09-14 06:05:16,680 INFO  [HG ASSET SERVICE]: HG asset service enabled
+2021-09-14 06:05:16,683 INFO  [REGIONASSETCONNECTOR]: enabled
+2021-09-14 06:05:16,686 INFO  [AGENT PREFERENCES CONNECTOR]: Remote agent preferences enabled
+2021-09-14 06:05:16,688 INFO  [SIM SERVICE]: SimulationService IN connector enabled
+2021-09-14 06:05:16,690 INFO  [NEIGHBOUR IN CONNECTOR]: NeighbourServiceInConnector enabled
+2021-09-14 06:05:16,693 INFO  [LAND IN CONNECTOR]: LandServiceInConnector enabled
+2021-09-14 06:05:16,699 DEBUG [VECTORRENDERMODULE]: using font "Arial" for text rendering.
+2021-09-14 06:05:16,834 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script dynamic texture image module is []
+2021-09-14 06:05:16,834 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script dynamic texture image module is []
+2021-09-14 06:05:16,855 DEBUG [USER MANAGEMENT MODULE]: HGUserManagementModule is enabled
+2021-09-14 06:05:16,858 DEBUG [BASIC SEARCH MODULE]: BasicSearchModule is enabled
+2021-09-14 06:05:16,860 DEBUG [LIBRARY MODULE]: Library service dll is OpenSim.Services.InventoryService.dll:LibraryService
+2021-09-14 06:05:16,864 DEBUG [LIBRARY]: Starting library service...
+2021-09-14 06:05:16,868 INFO  [LIBRARY INVENTORY]: Loading library control file ./inventory/Libraries.xml
+2021-09-14 06:05:16,930 DEBUG [HG IM SERVICE]: Starting... InRobust? False
+2021-09-14 06:05:16,950 DEBUG [FRIENDS MODULE]: HGFriendsModule enabled.
+2021-09-14 06:05:16,959 INFO  [FLOTSAM ASSET CACHE]: FlotsamAssetCache enabled
+2021-09-14 06:05:16,971 INFO  [FLOTSAM ASSET CACHE]: Cache Directory /opt/dev/bin/assetcache
+2021-09-14 06:05:16,978 DEBUG [OfflineIM.V2.RemoteConnector]: Offline IM server at http://cg.1studi.ru:9000 with auth None
+2021-09-14 06:05:16,978 DEBUG [OfflineIM.V2]: Offline messages enabled by Offline Message Module V2
+2021-09-14 06:05:16,981 ERROR [Groups.Messaging]: GroupsMessagingModule V2 requires MessageOnlineUsersOnly = true
+2021-09-14 06:05:16,982 INFO  [Groups]: Initializing Groups Module V2
+2021-09-14 06:05:16,983 DEBUG [Groups]: Initializing Groups HG Service Connector with LocalService remote
+2021-09-14 06:05:17,046 DEBUG [RADMIN]: Creating default avatar entries
+2021-09-14 06:05:17,046 DEBUG [RADMIN]: No default avatar information available
+2021-09-14 06:05:17,047 INFO  [RADMIN]: Default avatars not loaded
+2021-09-14 06:05:17,049 INFO  [LOAD REGIONS PLUGIN]: Loading region configurations from filesystem
+2021-09-14 06:05:17,054 INFO  [REGION LOADER FILE SYSTEM]: Loading config files from ./Regions
+2021-09-14 06:05:17,054 INFO  [REGION LOADER FILE SYSTEM]: Loading config file ./Regions/Regions.ini
+2021-09-14 06:05:17,071 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Dev
+2021-09-14 06:05:17,071 INFO  [LOAD REGIONS PLUGIN]: Loading specific shared modules...
+2021-09-14 06:05:17,071 INFO  [LOAD REGIONS PLUGIN]: Done.
+2021-09-14 06:05:17,074 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Dev (ThreadID: 1)
+2021-09-14 06:05:17,178 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 06:05:17,180 INFO  [SCENE]: Region Dev, WORLD MAP refresh time set to 0 seconds
+2021-09-14 06:05:17,188 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 06:05:17,198 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:05:17,446 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:05:17,447 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:05:17,450 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:05:17,457 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:05:17,457 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:05:17,457 DEBUG [SQLITE REGION DB]: Loaded terrain revision r23
+2021-09-14 06:05:17,457 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 06:05:17,747 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Dev
+2021-09-14 06:05:17,752 DEBUG [HG INVENTORY BROKER]: Manually setting scene in RemoteXInventoryServicesConnector to Dev
+2021-09-14 06:05:17,755 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Dev
+2021-09-14 06:05:17,790 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 06:05:17,799 INFO  [CHAT]: Initialized for Dev w:10 s:20 S:100
+2021-09-14 06:05:17,805 DEBUG [Groups]: Registering Groups HG Service Connector with Dev
+2021-09-14 06:05:17,834 INFO  [YEngine]: config enabled=False
+2021-09-14 06:05:17,861 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 06:05:17,862 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 06:05:17,862 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 06:05:17,865 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 06:05:17,892 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 06:05:17,893 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 06:05:17,904 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script HTTP request module is []
+2021-09-14 06:05:17,905 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script HTTP request module is []
+2021-09-14 06:05:17,912 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 06:05:17,917 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 06:05:17,927 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 06:05:18,347 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 06:05:18,359 DEBUG [Materials]: Initialized
+2021-09-14 06:05:18,419 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 06:05:18,425 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 06:05:18,453 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImage204c6bc7117640889f335cdd89c8bd30
+2021-09-14 06:05:18,456 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Dev), ID 44
+2021-09-14 06:05:18,473 INFO  L ... GenericSystemDrawing
+2021-09-14 06:05:18,473 INFO  L ... JPEG
+2021-09-14 06:05:18,474 INFO  L ... LLRAW
+2021-09-14 06:05:18,474 INFO  L ... RAW32
+2021-09-14 06:05:18,475 INFO  E ... ChannelDigger
+2021-09-14 06:05:18,476 INFO  E ... DefaultTerrainGenerator
+2021-09-14 06:05:18,540 DEBUG [RegionReady]: Enabled for region Dev
+2021-09-14 06:05:18,552 INFO  [XEngine]: Initializing scripts in region Dev
+2021-09-14 06:05:18,607 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 06:05:18,607 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000407ms
+2021-09-14 06:05:18,707 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 06:05:18,756 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 06:05:18,757 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Dev), ID 45
+2021-09-14 06:05:18,770 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Dev
+2021-09-14 06:05:18,771 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Dev
+2021-09-14 06:05:18,773 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Dev
+2021-09-14 06:05:18,774 INFO  [SIM SERVICE]: Starting...
+2021-09-14 06:05:19,047 DEBUG [Groups.RemoteConnector]: Groups server at http://cg.1studi.ru:8003/, authentication None
+2021-09-14 06:05:19,112 DEBUG [AuthorizationService]: Region Dev access restrictions: None
+2021-09-14 06:05:19,113 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Dev
+2021-09-14 06:05:19,114 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 06:05:19,188 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 06:05:19,189 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 06:05:19,257 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 06:05:19,260 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Dev), ID 46
+2021-09-14 06:05:19,261 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 06:05:19,262 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 06:05:19,263 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Dev), ID 47
+2021-09-14 06:05:19,272 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 06:05:19,310 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Dev/<0, 0, 0> created with Heightmap
+2021-09-14 06:05:19,354 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 06:05:19,667 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 06:05:19,670 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 06:05:19,671 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Dev (0 objects)...
+2021-09-14 06:05:19,691 DEBUG [WORLD MAP]: Generating map image for Dev
+2021-09-14 06:05:19,761 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 06:05:19,764 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 06:05:19,786 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 06:05:19,797 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 06:05:19,808 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 06:05:19,919 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 160 ms
+2021-09-14 06:05:19,929 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 06:05:19,932 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 4 ms
+2021-09-14 06:05:20,031 DEBUG [WORLD MAP]: Storing map image 9e2dc888-328c-4b12-888a-43beb5059f63 for Dev
+2021-09-14 06:05:20,139 DEBUG [WORLD MAP]: Region Dev has no parcels for sale, not generating overlay
+2021-09-14 06:05:20,175 DEBUG [MAP IMAGE SERVICE MODULE]: Upload maptile for Dev
+2021-09-14 06:05:20,385 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 196ms
+2021-09-14 06:05:20,407 DEBUG [GRID SERVICE]: Region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30, 256x256) registered at 1030,1030 with flags RegionOnline
+2021-09-14 06:05:20,459 INFO  [SCENE]: Initializing script instances in Dev
+2021-09-14 06:05:20,459 INFO  [SCENE]: Initialized 0 script instances in Dev
+2021-09-14 06:07:42,115 DEBUG [AGENT HANDLER]: QueryAccess returned True (). Version=0, 0.8/0.8
+2021-09-14 06:07:42,184 DEBUG [SCENE]: Region Dev told of incoming child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 1042800112, IP 144.91.119.25, viewer Firestorm-Releasex64 6.0.2.56680, teleportflags (ViaLocation, Godlike), position <128, 128, 1.5>. From region Capitolium (5729d57a-5ee0-11e9-8647-d663bd873d93) @ http://cg.1studi.ru:9000/
+2021-09-14 06:07:42,239 INFO  [SCENE Dev]: authorized child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 1042800112)
+2021-09-14 06:07:42,253 DEBUG [CreateCaps]: new caps agent d3045d90-817f-441d-b446-5293ea959dee, circuit 1042800112, path 9eb215d4-7a2d-4845-9653-2abbdb23c706, time 4 
+2021-09-14 06:07:42,565 WARN  [CHILDAGENTDATAUPDATE] got packed appearance
+2021-09-14 06:07:42,605 DEBUG [LLUDPSERVER]: Handling UseCircuitCode request for circuit 1042800112 to Dev from IP 178.67.197.173:34562
+2021-09-14 06:07:42,769 DEBUG [SCENE]: Adding new child scene presence Sam Adama d3045d90-817f-441d-b446-5293ea959dee to scene Dev at pos <128, 128, 1.5>, tpflags: ViaLocation, Godlike
+2021-09-14 06:07:42,896 DEBUG [CAPS]: Received SEED caps request in Dev for agent d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:07:42,954 DEBUG [SCENE]: Incoming child agent update for d3045d90-817f-441d-b446-5293ea959dee in Dev
+2021-09-14 06:07:43,128 DEBUG [LLUDPSERVER]: Client created
+2021-09-14 06:07:43,134 DEBUG [LLUDPSERVER]: processing UseCircuitCode pending queue, 1 entries
+2021-09-14 06:07:43,162 INFO  [SCENE PRESENCE]: Complete movement of Sam Adama into Dev <128, 128, 1.5>
+2021-09-14 06:07:43,562 DEBUG [CompleteMovement] end: 404ms
+2021-09-14 06:07:43,704 DEBUG [AVFACTORY]: Received texture update for Sam Adama d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:07:43,722 DEBUG [UpdateBakedCache] cache hits: 5 changed entries: 0 rebakes 0
+2021-09-14 06:07:44,012 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData for d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:07:44,015 DEBUG [SCENE PRESENCE]: Closing 1 child agents
+2021-09-14 06:07:44,015 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData at parcel 2d38edba-7e6f-48e8-93d6-7ba736b1c852
+2021-09-14 06:07:44,078 DEBUG [SCENE COMMUNICATION SERVICE]: Sending close agent ID d3045d90-817f-441d-b446-5293ea959dee to Capitolium
+2021-09-14 06:07:44,082 DEBUG [REMOTE SIMULATION CONNECTOR]: CloseAgent http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/?auth=5bd8ca6e-e122-4976-a158-81491ec3fdd8
+2021-09-14 06:07:53,646 DEBUG [WATCHDOG]: Started tracking thread AsyncLSLCmdHandlerThread, ID 53
+2021-09-14 06:11:20,513 DEBUG [ENTITY TRANSFER MODULE]: Request to teleport Sam Adama d3045d90-817f-441d-b446-5293ea959dee home
+2021-09-14 06:11:20,740 DEBUG [HG ENTITY TRANSFER MODULE]: region Capitolium flags: 1031
+2021-09-14 06:11:20,749 DEBUG [ENTITY TRANSFER MODULE]: Teleporting Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev to http://62.171.135.148:9010/ (http://62.171.135.148:9010/) Capitolium/<128, 128, 2550.066>
+2021-09-14 06:11:20,771 DEBUG [REMOTE SIMULATION CONNECTOR]: QueryAccess to http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/ returned True, reason , version 0.8/0.8
+2021-09-14 06:11:20,773 DEBUG [ENTITY TRANSFER MODULE]: Dev transfer protocol version to Capitolium is 0.8 / 0.8
+2021-09-14 06:11:20,776 DEBUG [ENTITY TRANSFER MODULE]: Determined that region Capitolium at 1000,1000 size 256,256 needs new child agent for agent Sam Adama from Dev
+2021-09-14 06:11:20,782 DEBUG [HG ENTITY TRANSFER MODULE]: CreateAgent http://62.171.135.148:9010/ http://62.171.135.148:9010/
+2021-09-14 06:11:20,796 DEBUG [REMOTE SIMULATION CONNECTOR]: Creating agent at http://62.171.135.148:9010/
+2021-09-14 06:11:20,853 DEBUG [ENTITY TRANSFER MODULE]: Sending new CAPS seed url http://62.171.135.148:9010/CAPS/9042781b-64e5-4b29-bd25-9b601c413d800000/ from Dev to Sam Adama
+2021-09-14 06:11:20,987 DEBUG [ENTITY TRANSFER MODULE]: Set release callback URL to http://144.91.119.25:9000/agent/d3045d90-817f-441d-b446-5293ea959dee/204c6bc7-1176-4088-9f33-5cdd89c8bd30/release/ in Dev
+2021-09-14 06:11:21,704 DEBUG [SCENE PRESENCE]: Making Sam Adama a child agent in Dev from root region 1099511628032000
+2021-09-14 06:11:21,843 DEBUG [AGENT HANDLER]: Release d3045d90-817f-441d-b446-5293ea959dee to RegionID: 204c6bc7-1176-4088-9f33-5cdd89c8bd30
+2021-09-14 06:11:21,962 DEBUG [ENTITY TRANSFER MODULE]: Closing agent Sam Adama in Dev after teleport 
+2021-09-14 06:11:21,967 DEBUG [CLIENT]: Close has been called for Sam Adama attached to scene Dev
+2021-09-14 06:11:21,971 DEBUG [JobEngine] Stopping AsyncInUDP-d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 06:11:21,975 DEBUG [SCENE]: Removing child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev
+2021-09-14 06:11:21,998 DEBUG [Scene] The avatar has left the building
+2021-09-14 06:11:22,005 DEBUG [CAPS]: Remove caps for agent d3045d90-817f-441d-b446-5293ea959dee in region Dev
+2021-09-14 06:56:48,251 INFO  [SHUTDOWN]: Closing all threads
+2021-09-14 06:56:48,289 INFO  [SHUTDOWN]: Killing listener thread
+2021-09-14 06:56:48,290 INFO  [SHUTDOWN]: Killing clients
+2021-09-14 06:56:48,292 INFO  [SHUTDOWN]: Closing console and terminating
+2021-09-14 06:56:48,381 INFO  [SCENE]: Closing down the single simulator: Dev
+2021-09-14 06:56:48,504 DEBUG [GRID SERVICE]: Deregistering region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30) at 1030-1030
+2021-09-14 06:56:48,536 DEBUG [WATCHDOG]: Removing thread Heartbeat-(Dev), ID 48
+2021-09-14 06:56:49,030 DEBUG [SCENE]: TriggerSceneShuttingDown
+2021-09-14 06:56:49,031 INFO  [EVENT MANAGER]: TriggerSceneShuttingDown done
+2021-09-14 06:56:49,031 DEBUG [SCENE]: Persisting changed objects
+2021-09-14 06:56:49,032 DEBUG [SCENE]: Closing scene
+2021-09-14 06:56:49,404 DEBUG [SHUTDOWN]: Shutting down region Dev
+2021-09-14 06:56:49,780 DEBUG [WATCHDOG]: Removing thread MapBlocks (Dev), ID 44
+2021-09-14 06:56:49,816 DEBUG [JobEngine] Stopping ScriptsHttpReq
+2021-09-14 06:56:49,825 DEBUG [JobEngine] Stopping HG Incoming Scene Object Engine (Dev)
+2021-09-14 06:56:49,894 INFO  [XEngine]: Shutting down 0 scripts in Dev
+2021-09-14 06:56:49,929 INFO  [LLUDPSERVER]: Shutting down the LLUDP server for Dev
+2021-09-14 06:56:49,930 DEBUG [UDPBASE]: Stopping outbound UDP loop
+2021-09-14 06:56:49,938 DEBUG [UDPBASE]: Stopping inbound UDP loop
+2021-09-14 06:56:49,942 DEBUG [JobEngine] Stopping Outgoing Queue Refill Engine (Dev)
+2021-09-14 06:56:49,982 DEBUG [SCENE]: Dispose Physics
+2021-09-14 06:56:49,986 DEBUG [WATCHDOG]: Removing thread Outgoing Packets (Dev), ID 47
+2021-09-14 06:56:50,031 DEBUG [WATCHDOG]: Removing thread bulletunmanaged (Dev), ID 45
+2021-09-14 06:56:50,375 DEBUG [JobEngine] Stopping ServiceThrottle
+2021-09-14 06:56:51,064 DEBUG [JobEngine] Stopping Non-blocking non-critical job engine
+2021-09-14 06:56:51,075 WARN  [WATCHDOG]: Requested to remove thread with ID 46 but this is not being monitored
+2021-09-14 06:56:51,077 INFO  [SHUTDOWN]: Shutdown processing on main thread complete.  Exiting...
+2021-09-14 06:59:50,142 INFO  [OPENSIM MAIN]: configured log4net using default OpenSim.exe.config
+2021-09-14 06:59:50,248 INFO  [OPENSIM MAIN]: System Locale is en-US
+2021-09-14 06:59:50,284 INFO  [UTIL] TimeStamp clock with period of 0.0001ms
+2021-09-14 06:59:50,289 INFO  [OPENSIM MAIN]: Environment variable MONO_THREADS_PER_CPU is unset
+2021-09-14 06:59:50,290 INFO  [OPENSIM MAIN]: Runtime gave us 2 min worker threads and 2 min IOCP threads
+2021-09-14 06:59:50,291 INFO  [OPENSIM MAIN]: Runtime gave us 200 max worker threads and 200 max IOCP threads
+2021-09-14 06:59:50,291 INFO  [OPENSIM MAIN]: Bumping up max worker threads to 500
+2021-09-14 06:59:50,291 INFO  [OPENSIM MAIN]: Bumping up max IOCP threads to 1000
+2021-09-14 06:59:50,291 INFO  [OPENSIM MAIN]: Threadpool set to 500 max worker threads and 1000 max IOCP threads
+2021-09-14 06:59:50,292 INFO  [OPENSIM MAIN]: Environment is supported by OpenSimulator.
+2021-09-14 06:59:50,292 INFO  Default culture changed to English (United States)
+2021-09-14 06:59:50,314 INFO  [CONFIG]: Reading configuration settings
+2021-09-14 06:59:50,315 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSimDefaults.ini
+2021-09-14 06:59:50,403 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSim.ini
+2021-09-14 06:59:50,440 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/osslDefaultEnable.ini
+2021-09-14 06:59:50,451 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:59:50,452 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridHypergrid.ini
+2021-09-14 06:59:50,456 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:59:50,457 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridCommon.ini
+2021-09-14 06:59:50,462 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:59:50,465 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/FlotsamCache.ini
+2021-09-14 06:59:50,469 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:59:50,471 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/storage/SQLiteStandalone.ini
+2021-09-14 06:59:50,477 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 06:59:50,480 INFO  [CONFIG]: Loading environment variables for Config
+2021-09-14 06:59:50,581 INFO  [OPENSIM MAIN]: Using async_call_method SmartThreadPool
+2021-09-14 06:59:50,581 INFO  [OPENSIM MAIN] Running GC in workstation mode
+2021-09-14 06:59:50,591 INFO  [STARTUP]: Beginning startup processing
+2021-09-14 06:59:50,591 INFO  [STARTUP]: version: OpenSim 0.9.2.0 Yeti Dev   
+
+2021-09-14 06:59:50,593 INFO  [STARTUP]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+
+2021-09-14 06:59:50,604 INFO  ====================================================================
+2021-09-14 06:59:50,604 INFO  ========================= STARTING OPENSIM =========================
+2021-09-14 06:59:50,604 INFO  ====================================================================
+2021-09-14 06:59:50,621 INFO  [LOCAL CONSOLE]: Persistent command line history is Enabled, up to 100 lines from file /opt/dev/bin/OpenSimConsoleHistory.txt without timestamps
+2021-09-14 06:59:50,623 INFO  [LOCAL CONSOLE]: Read 11 lines of command line history from file /opt/dev/bin/OpenSimConsoleHistory.txt
+2021-09-14 06:59:50,636 INFO  [SERVER BASE]: Logging started to file /opt/dev/bin/OpenSim.log
+2021-09-14 06:59:50,661 INFO  [SERVER BASE]: Stats Logging started to file /opt/dev/bin/OpenSimStats.log
+2021-09-14 06:59:50,662 INFO  [SERVER BASE]: Starting in /opt/dev/bin
+2021-09-14 06:59:50,662 INFO  [SERVER BASE]: OpenSimulator version: OpenSim 0.9.2.0 Yeti Dev   
+2021-09-14 06:59:50,662 INFO  [SERVER BASE]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+2021-09-14 06:59:50,866 INFO  [SQLITE REGION DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:59:51,337 DEBUG [MIGRATIONS]: RegionStore data tables already up to date at revision 39
+2021-09-14 06:59:51,516 INFO  [ESTATE DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 06:59:51,519 DEBUG [MIGRATIONS]: EstateStore data tables already up to date at revision 12
+2021-09-14 06:59:51,555 INFO  [BASE HTTP SERVER]: Starting HTTP server on port 9000
+2021-09-14 06:59:51,627 DEBUG [WATCHDOG]: Started tracking thread PollServiceWatcherThread, ID 41
+2021-09-14 06:59:51,653 INFO  [PLUGINS]: Initializing addin manager
+2021-09-14 06:59:51,780 INFO  [PLUGINS]: Plugin Loaded: OpenSim
+2021-09-14 06:59:51,783 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.Framework
+2021-09-14 06:59:51,784 INFO  [PLUGINS]: Plugin Loaded: Robust
+2021-09-14 06:59:51,791 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Data
+2021-09-14 06:59:51,842 INFO  [PLUGINS]: Loading extension point /OpenSim/Startup
+2021-09-14 06:59:51,869 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:59:51,870 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RegionModulesController
+2021-09-14 06:59:51,873 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:59:51,873 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RemoteController
+2021-09-14 06:59:51,875 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 06:59:51,875 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.LoadRegions
+2021-09-14 06:59:51,894 INFO  [PLUGINS]: Plugin Loaded: YEngine
+2021-09-14 06:59:51,899 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.CoreModules
+2021-09-14 06:59:51,906 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.Meshing
+2021-09-14 06:59:51,908 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BasicPhysics
+2021-09-14 06:59:51,909 INFO  [PLUGINS]: Plugin Loaded: OpenSim.OfflineIM
+2021-09-14 06:59:51,910 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOde
+2021-09-14 06:59:51,913 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Groups
+2021-09-14 06:59:51,914 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.OptionalModules
+2021-09-14 06:59:51,918 INFO  [PLUGINS]: Plugin Loaded: LindenCaps
+2021-09-14 06:59:51,919 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.ScriptEngine.XEngine
+2021-09-14 06:59:51,920 INFO  [PLUGINS]: Plugin Loaded: LindenUDP
+2021-09-14 06:59:51,921 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BulletS
+2021-09-14 06:59:51,924 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOdeMeshing
+2021-09-14 06:59:51,926 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ODE
+2021-09-14 06:59:51,928 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.POS
+2021-09-14 06:59:51,929 INFO  [REGIONMODULES]: From plugin YEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,929 INFO  [REGIONMODULES]: From plugin OpenSim.Region.CoreModules, (version 0.9.2.0), loaded 114 modules, 74 shared, 40 non-shared 0 unknown
+2021-09-14 06:59:51,930 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.Meshing, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:59:51,930 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BasicPhysics, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,930 INFO  [REGIONMODULES]: From plugin OpenSim.OfflineIM, (version 0.9.2.0), loaded 1 modules, 1 shared, 0 non-shared 0 unknown
+2021-09-14 06:59:51,931 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOde, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,931 INFO  [REGIONMODULES]: From plugin OpenSim.Groups, (version 0.9.2.0), loaded 5 modules, 5 shared, 0 non-shared 0 unknown
+2021-09-14 06:59:51,932 INFO  [REGIONMODULES]: From plugin OpenSim.Region.OptionalModules, (version 0.9.2.0), loaded 39 modules, 20 shared, 19 non-shared 0 unknown
+2021-09-14 06:59:51,932 INFO  [REGIONMODULES]: From plugin LindenCaps, (version 0.9.2.0), loaded 16 modules, 5 shared, 11 non-shared 0 unknown
+2021-09-14 06:59:51,932 INFO  [REGIONMODULES]: From plugin OpenSim.Region.ScriptEngine.XEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,933 INFO  [REGIONMODULES]: From plugin LindenUDP, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,933 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BulletS, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 06:59:51,934 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOdeMeshing, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,934 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ODE, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,934 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.POS, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 06:59:51,940 INFO  [Serialiser] Enabled, using save dir "exports"
+2021-09-14 06:59:51,970 INFO  [USER CONNECTOR]: Remote users enabled
+2021-09-14 06:59:51,974 INFO  [REMOTE SIMULATION CONNECTOR]: Remote simulation enabled.
+2021-09-14 06:59:51,976 INFO  [REMOTE PRESENCE CONNECTOR]: Remote presence enabled
+2021-09-14 06:59:51,977 INFO  [NEIGHBOUR CONNECTOR]: Neighbour out connector enabled
+2021-09-14 06:59:51,985 INFO  [MAP IMAGE SERVICE MODULE]: enabled with no refresh and service object OpenSim.Services.Connectors.dll:MapImageServicesConnector
+2021-09-14 06:59:51,987 INFO  [LAND CONNECTOR]: Remote Land connector enabled
+2021-09-14 06:59:51,999 INFO  [HG INVENTORY CONNECTOR]: HG inventory broker enabled with inner connector of type OpenSim.Region.CoreModules.ServiceConnectorsOut.Inventory.RemoteXInventoryServicesConnector
+2021-09-14 06:59:52,004 DEBUG [ACTIVITY DETECTOR]: starting 
+2021-09-14 06:59:52,004 INFO  [REMOTE GRID USER CONNECTOR]: Remote grid user enabled
+2021-09-14 06:59:52,014 DEBUG [GRID SERVICE]: Starting...
+2021-09-14 06:59:52,018 DEBUG [HYPERGRID LINKER]: Starting with db OpenSim.Data.Null.NullRegionData
+2021-09-14 06:59:52,027 DEBUG [HYPERGRID LINKER]: Local Gatekeeper: http://cg.1studi.ru:9000/
+2021-09-14 06:59:52,028 DEBUG [HYPERGRID LINKER]: Loaded all services...
+2021-09-14 06:59:52,034 INFO  [REGION GRID CONNECTOR]: enabled in Grid mode
+2021-09-14 06:59:52,037 INFO  [AVATAR CONNECTOR]: Remote avatars enabled
+2021-09-14 06:59:52,041 INFO  [AUTH CONNECTOR]: Remote Authentication enabled
+2021-09-14 06:59:52,045 INFO  [HG ASSET SERVICE]: HG asset service enabled
+2021-09-14 06:59:52,047 INFO  [REGIONASSETCONNECTOR]: enabled
+2021-09-14 06:59:52,050 INFO  [AGENT PREFERENCES CONNECTOR]: Remote agent preferences enabled
+2021-09-14 06:59:52,052 INFO  [SIM SERVICE]: SimulationService IN connector enabled
+2021-09-14 06:59:52,053 INFO  [NEIGHBOUR IN CONNECTOR]: NeighbourServiceInConnector enabled
+2021-09-14 06:59:52,056 INFO  [LAND IN CONNECTOR]: LandServiceInConnector enabled
+2021-09-14 06:59:52,079 DEBUG [VECTORRENDERMODULE]: using font "Arial" for text rendering.
+2021-09-14 06:59:52,363 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script dynamic texture image module is []
+2021-09-14 06:59:52,384 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script dynamic texture image module is []
+2021-09-14 06:59:52,407 DEBUG [USER MANAGEMENT MODULE]: HGUserManagementModule is enabled
+2021-09-14 06:59:52,410 DEBUG [BASIC SEARCH MODULE]: BasicSearchModule is enabled
+2021-09-14 06:59:52,411 DEBUG [LIBRARY MODULE]: Library service dll is OpenSim.Services.InventoryService.dll:LibraryService
+2021-09-14 06:59:52,416 DEBUG [LIBRARY]: Starting library service...
+2021-09-14 06:59:52,420 INFO  [LIBRARY INVENTORY]: Loading library control file ./inventory/Libraries.xml
+2021-09-14 06:59:52,575 DEBUG [HG IM SERVICE]: Starting... InRobust? False
+2021-09-14 06:59:52,593 DEBUG [FRIENDS MODULE]: HGFriendsModule enabled.
+2021-09-14 06:59:52,602 INFO  [FLOTSAM ASSET CACHE]: FlotsamAssetCache enabled
+2021-09-14 06:59:52,616 INFO  [FLOTSAM ASSET CACHE]: Cache Directory /opt/dev/bin/assetcache
+2021-09-14 06:59:52,745 DEBUG [OfflineIM.V2.RemoteConnector]: Offline IM server at http://cg.1studi.ru:9000 with auth None
+2021-09-14 06:59:52,747 DEBUG [OfflineIM.V2]: Offline messages enabled by Offline Message Module V2
+2021-09-14 06:59:52,752 ERROR [Groups.Messaging]: GroupsMessagingModule V2 requires MessageOnlineUsersOnly = true
+2021-09-14 06:59:52,754 INFO  [Groups]: Initializing Groups Module V2
+2021-09-14 06:59:52,756 DEBUG [Groups]: Initializing Groups HG Service Connector with LocalService remote
+2021-09-14 06:59:52,848 DEBUG [RADMIN]: Creating default avatar entries
+2021-09-14 06:59:52,849 DEBUG [RADMIN]: No default avatar information available
+2021-09-14 06:59:52,850 INFO  [RADMIN]: Default avatars not loaded
+2021-09-14 06:59:52,854 INFO  [LOAD REGIONS PLUGIN]: Loading region configurations from filesystem
+2021-09-14 06:59:52,862 INFO  [REGION LOADER FILE SYSTEM]: Loading config files from ./Regions
+2021-09-14 06:59:52,863 INFO  [REGION LOADER FILE SYSTEM]: Loading config file ./Regions/Regions.ini
+2021-09-14 06:59:52,876 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Dev
+2021-09-14 06:59:52,877 INFO  [REGION INFO] Region Var size set to <1024,1024>
+2021-09-14 06:59:52,877 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Var
+2021-09-14 06:59:52,877 INFO  [LOAD REGIONS PLUGIN]: Loading specific shared modules...
+2021-09-14 06:59:52,877 INFO  [LOAD REGIONS PLUGIN]: Done.
+2021-09-14 06:59:52,879 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Dev (ThreadID: 1)
+2021-09-14 06:59:53,036 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 06:59:53,039 INFO  [SCENE]: Region Dev, WORLD MAP refresh time set to 0 seconds
+2021-09-14 06:59:53,040 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 06:59:53,055 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:59:53,076 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:59:53,077 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:59:53,080 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 06:59:53,090 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 06:59:53,091 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 06:59:53,091 DEBUG [SQLITE REGION DB]: Loaded terrain revision r23
+2021-09-14 06:59:53,092 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 06:59:54,254 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Dev
+2021-09-14 06:59:54,263 DEBUG [HG INVENTORY BROKER]: Manually setting scene in RemoteXInventoryServicesConnector to Dev
+2021-09-14 06:59:54,266 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Dev
+2021-09-14 06:59:54,298 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 06:59:54,306 INFO  [CHAT]: Initialized for Dev w:10 s:20 S:100
+2021-09-14 06:59:54,310 DEBUG [Groups]: Registering Groups HG Service Connector with Dev
+2021-09-14 06:59:54,332 INFO  [YEngine]: config enabled=False
+2021-09-14 06:59:54,353 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 06:59:54,354 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 06:59:54,354 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 06:59:54,357 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 06:59:54,365 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 06:59:54,365 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 06:59:54,371 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script HTTP request module is []
+2021-09-14 06:59:54,371 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script HTTP request module is []
+2021-09-14 06:59:54,377 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 06:59:54,386 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 06:59:54,391 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 06:59:54,762 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 06:59:54,772 DEBUG [Materials]: Initialized
+2021-09-14 06:59:54,848 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 06:59:54,855 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 06:59:54,869 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImage204c6bc7117640889f335cdd89c8bd30
+2021-09-14 06:59:54,871 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Dev), ID 44
+2021-09-14 06:59:54,907 INFO  L ... GenericSystemDrawing
+2021-09-14 06:59:54,908 INFO  L ... JPEG
+2021-09-14 06:59:54,908 INFO  L ... LLRAW
+2021-09-14 06:59:54,909 INFO  L ... RAW32
+2021-09-14 06:59:54,910 INFO  E ... ChannelDigger
+2021-09-14 06:59:54,910 INFO  E ... DefaultTerrainGenerator
+2021-09-14 06:59:54,968 DEBUG [RegionReady]: Enabled for region Dev
+2021-09-14 06:59:54,975 INFO  [XEngine]: Initializing scripts in region Dev
+2021-09-14 06:59:55,019 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 06:59:55,019 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000123ms
+2021-09-14 06:59:55,121 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 06:59:55,157 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 06:59:55,158 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Dev), ID 45
+2021-09-14 06:59:55,170 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Dev
+2021-09-14 06:59:55,171 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Dev
+2021-09-14 06:59:55,173 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Dev
+2021-09-14 06:59:55,173 INFO  [SIM SERVICE]: Starting...
+2021-09-14 06:59:56,415 DEBUG [Groups.RemoteConnector]: Groups server at http://cg.1studi.ru:8003/, authentication None
+2021-09-14 06:59:56,509 DEBUG [AuthorizationService]: Region Dev access restrictions: None
+2021-09-14 06:59:56,510 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Dev
+2021-09-14 06:59:56,511 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 06:59:56,574 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 06:59:56,575 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 06:59:56,647 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 06:59:56,650 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Dev), ID 46
+2021-09-14 06:59:56,652 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 06:59:56,652 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 06:59:56,653 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Dev), ID 47
+2021-09-14 06:59:56,659 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 06:59:56,659 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 06:59:56,708 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Dev/<0, 0, 0> created with Heightmap
+2021-09-14 06:59:56,800 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 06:59:56,804 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 06:59:56,806 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Dev (0 objects)...
+2021-09-14 06:59:56,822 DEBUG [WORLD MAP]: Generating map image for Dev
+2021-09-14 06:59:56,892 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 06:59:56,899 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 06:59:56,935 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 06:59:56,948 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 06:59:56,972 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 06:59:57,099 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 209 ms
+2021-09-14 06:59:57,112 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 06:59:57,115 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 4 ms
+2021-09-14 06:59:57,513 DEBUG [WORLD MAP]: Storing map image 8c2a4b6f-ed64-4f94-93ac-7f9d1cfc5c55 for Dev
+2021-09-14 06:59:57,636 DEBUG [WORLD MAP]: Region Dev has no parcels for sale, not generating overlay
+2021-09-14 06:59:57,691 DEBUG [MAP IMAGE SERVICE MODULE]: Upload maptile for Dev
+2021-09-14 06:59:58,001 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 296ms
+2021-09-14 06:59:58,015 DEBUG [GRID SERVICE]: Region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30, 256x256) registered at 1030,1030 with flags RegionOnline
+2021-09-14 06:59:58,046 INFO  [SCENE]: Initializing script instances in Dev
+2021-09-14 06:59:58,047 INFO  [SCENE]: Initialized 0 script instances in Dev
+2021-09-14 06:59:58,049 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Var (ThreadID: 1)
+2021-09-14 06:59:58,051 WARN  [ESTATE] Region Var is not part of an estate.
+2021-09-14 06:59:58,056 DEBUG [RegionInfo] Could not locate value for parameter TargetEstate
+2021-09-14 07:00:04,475 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 07:00:04,475 INFO  [SCENE]: Region Var, WORLD MAP refresh time set to 0 seconds
+2021-09-14 07:00:04,476 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 07:00:04,477 WARN  [SQLITE REGION DB]: No terrain found for region
+2021-09-14 07:00:04,477 INFO  [TERRAIN]: No default terrain. Generating a new terrain flat.
+2021-09-14 07:00:04,901 DEBUG [TERRAIN DATA] V2DGzip 4107 bytes
+2021-09-14 07:00:04,902 DEBUG [REGION DB SQLITE] Storing terrain format 23
+2021-09-14 07:00:05,368 DEBUG [TERRAIN DATA] V2DGzip 4107 bytes
+2021-09-14 07:00:05,368 DEBUG [REGION DB SQLITE] Storing bakedterrain format 23
+2021-09-14 07:00:05,372 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 07:00:05,392 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Var
+2021-09-14 07:00:05,392 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Var
+2021-09-14 07:00:05,394 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 07:00:05,394 INFO  [CHAT]: Initialized for Var w:10 s:20 S:100
+2021-09-14 07:00:05,394 DEBUG [Groups]: Registering Groups HG Service Connector with Var
+2021-09-14 07:00:05,395 INFO  [YEngine]: config enabled=False
+2021-09-14 07:00:05,396 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 07:00:05,396 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 07:00:05,396 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 07:00:05,397 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 07:00:05,397 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 07:00:05,397 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 07:00:05,398 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 07:00:05,398 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 07:00:05,399 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 07:00:05,399 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 07:00:05,400 DEBUG [Materials]: Initialized
+2021-09-14 07:00:05,400 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 07:00:05,401 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 07:00:05,401 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImagef28efa39b1dc42918c3f9f1e12f4de98
+2021-09-14 07:00:05,401 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Var), ID 48
+2021-09-14 07:00:05,403 INFO  L ... GenericSystemDrawing
+2021-09-14 07:00:05,403 INFO  L ... JPEG
+2021-09-14 07:00:05,404 INFO  L ... LLRAW
+2021-09-14 07:00:05,404 INFO  L ... RAW32
+2021-09-14 07:00:05,405 INFO  E ... ChannelDigger
+2021-09-14 07:00:05,405 INFO  E ... DefaultTerrainGenerator
+2021-09-14 07:00:05,410 DEBUG [RegionReady]: Enabled for region Var
+2021-09-14 07:00:05,411 INFO  [XEngine]: Initializing scripts in region Var
+2021-09-14 07:00:05,450 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 07:00:05,450 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000104ms
+2021-09-14 07:00:05,459 WARN  [BULLETS SCENE] Forcing terrain implementation to heightmap for large region
+2021-09-14 07:00:05,464 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 07:00:05,478 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 07:00:05,479 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Var), ID 49
+2021-09-14 07:00:05,527 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Var
+2021-09-14 07:00:05,527 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Var
+2021-09-14 07:00:05,527 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Var
+2021-09-14 07:00:05,528 DEBUG [AuthorizationService]: Region Var access restrictions: None
+2021-09-14 07:00:05,528 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Var
+2021-09-14 07:00:05,528 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 07:00:05,535 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 07:00:05,536 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 07:00:05,536 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 07:00:05,537 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Var), ID 50
+2021-09-14 07:00:05,537 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 07:00:05,538 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 07:00:05,538 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Var), ID 51
+2021-09-14 07:00:05,545 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 07:00:05,545 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 07:00:05,548 DEBUG [LAND MANAGEMENT MODULE] Creating default parcel for region Var
+2021-09-14 07:00:05,584 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Var/<0, 0, 0> created with Heightmap
+2021-09-14 07:00:05,640 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 07:00:05,640 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 07:00:05,641 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Var (0 objects)...
+2021-09-14 07:00:05,641 DEBUG [WORLD MAP]: Generating map image for Var
+2021-09-14 07:00:05,655 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 07:00:05,722 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 07:00:05,743 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 07:00:05,759 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 07:00:05,779 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 07:00:07,923 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 2268 ms
+2021-09-14 07:00:07,924 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 07:00:07,924 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 0 ms
+2021-09-14 07:00:08,063 DEBUG [WORLD MAP]: Storing map image 9b9cc5af-0cca-4be3-93ec-7ae4b8d27fdf for Var
+2021-09-14 07:00:08,391 DEBUG [WORLD MAP]: Region Var has no parcels for sale, not generating overlay
+2021-09-14 07:00:08,440 DEBUG [MAP IMAGE SERVICE MODULE]: Upload 16 maptiles for Var
+2021-09-14 07:00:08,493 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 52ms
+2021-09-14 07:00:08,501 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:08,508 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:08,516 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,524 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,533 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,546 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 12ms
+2021-09-14 07:00:08,560 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 12ms
+2021-09-14 07:00:08,573 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 12ms
+2021-09-14 07:00:08,583 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,594 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,603 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,612 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:08,619 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:08,628 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:08,649 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 20ms
+2021-09-14 07:00:08,650 DEBUG [GRID SERVICE]: Region Var (f28efa39-b1dc-4291-8c3f-9f1e12f4de98, 1024x1024) registered at 977,1017 with flags RegionOnline
+2021-09-14 07:00:08,671 INFO  [SCENE]: Initializing script instances in Var
+2021-09-14 07:00:08,672 INFO  [SCENE]: Initialized 0 script instances in Var
+2021-09-14 07:00:15,099 INFO  [SHUTDOWN]: Closing all threads
+2021-09-14 07:00:15,099 INFO  [SHUTDOWN]: Killing listener thread
+2021-09-14 07:00:15,099 INFO  [SHUTDOWN]: Killing clients
+2021-09-14 07:00:15,100 INFO  [SHUTDOWN]: Closing console and terminating
+2021-09-14 07:00:15,101 INFO  [SCENE]: Closing down the single simulator: Dev
+2021-09-14 07:00:15,104 DEBUG [GRID SERVICE]: Deregistering region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30) at 1030-1030
+2021-09-14 07:00:15,162 DEBUG [WATCHDOG]: Removing thread Heartbeat-(Dev), ID 52
+2021-09-14 07:00:15,622 DEBUG [SCENE]: TriggerSceneShuttingDown
+2021-09-14 07:00:15,623 INFO  [EVENT MANAGER]: TriggerSceneShuttingDown done
+2021-09-14 07:00:15,623 DEBUG [SCENE]: Persisting changed objects
+2021-09-14 07:00:15,628 DEBUG [SCENE]: Closing scene
+2021-09-14 07:00:15,635 DEBUG [SHUTDOWN]: Shutting down region Dev
+2021-09-14 07:00:15,675 DEBUG [WATCHDOG]: Removing thread MapBlocks (Dev), ID 44
+2021-09-14 07:00:15,709 DEBUG [JobEngine] Stopping HG Incoming Scene Object Engine (Dev)
+2021-09-14 07:00:15,728 INFO  [XEngine]: Shutting down 0 scripts in Dev
+2021-09-14 07:00:15,738 INFO  [LLUDPSERVER]: Shutting down the LLUDP server for Dev
+2021-09-14 07:00:15,739 DEBUG [UDPBASE]: Stopping outbound UDP loop
+2021-09-14 07:00:15,741 DEBUG [UDPBASE]: Stopping inbound UDP loop
+2021-09-14 07:00:15,746 DEBUG [JobEngine] Stopping Outgoing Queue Refill Engine (Dev)
+2021-09-14 07:00:15,751 DEBUG [SCENE]: Dispose Physics
+2021-09-14 07:00:15,757 DEBUG [WATCHDOG]: Removing thread Outgoing Packets (Dev), ID 47
+2021-09-14 07:00:15,760 INFO  [SCENE]: Closing down the single simulator: Var
+2021-09-14 07:00:15,760 DEBUG [GRID SERVICE]: Deregistering region Var (f28efa39-b1dc-4291-8c3f-9f1e12f4de98) at 977-1017
+2021-09-14 07:00:15,797 DEBUG [WATCHDOG]: Removing thread Heartbeat-(Var), ID 53
+2021-09-14 07:00:15,814 DEBUG [WATCHDOG]: Removing thread bulletunmanaged (Dev), ID 45
+2021-09-14 07:00:16,271 DEBUG [SCENE]: TriggerSceneShuttingDown
+2021-09-14 07:00:16,272 INFO  [EVENT MANAGER]: TriggerSceneShuttingDown done
+2021-09-14 07:00:16,273 DEBUG [SCENE]: Persisting changed objects
+2021-09-14 07:00:16,274 DEBUG [SCENE]: Closing scene
+2021-09-14 07:00:16,275 DEBUG [SHUTDOWN]: Shutting down region Var
+2021-09-14 07:00:16,284 DEBUG [WATCHDOG]: Removing thread MapBlocks (Var), ID 48
+2021-09-14 07:00:16,284 DEBUG [JobEngine] Stopping ScriptsHttpReq
+2021-09-14 07:00:16,289 DEBUG [JobEngine] Stopping HG Incoming Scene Object Engine (Var)
+2021-09-14 07:00:16,289 INFO  [XEngine]: Shutting down 0 scripts in Var
+2021-09-14 07:00:16,291 INFO  [LLUDPSERVER]: Shutting down the LLUDP server for Var
+2021-09-14 07:00:16,291 DEBUG [UDPBASE]: Stopping outbound UDP loop
+2021-09-14 07:00:16,292 DEBUG [UDPBASE]: Stopping inbound UDP loop
+2021-09-14 07:00:16,293 DEBUG [JobEngine] Stopping Outgoing Queue Refill Engine (Var)
+2021-09-14 07:00:16,293 DEBUG [SCENE]: Dispose Physics
+2021-09-14 07:00:16,299 DEBUG [JobEngine] Stopping ServiceThrottle
+2021-09-14 07:00:16,331 DEBUG [WATCHDOG]: Removing thread bulletunmanaged (Var), ID 49
+2021-09-14 07:00:16,384 DEBUG [WATCHDOG]: Removing thread Outgoing Packets (Var), ID 51
+2021-09-14 07:00:16,927 DEBUG [JobEngine] Stopping Non-blocking non-critical job engine
+2021-09-14 07:00:16,931 WARN  [WATCHDOG]: Requested to remove thread with ID 46 but this is not being monitored
+2021-09-14 07:00:16,931 WARN  [WATCHDOG]: Requested to remove thread with ID 50 but this is not being monitored
+2021-09-14 07:00:16,932 INFO  [SHUTDOWN]: Shutdown processing on main thread complete.  Exiting...
+2021-09-14 07:00:18,866 INFO  [OPENSIM MAIN]: configured log4net using default OpenSim.exe.config
+2021-09-14 07:00:18,980 INFO  [OPENSIM MAIN]: System Locale is en-US
+2021-09-14 07:00:19,020 INFO  [UTIL] TimeStamp clock with period of 0.0001ms
+2021-09-14 07:00:19,026 INFO  [OPENSIM MAIN]: Environment variable MONO_THREADS_PER_CPU is unset
+2021-09-14 07:00:19,027 INFO  [OPENSIM MAIN]: Runtime gave us 2 min worker threads and 2 min IOCP threads
+2021-09-14 07:00:19,028 INFO  [OPENSIM MAIN]: Runtime gave us 200 max worker threads and 200 max IOCP threads
+2021-09-14 07:00:19,028 INFO  [OPENSIM MAIN]: Bumping up max worker threads to 500
+2021-09-14 07:00:19,028 INFO  [OPENSIM MAIN]: Bumping up max IOCP threads to 1000
+2021-09-14 07:00:19,028 INFO  [OPENSIM MAIN]: Threadpool set to 500 max worker threads and 1000 max IOCP threads
+2021-09-14 07:00:19,029 INFO  [OPENSIM MAIN]: Environment is supported by OpenSimulator.
+2021-09-14 07:00:19,029 INFO  Default culture changed to English (United States)
+2021-09-14 07:00:19,048 INFO  [CONFIG]: Reading configuration settings
+2021-09-14 07:00:19,049 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSimDefaults.ini
+2021-09-14 07:00:19,115 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/OpenSim.ini
+2021-09-14 07:00:19,127 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/osslDefaultEnable.ini
+2021-09-14 07:00:19,134 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 07:00:19,135 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridHypergrid.ini
+2021-09-14 07:00:19,145 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 07:00:19,148 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/GridCommon.ini
+2021-09-14 07:00:19,154 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 07:00:19,157 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/FlotsamCache.ini
+2021-09-14 07:00:19,161 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 07:00:19,163 INFO  [CONFIG]: Reading configuration file /opt/dev/bin/config-include/storage/SQLiteStandalone.ini
+2021-09-14 07:00:19,168 WARN  [CONFIG]: Could not find include file /opt/dev/bin/config-include/osslEnable.ini
+2021-09-14 07:00:19,170 INFO  [CONFIG]: Loading environment variables for Config
+2021-09-14 07:00:19,258 INFO  [OPENSIM MAIN]: Using async_call_method SmartThreadPool
+2021-09-14 07:00:19,264 INFO  [OPENSIM MAIN] Running GC in workstation mode
+2021-09-14 07:00:19,265 INFO  [STARTUP]: Beginning startup processing
+2021-09-14 07:00:19,265 INFO  [STARTUP]: version: OpenSim 0.9.2.0 Yeti Dev   
+
+2021-09-14 07:00:19,267 INFO  [STARTUP]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+
+2021-09-14 07:00:19,272 INFO  ====================================================================
+2021-09-14 07:00:19,275 INFO  ========================= STARTING OPENSIM =========================
+2021-09-14 07:00:19,275 INFO  ====================================================================
+2021-09-14 07:00:19,290 INFO  [LOCAL CONSOLE]: Persistent command line history is Enabled, up to 100 lines from file /opt/dev/bin/OpenSimConsoleHistory.txt without timestamps
+2021-09-14 07:00:19,292 INFO  [LOCAL CONSOLE]: Read 12 lines of command line history from file /opt/dev/bin/OpenSimConsoleHistory.txt
+2021-09-14 07:00:19,307 INFO  [SERVER BASE]: Logging started to file /opt/dev/bin/OpenSim.log
+2021-09-14 07:00:19,326 INFO  [SERVER BASE]: Stats Logging started to file /opt/dev/bin/OpenSimStats.log
+2021-09-14 07:00:19,326 INFO  [SERVER BASE]: Starting in /opt/dev/bin
+2021-09-14 07:00:19,327 INFO  [SERVER BASE]: OpenSimulator version: OpenSim 0.9.2.0 Yeti Dev   
+2021-09-14 07:00:19,327 INFO  [SERVER BASE]: Operating system version: Unix 4.15.0.156, .NET platform Unix, 64-bit
+2021-09-14 07:00:19,368 INFO  [SQLITE REGION DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 07:00:19,462 DEBUG [MIGRATIONS]: RegionStore data tables already up to date at revision 39
+2021-09-14 07:00:19,627 INFO  [ESTATE DB]: Sqlite - connecting: URI=file:OpenSim.db,version=3,UseUTF16Encoding=True
+2021-09-14 07:00:19,630 DEBUG [MIGRATIONS]: EstateStore data tables already up to date at revision 12
+2021-09-14 07:00:19,664 INFO  [BASE HTTP SERVER]: Starting HTTP server on port 9000
+2021-09-14 07:00:19,699 DEBUG [WATCHDOG]: Started tracking thread PollServiceWatcherThread, ID 41
+2021-09-14 07:00:19,728 INFO  [PLUGINS]: Initializing addin manager
+2021-09-14 07:00:19,841 INFO  [PLUGINS]: Plugin Loaded: OpenSim
+2021-09-14 07:00:19,844 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.Framework
+2021-09-14 07:00:19,844 INFO  [PLUGINS]: Plugin Loaded: Robust
+2021-09-14 07:00:19,851 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Data
+2021-09-14 07:00:19,895 INFO  [PLUGINS]: Loading extension point /OpenSim/Startup
+2021-09-14 07:00:19,919 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 07:00:19,921 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RegionModulesController
+2021-09-14 07:00:19,925 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 07:00:19,925 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.RemoteController
+2021-09-14 07:00:19,928 INFO  [PLUGINS]: Trying plugin /OpenSim/Startup/LoadRegions
+2021-09-14 07:00:19,928 INFO  [PLUGINS]: Plugin Loaded: OpenSim.ApplicationPlugins.LoadRegions
+2021-09-14 07:00:19,947 INFO  [PLUGINS]: Plugin Loaded: YEngine
+2021-09-14 07:00:19,952 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.CoreModules
+2021-09-14 07:00:19,963 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.Meshing
+2021-09-14 07:00:19,965 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BasicPhysics
+2021-09-14 07:00:19,965 INFO  [PLUGINS]: Plugin Loaded: OpenSim.OfflineIM
+2021-09-14 07:00:19,966 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOde
+2021-09-14 07:00:19,967 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Groups
+2021-09-14 07:00:19,968 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.OptionalModules
+2021-09-14 07:00:19,970 INFO  [PLUGINS]: Plugin Loaded: LindenCaps
+2021-09-14 07:00:19,972 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.ScriptEngine.XEngine
+2021-09-14 07:00:19,973 INFO  [PLUGINS]: Plugin Loaded: LindenUDP
+2021-09-14 07:00:19,974 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.BulletS
+2021-09-14 07:00:19,975 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ubOdeMeshing
+2021-09-14 07:00:19,975 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.ODE
+2021-09-14 07:00:19,976 INFO  [PLUGINS]: Plugin Loaded: OpenSim.Region.PhysicsModule.POS
+2021-09-14 07:00:19,977 INFO  [REGIONMODULES]: From plugin YEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,978 INFO  [REGIONMODULES]: From plugin OpenSim.Region.CoreModules, (version 0.9.2.0), loaded 114 modules, 74 shared, 40 non-shared 0 unknown
+2021-09-14 07:00:19,978 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.Meshing, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 07:00:19,978 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BasicPhysics, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,978 INFO  [REGIONMODULES]: From plugin OpenSim.OfflineIM, (version 0.9.2.0), loaded 1 modules, 1 shared, 0 non-shared 0 unknown
+2021-09-14 07:00:19,979 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOde, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,979 INFO  [REGIONMODULES]: From plugin OpenSim.Groups, (version 0.9.2.0), loaded 5 modules, 5 shared, 0 non-shared 0 unknown
+2021-09-14 07:00:19,979 INFO  [REGIONMODULES]: From plugin OpenSim.Region.OptionalModules, (version 0.9.2.0), loaded 39 modules, 20 shared, 19 non-shared 0 unknown
+2021-09-14 07:00:19,980 INFO  [REGIONMODULES]: From plugin LindenCaps, (version 0.9.2.0), loaded 16 modules, 5 shared, 11 non-shared 0 unknown
+2021-09-14 07:00:19,980 INFO  [REGIONMODULES]: From plugin OpenSim.Region.ScriptEngine.XEngine, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,980 INFO  [REGIONMODULES]: From plugin LindenUDP, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,980 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.BulletS, (version 0.9.2.0), loaded 2 modules, 0 shared, 2 non-shared 0 unknown
+2021-09-14 07:00:19,981 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ubOdeMeshing, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,981 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.ODE, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,981 INFO  [REGIONMODULES]: From plugin OpenSim.Region.PhysicsModule.POS, (version 0.9.2.0), loaded 1 modules, 0 shared, 1 non-shared 0 unknown
+2021-09-14 07:00:19,985 INFO  [Serialiser] Enabled, using save dir "exports"
+2021-09-14 07:00:20,007 INFO  [USER CONNECTOR]: Remote users enabled
+2021-09-14 07:00:20,012 INFO  [REMOTE SIMULATION CONNECTOR]: Remote simulation enabled.
+2021-09-14 07:00:20,015 INFO  [REMOTE PRESENCE CONNECTOR]: Remote presence enabled
+2021-09-14 07:00:20,016 INFO  [NEIGHBOUR CONNECTOR]: Neighbour out connector enabled
+2021-09-14 07:00:20,023 INFO  [MAP IMAGE SERVICE MODULE]: enabled with no refresh and service object OpenSim.Services.Connectors.dll:MapImageServicesConnector
+2021-09-14 07:00:20,025 INFO  [LAND CONNECTOR]: Remote Land connector enabled
+2021-09-14 07:00:20,038 INFO  [HG INVENTORY CONNECTOR]: HG inventory broker enabled with inner connector of type OpenSim.Region.CoreModules.ServiceConnectorsOut.Inventory.RemoteXInventoryServicesConnector
+2021-09-14 07:00:20,043 DEBUG [ACTIVITY DETECTOR]: starting 
+2021-09-14 07:00:20,044 INFO  [REMOTE GRID USER CONNECTOR]: Remote grid user enabled
+2021-09-14 07:00:20,051 DEBUG [GRID SERVICE]: Starting...
+2021-09-14 07:00:20,054 DEBUG [HYPERGRID LINKER]: Starting with db OpenSim.Data.Null.NullRegionData
+2021-09-14 07:00:20,060 DEBUG [HYPERGRID LINKER]: Local Gatekeeper: http://cg.1studi.ru:9000/
+2021-09-14 07:00:20,061 DEBUG [HYPERGRID LINKER]: Loaded all services...
+2021-09-14 07:00:20,068 INFO  [REGION GRID CONNECTOR]: enabled in Grid mode
+2021-09-14 07:00:20,071 INFO  [AVATAR CONNECTOR]: Remote avatars enabled
+2021-09-14 07:00:20,074 INFO  [AUTH CONNECTOR]: Remote Authentication enabled
+2021-09-14 07:00:20,079 INFO  [HG ASSET SERVICE]: HG asset service enabled
+2021-09-14 07:00:20,082 INFO  [REGIONASSETCONNECTOR]: enabled
+2021-09-14 07:00:20,085 INFO  [AGENT PREFERENCES CONNECTOR]: Remote agent preferences enabled
+2021-09-14 07:00:20,087 INFO  [SIM SERVICE]: SimulationService IN connector enabled
+2021-09-14 07:00:20,088 INFO  [NEIGHBOUR IN CONNECTOR]: NeighbourServiceInConnector enabled
+2021-09-14 07:00:20,091 INFO  [LAND IN CONNECTOR]: LandServiceInConnector enabled
+2021-09-14 07:00:20,097 DEBUG [VECTORRENDERMODULE]: using font "Arial" for text rendering.
+2021-09-14 07:00:20,118 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script dynamic texture image module is []
+2021-09-14 07:00:20,118 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script dynamic texture image module is []
+2021-09-14 07:00:20,133 DEBUG [USER MANAGEMENT MODULE]: HGUserManagementModule is enabled
+2021-09-14 07:00:20,135 DEBUG [BASIC SEARCH MODULE]: BasicSearchModule is enabled
+2021-09-14 07:00:20,136 DEBUG [LIBRARY MODULE]: Library service dll is OpenSim.Services.InventoryService.dll:LibraryService
+2021-09-14 07:00:20,139 DEBUG [LIBRARY]: Starting library service...
+2021-09-14 07:00:20,143 INFO  [LIBRARY INVENTORY]: Loading library control file ./inventory/Libraries.xml
+2021-09-14 07:00:20,184 DEBUG [HG IM SERVICE]: Starting... InRobust? False
+2021-09-14 07:00:20,201 DEBUG [FRIENDS MODULE]: HGFriendsModule enabled.
+2021-09-14 07:00:20,212 INFO  [FLOTSAM ASSET CACHE]: FlotsamAssetCache enabled
+2021-09-14 07:00:20,225 INFO  [FLOTSAM ASSET CACHE]: Cache Directory /opt/dev/bin/assetcache
+2021-09-14 07:00:20,234 DEBUG [OfflineIM.V2.RemoteConnector]: Offline IM server at http://cg.1studi.ru:9000 with auth None
+2021-09-14 07:00:20,235 DEBUG [OfflineIM.V2]: Offline messages enabled by Offline Message Module V2
+2021-09-14 07:00:20,238 ERROR [Groups.Messaging]: GroupsMessagingModule V2 requires MessageOnlineUsersOnly = true
+2021-09-14 07:00:20,240 INFO  [Groups]: Initializing Groups Module V2
+2021-09-14 07:00:20,242 DEBUG [Groups]: Initializing Groups HG Service Connector with LocalService remote
+2021-09-14 07:00:20,305 DEBUG [RADMIN]: Creating default avatar entries
+2021-09-14 07:00:20,305 DEBUG [RADMIN]: No default avatar information available
+2021-09-14 07:00:20,305 INFO  [RADMIN]: Default avatars not loaded
+2021-09-14 07:00:20,308 INFO  [LOAD REGIONS PLUGIN]: Loading region configurations from filesystem
+2021-09-14 07:00:20,314 INFO  [REGION LOADER FILE SYSTEM]: Loading config files from ./Regions
+2021-09-14 07:00:20,315 INFO  [REGION LOADER FILE SYSTEM]: Loading config file ./Regions/Regions.ini
+2021-09-14 07:00:20,335 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Dev
+2021-09-14 07:00:20,336 INFO  [REGION INFO] Region Var size set to <1024,1024>
+2021-09-14 07:00:20,337 INFO  [REGION LOADER FILE SYSTEM]: Loaded config for region Var
+2021-09-14 07:00:20,337 INFO  [LOAD REGIONS PLUGIN]: Loading specific shared modules...
+2021-09-14 07:00:20,337 INFO  [LOAD REGIONS PLUGIN]: Done.
+2021-09-14 07:00:20,339 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Dev (ThreadID: 1)
+2021-09-14 07:00:20,441 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 07:00:20,443 INFO  [SCENE]: Region Dev, WORLD MAP refresh time set to 0 seconds
+2021-09-14 07:00:20,443 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 07:00:20,453 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 07:00:20,471 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 07:00:20,472 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 07:00:20,474 INFO  [TERRAIN DATA] VD2Gzip 296 bytes input
+2021-09-14 07:00:20,480 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<256,256>. Region size=<256,256>
+2021-09-14 07:00:20,480 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<256,256>
+2021-09-14 07:00:20,480 DEBUG [SQLITE REGION DB]: Loaded terrain revision r23
+2021-09-14 07:00:20,480 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 07:00:20,730 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Dev
+2021-09-14 07:00:20,737 DEBUG [HG INVENTORY BROKER]: Manually setting scene in RemoteXInventoryServicesConnector to Dev
+2021-09-14 07:00:20,745 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Dev
+2021-09-14 07:00:20,777 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 07:00:20,786 INFO  [CHAT]: Initialized for Dev w:10 s:20 S:100
+2021-09-14 07:00:20,790 DEBUG [Groups]: Registering Groups HG Service Connector with Dev
+2021-09-14 07:00:20,811 INFO  [YEngine]: config enabled=False
+2021-09-14 07:00:20,841 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 07:00:20,842 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 07:00:20,842 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 07:00:20,847 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 07:00:20,858 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 07:00:20,858 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 07:00:20,868 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScripts for Script HTTP request module is []
+2021-09-14 07:00:20,868 DEBUG [OUTBOUND URL FILTER]: OutboundDisallowForUserScriptsExcept for Script HTTP request module is []
+2021-09-14 07:00:20,874 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 07:00:20,879 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 07:00:20,885 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 07:00:21,269 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 07:00:21,282 DEBUG [Materials]: Initialized
+2021-09-14 07:00:21,343 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 07:00:21,348 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 07:00:21,365 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImage204c6bc7117640889f335cdd89c8bd30
+2021-09-14 07:00:21,381 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Dev), ID 44
+2021-09-14 07:00:21,409 INFO  L ... GenericSystemDrawing
+2021-09-14 07:00:21,410 INFO  L ... JPEG
+2021-09-14 07:00:21,410 INFO  L ... LLRAW
+2021-09-14 07:00:21,410 INFO  L ... RAW32
+2021-09-14 07:00:21,412 INFO  E ... ChannelDigger
+2021-09-14 07:00:21,413 INFO  E ... DefaultTerrainGenerator
+2021-09-14 07:00:21,476 DEBUG [RegionReady]: Enabled for region Dev
+2021-09-14 07:00:21,484 INFO  [XEngine]: Initializing scripts in region Dev
+2021-09-14 07:00:21,531 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 07:00:21,532 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000162ms
+2021-09-14 07:00:21,624 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 07:00:21,653 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 07:00:21,654 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Dev), ID 45
+2021-09-14 07:00:21,667 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Dev
+2021-09-14 07:00:21,669 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Dev
+2021-09-14 07:00:21,671 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Dev
+2021-09-14 07:00:21,673 INFO  [SIM SERVICE]: Starting...
+2021-09-14 07:00:21,885 DEBUG [Groups.RemoteConnector]: Groups server at http://cg.1studi.ru:8003/, authentication None
+2021-09-14 07:00:21,985 DEBUG [AuthorizationService]: Region Dev access restrictions: None
+2021-09-14 07:00:21,985 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Dev
+2021-09-14 07:00:21,986 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 07:00:22,059 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 07:00:22,060 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 07:00:22,152 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 07:00:22,155 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Dev), ID 46
+2021-09-14 07:00:22,156 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 07:00:22,157 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 07:00:22,157 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Dev), ID 47
+2021-09-14 07:00:22,167 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 07:00:22,168 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 07:00:22,233 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Dev/<0, 0, 0> created with Heightmap
+2021-09-14 07:00:22,422 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 07:00:22,427 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 07:00:22,429 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Dev (0 objects)...
+2021-09-14 07:00:22,448 DEBUG [WORLD MAP]: Generating map image for Dev
+2021-09-14 07:00:22,492 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 07:00:22,494 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 07:00:22,518 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 07:00:22,530 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 07:00:22,543 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 07:00:22,664 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 172 ms
+2021-09-14 07:00:22,674 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 07:00:22,676 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 0 ms
+2021-09-14 07:00:22,743 DEBUG [WORLD MAP]: Storing map image fd4e2f48-f528-4215-8376-bc0e4b20455a for Dev
+2021-09-14 07:00:23,037 DEBUG [WORLD MAP]: Region Dev has no parcels for sale, not generating overlay
+2021-09-14 07:00:23,053 DEBUG [MAP IMAGE SERVICE MODULE]: Upload maptile for Dev
+2021-09-14 07:00:23,207 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 144ms
+2021-09-14 07:00:23,231 DEBUG [GRID SERVICE]: Region Dev (204c6bc7-1176-4088-9f33-5cdd89c8bd30, 256x256) registered at 1030,1030 with flags RegionOnline
+2021-09-14 07:00:23,388 INFO  [SCENE]: Initializing script instances in Dev
+2021-09-14 07:00:23,389 INFO  [SCENE]: Initialized 0 script instances in Dev
+2021-09-14 07:00:23,391 DEBUG [LOAD REGIONS PLUGIN]: Creating Region: Var (ThreadID: 1)
+2021-09-14 07:00:23,398 INFO  [SCENE]: Default script engine XEngine
+2021-09-14 07:00:23,398 INFO  [SCENE]: Region Var, WORLD MAP refresh time set to 0 seconds
+2021-09-14 07:00:23,399 DEBUG [SCENE]: Using the BestAvatarResponsiveness prioritization scheme
+2021-09-14 07:00:23,408 INFO  [TERRAIN DATA] VD2Gzip 4107 bytes input
+2021-09-14 07:00:23,544 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<1024,1024>. Region size=<1024,1024>
+2021-09-14 07:00:23,544 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<1024,1024>
+2021-09-14 07:00:23,571 INFO  [TERRAIN DATA] VD2Gzip 4107 bytes input
+2021-09-14 07:00:23,726 DEBUG [TERRAIN DATA] V2DGzip. Heightmap size=<1024,1024>. Region size=<1024,1024>
+2021-09-14 07:00:23,726 DEBUG [TERRAIN DATA] HeightmapTerrainData create from Variable2DGzip serialization. Size=<1024,1024>
+2021-09-14 07:00:23,726 DEBUG [SQLITE REGION DB]: Loaded terrain revision r23
+2021-09-14 07:00:23,727 INFO  [REGIONMODULES]: Loading Region's modules
+2021-09-14 07:00:23,739 INFO  [BASE PRESENCE SERVICE CONNECTOR]: Enabled for region Var
+2021-09-14 07:00:23,741 INFO  [REMOTE GRID USER CONNECTOR]: Enabled remote grid user for region Var
+2021-09-14 07:00:23,744 DEBUG [HG MESSAGE TRANSFER]: Message transfer module HGMessageTransferModule active
+2021-09-14 07:00:23,745 INFO  [CHAT]: Initialized for Var w:10 s:20 S:100
+2021-09-14 07:00:23,746 DEBUG [Groups]: Registering Groups HG Service Connector with Var
+2021-09-14 07:00:23,747 INFO  [YEngine]: config enabled=False
+2021-09-14 07:00:23,748 DEBUG [PERMISSIONS]: allowed_script_creators All
+2021-09-14 07:00:23,749 DEBUG [PERMISSIONS]: allowed_script_editors All
+2021-09-14 07:00:23,750 DEBUG [PERMISSIONS]: Enabling all region service permission checks
+2021-09-14 07:00:23,751 INFO  [EnvironmentModule]: Module is enabled.
+2021-09-14 07:00:23,752 INFO  [AUTHORIZATION CONNECTOR]: Initialise
+2021-09-14 07:00:23,753 INFO  [AUTHORIZATION CONNECTOR]: Local authorization connector enabled
+2021-09-14 07:00:23,753 INFO  [HG INVENTORY ACCESS MODULE]: HGInventoryAccessModule enabled.
+2021-09-14 07:00:23,754 DEBUG [HG ENTITY TRANSFER MODULE]: HGEntityTransferModule enabled.
+2021-09-14 07:00:23,754 DEBUG [UserProfileModule]: Full Profiles Enabled
+2021-09-14 07:00:23,757 DEBUG [TREES]: Initialised tree populator module
+2021-09-14 07:00:23,758 DEBUG [Materials]: Initialized
+2021-09-14 07:00:23,758 INFO  [XEngine]: Script stop strategy is co-op
+2021-09-14 07:00:23,759 INFO  [EXTENDED PHYSICS] module is not enabled
+2021-09-14 07:00:23,760 INFO  [WORLD MAP]: JPEG Map location: http://144.91.119.25:9000/index.php?method=regionImagef28efa39b1dc42918c3f9f1e12f4de98
+2021-09-14 07:00:23,760 DEBUG [WATCHDOG]: Started tracking thread MapBlocks (Var), ID 48
+2021-09-14 07:00:23,762 INFO  L ... GenericSystemDrawing
+2021-09-14 07:00:23,762 INFO  L ... JPEG
+2021-09-14 07:00:23,762 INFO  L ... LLRAW
+2021-09-14 07:00:23,762 INFO  L ... RAW32
+2021-09-14 07:00:23,762 INFO  E ... ChannelDigger
+2021-09-14 07:00:23,763 INFO  E ... DefaultTerrainGenerator
+2021-09-14 07:00:23,766 DEBUG [RegionReady]: Enabled for region Var
+2021-09-14 07:00:23,766 INFO  [XEngine]: Initializing scripts in region Var
+2021-09-14 07:00:23,806 INFO  [LLUDPSERVER]: Average Environment.TickCount resolution: 4ms
+2021-09-14 07:00:23,806 INFO  [LLUDPSERVER]: Average Util.GetTimeStampMS resolution: 0.000109ms
+2021-09-14 07:00:23,813 WARN  [BULLETS SCENE] Forcing terrain implementation to heightmap for large region
+2021-09-14 07:00:23,813 INFO  [BULLETS SCENE] Selected bullet engine bulletunmanaged -> BulletUnmanaged/
+2021-09-14 07:00:23,824 INFO  [BULLETS SCENE] Linksets implemented with Compound
+2021-09-14 07:00:23,825 DEBUG [WATCHDOG]: Started tracking thread bulletunmanaged (Var), ID 49
+2021-09-14 07:00:23,869 INFO  [NEIGHBOUR CONNECTOR]: Enabled out neighbours for region Var
+2021-09-14 07:00:23,870 INFO  [HG INVENTORY CONNECTOR]: Enabled HG inventory for region Var
+2021-09-14 07:00:23,870 INFO  [REGIONASSETCONNECTOR]: active with HG and cache for region Var
+2021-09-14 07:00:23,870 DEBUG [AuthorizationService]: Region Var access restrictions: None
+2021-09-14 07:00:23,871 INFO  [AUTHORIZATION CONNECTOR]: Enabled local authorization for region Var
+2021-09-14 07:00:23,871 INFO  [MODULE COMMANDS]: Script engine found, module active
+2021-09-14 07:00:23,876 INFO  [LLUDPSERVER]: Starting inbound packet processing for the LLUDP server
+2021-09-14 07:00:23,876 DEBUG [UDPBASE]: Starting inbound UDP loop
+2021-09-14 07:00:23,877 DEBUG [UDPBASE]: SIO_UDP_CONNRESET flag not supported on this platform, ignoring
+2021-09-14 07:00:23,878 DEBUG [WATCHDOG]: Started tracking thread Incoming Packets (Var), ID 50
+2021-09-14 07:00:23,879 INFO  [LLUDPSERVER]: Starting outbound packet processing for the LLUDP server
+2021-09-14 07:00:23,880 DEBUG [UDPBASE]: Starting outbound UDP loop
+2021-09-14 07:00:23,880 DEBUG [WATCHDOG]: Started tracking thread Outgoing Packets (Var), ID 51
+2021-09-14 07:00:23,881 INFO  [SCENE]: Secure permissions loading enabled, modules loaded: DefaultPermissionsModule
+2021-09-14 07:00:23,882 INFO  [SCENE]: Loading land objects from storage
+2021-09-14 07:00:23,907 INFO  [SCENE]: Loading objects from datastore
+2021-09-14 07:00:23,907 INFO  [SCENE]: Loaded 0 objects from the datastore
+2021-09-14 07:00:23,907 DEBUG [USER MANAGEMENT MODULE]: Caching creators' data from Var (0 objects)...
+2021-09-14 07:00:23,908 DEBUG [WORLD MAP]: Generating map image for Var
+2021-09-14 07:00:23,913 DEBUG [TEXTURED MAPTILE RENDERER] Generating Maptile Step 1: Terrain
+2021-09-14 07:00:23,923 DEBUG [BULLETSIM TERRAIN MANAGER] Terrain for Var/<0, 0, 0> created with Heightmap
+2021-09-14 07:00:23,963 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture b8d3965a-ad78-bf43-699b-bff8eca6c975, found: True
+2021-09-14 07:00:23,976 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture abb783e6-3e93-26c0-248a-247666855da3, found: True
+2021-09-14 07:00:23,988 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture 179cdabd-398a-9b6b-1391-4dc333ba321f, found: True
+2021-09-14 07:00:24,000 DEBUG [TEXTURED MAPTILE RENDERER] Fetched texture beb169c7-11ea-fff2-efe5-0f24dc881df2, found: True
+2021-09-14 07:00:25,816 DEBUG [TEXTURED MAP TILE RENDERER]: Generating Maptile Step 1: Done in 1904 ms
+2021-09-14 07:00:25,817 DEBUG [MAPTILE]: Generating Maptile Step 2: Object Volume Profile
+2021-09-14 07:00:25,817 DEBUG [MAPTILE]: Generating Maptile Step 2: Done in 0 ms
+2021-09-14 07:00:25,952 DEBUG [WORLD MAP]: Storing map image 5a159480-22c3-44f8-9137-2a3b36ebcbe8 for Var
+2021-09-14 07:00:26,013 DEBUG [WORLD MAP]: Region Var has no parcels for sale, not generating overlay
+2021-09-14 07:00:26,020 DEBUG [MAP IMAGE SERVICE MODULE]: Upload 16 maptiles for Var
+2021-09-14 07:00:26,032 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,040 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,049 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,058 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:26,066 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,073 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,082 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:26,091 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 12ms
+2021-09-14 07:00:26,099 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,120 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 20ms
+2021-09-14 07:00:26,144 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 20ms
+2021-09-14 07:00:26,154 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,162 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:26,172 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 12ms
+2021-09-14 07:00:26,180 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 4ms
+2021-09-14 07:00:26,186 DEBUG [MAP IMAGE CONNECTOR]: map tile upload time 8ms
+2021-09-14 07:00:26,188 DEBUG [GRID SERVICE]: Region Var (f28efa39-b1dc-4291-8c3f-9f1e12f4de98, 1024x1024) registered at 977,1017 with flags RegionOnline
+2021-09-14 07:00:26,205 INFO  [SCENE]: Initializing script instances in Var
+2021-09-14 07:00:26,205 INFO  [SCENE]: Initialized 0 script instances in Var
+2021-09-14 07:00:35,037 DEBUG [AGENT HANDLER]: QueryAccess returned True (). Version=0, 0.8/0.8
+2021-09-14 07:00:35,095 DEBUG [SCENE]: Region Var told of incoming child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 1042800112, IP 144.91.119.25, viewer Firestorm-Releasex64 6.0.2.56680, teleportflags (ViaLocation, Godlike), position <128, 128, 1.5>. From region Capitolium (5729d57a-5ee0-11e9-8647-d663bd873d93) @ http://cg.1studi.ru:9000/
+2021-09-14 07:00:35,121 INFO  [SCENE Var]: authorized child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 1042800112)
+2021-09-14 07:00:35,133 DEBUG [CreateCaps]: new caps agent d3045d90-817f-441d-b446-5293ea959dee, circuit 1042800112, path db0df3b5-b04b-432b-91a5-5a68d713f371, time 4 
+2021-09-14 07:00:35,637 WARN  [CHILDAGENTDATAUPDATE] got packed appearance
+2021-09-14 07:00:35,666 DEBUG [LLUDPSERVER]: Handling UseCircuitCode request for circuit 1042800112 to Var from IP 178.67.197.173:40192
+2021-09-14 07:00:35,738 DEBUG [CAPS]: Received SEED caps request in Var for agent d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 07:00:35,768 DEBUG [SCENE]: Adding new child scene presence Sam Adama d3045d90-817f-441d-b446-5293ea959dee to scene Var at pos <128, 128, 1.5>, tpflags: ViaLocation, Godlike
+2021-09-14 07:00:36,058 DEBUG [SCENE]: Incoming child agent update for d3045d90-817f-441d-b446-5293ea959dee in Var
+2021-09-14 07:00:36,090 DEBUG [LLUDPSERVER]: Client created
+2021-09-14 07:00:36,095 DEBUG [LLUDPSERVER]: processing UseCircuitCode pending queue, 1 entries
+2021-09-14 07:00:36,119 INFO  [SCENE PRESENCE]: Complete movement of Sam Adama into Var <128, 128, 1.5>
+2021-09-14 07:00:37,772 DEBUG [SCENE PRESENCE(Var)]: SendInitialData for d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 07:00:37,775 DEBUG [SCENE PRESENCE(Var)]: SendInitialData at parcel 34129524-0f6c-434f-a62d-0a0b9d7e09e4
+2021-09-14 07:00:37,777 DEBUG [SCENE PRESENCE]: Closing 1 child agents
+2021-09-14 07:00:37,808 DEBUG [SCENE COMMUNICATION SERVICE]: Sending close agent ID d3045d90-817f-441d-b446-5293ea959dee to Capitolium
+2021-09-14 07:00:37,813 DEBUG [REMOTE SIMULATION CONNECTOR]: CloseAgent http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/?auth=5bd8ca6e-e122-4976-a158-81491ec3fdd8
+2021-09-14 07:00:37,936 DEBUG [CompleteMovement] end: 1816ms
+2021-09-14 07:00:37,946 DEBUG [AVFACTORY]: Received texture update for Sam Adama d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 07:00:37,953 DEBUG [UpdateBakedCache] cache hits: 5 changed entries: 0 rebakes 0
+2021-09-14 07:00:49,170 DEBUG [WATCHDOG]: Started tracking thread AsyncLSLCmdHandlerThread, ID 56
+2021-09-14 08:00:19,795 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 08:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 01:00:00.6943230
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 59 MB
+Heap allocation rate (last/avg): 0/0.001MB/s
+Process memory:      Physical 174 MB 	 Paged 0 MB 	 Virtual 1380 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1385 MB
+
+Total process Threads 60
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 28         3600093       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               1516         3598421       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 68         3598133       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1816         3597633       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                  4         3597633       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               2472         3596029       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 32         3595965       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)                940         3595909       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                  4         3595909       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 16         3593557       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 68         3593525       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 56         3570616       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 1
+Work items waiting         : 0
+
+Total process threads: 60
+
+
+2021-09-14 08:48:23,739 WARN  [LLUDPSERVER]: No packets received from root agent of Sam Adama for 60000ms in Var.  Disconnecting.
+2021-09-14 08:48:24,453 DEBUG [CLIENT]: Close has been called for Sam Adama attached to scene Var
+2021-09-14 08:48:24,791 DEBUG [JobEngine] Stopping AsyncInUDP-d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 08:48:24,814 DEBUG [SCENE]: Removing root agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Var
+2021-09-14 08:48:24,844 DEBUG [HG MAP]: Resetting 1 blocks
+2021-09-14 08:48:25,177 DEBUG [ATTACHMENTS MODULE]: Updating asset for attachment 84dad401-2ca2-4bca-88b8-3f45def8ce29, attachpoint 38
+2021-09-14 08:48:25,908 DEBUG [Scene] The avatar has left the building
+2021-09-14 08:48:25,923 DEBUG [CAPS]: Remove caps for agent d3045d90-817f-441d-b446-5293ea959dee in region Var
+2021-09-14 09:00:19,728 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 09:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 02:00:00.6823800
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 39 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 147 MB 	 Paged 0 MB 	 Virtual 1370 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1385 MB
+
+Total process Threads 60
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 20         7200033       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               4680         7198361       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                  8         7198073       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1476         7197573       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                  4         7197573       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)                676         7195969       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 48         7195905       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               2464         7195849       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                  4         7195849       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                  8         7193497       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 76         7193465       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                  0         7170556       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 60
+
+
+2021-09-14 10:00:19,726 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 10:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 03:00:00.6823990
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 40 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 145 MB 	 Paged 0 MB 	 Virtual 1370 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1385 MB
+
+Total process Threads 60
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 44        10800029       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               2968        10798357       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                  8        10798069       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1204        10797569       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 80        10797569       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               3876        10795965       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 32        10795901       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               2204        10795845       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 52        10795845       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 36        10793493       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 24        10793461       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 64        10770552       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 60
+
+
+2021-09-14 11:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 11:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 04:00:00.6823150
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 40 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 143 MB 	 Paged 0 MB 	 Virtual 1374 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1385 MB
+
+Total process Threads 65
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 96        14400030       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               1244        14398358       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                  0        14398070       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)                944        14397570       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 12        14397570       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               2180        14395966       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 12        14395902       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               2000        14395846       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 48        14395846       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 92        14393494       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 52        14393462       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 12        14370553       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 65
+
+
+2021-09-14 12:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 12:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 05:00:00.6828430
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 41 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 138 MB 	 Paged 0 MB 	 Virtual 1374 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1385 MB
+
+Total process Threads 65
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                  8        18000028       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               4356        17998356       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 24        17998068       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)                720        17997568       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 40        17997568       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)                456        17995964       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 68        17995900       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               1744        17995844       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                  8        17995844       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                  0        17993492       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 60        17993460       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 92        17970551       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 65
+
+
+2021-09-14 12:06:22,572 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 12:06:22,668 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 12:06:37,368 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 12:06:37,384 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 12:20:52,627 DEBUG [AGENT HANDLER]: QueryAccess returned True (). Version=0, 0.8/0.8
+2021-09-14 12:20:52,656 DEBUG [SCENE]: Region Dev told of incoming child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 55281665, IP 144.91.119.25, viewer Firestorm-Releasex64 6.0.2.56680, teleportflags (ViaLocation, Godlike), position <128, 128, 0>. From region Capitolium (5729d57a-5ee0-11e9-8647-d663bd873d93) @ http://cg.1studi.ru:9000/
+2021-09-14 12:20:52,669 INFO  [SCENE Dev]: authorized child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee (circuit code 55281665)
+2021-09-14 12:20:52,670 DEBUG [CreateCaps]: new caps agent d3045d90-817f-441d-b446-5293ea959dee, circuit 55281665, path 8a575295-b80f-493d-a666-494de52b8e99, time 0 
+2021-09-14 12:20:52,850 WARN  [CHILDAGENTDATAUPDATE] got packed appearance
+2021-09-14 12:20:52,986 DEBUG [LLUDPSERVER]: Handling UseCircuitCode request for circuit 55281665 to Dev from IP 178.67.199.163:28933
+2021-09-14 12:20:52,997 DEBUG [SCENE]: Incoming child agent update for d3045d90-817f-441d-b446-5293ea959dee in Dev
+2021-09-14 12:20:53,109 DEBUG [SCENE]: Adding new child scene presence Sam Adama d3045d90-817f-441d-b446-5293ea959dee to scene Dev at pos <128, 128, 0>, tpflags: ViaLocation, Godlike
+2021-09-14 12:20:53,218 DEBUG [LLUDPSERVER]: Client created
+2021-09-14 12:20:53,223 DEBUG [LLUDPSERVER]: processing UseCircuitCode pending queue, 1 entries
+2021-09-14 12:20:53,227 INFO  [SCENE PRESENCE]: Complete movement of Sam Adama into Dev <128, 128, 0>
+2021-09-14 12:20:53,269 DEBUG [CAPS]: Received SEED caps request in Dev for agent d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 12:20:53,506 DEBUG [CompleteMovement] end: 276ms
+2021-09-14 12:20:53,622 DEBUG [AVFACTORY]: Received texture update for Sam Adama d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 12:20:53,630 DEBUG [UpdateBakedCache] cache hits: 5 changed entries: 0 rebakes 0
+2021-09-14 12:20:53,896 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData for d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 12:20:53,896 DEBUG [SCENE PRESENCE]: Closing 1 child agents
+2021-09-14 12:20:53,898 DEBUG [SCENE PRESENCE(Dev)]: SendInitialData at parcel 2d38edba-7e6f-48e8-93d6-7ba736b1c852
+2021-09-14 12:20:53,935 DEBUG [SCENE COMMUNICATION SERVICE]: Sending close agent ID d3045d90-817f-441d-b446-5293ea959dee to Capitolium
+2021-09-14 12:20:53,939 DEBUG [REMOTE SIMULATION CONNECTOR]: CloseAgent http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/?auth=05995543-5f72-4a0a-9341-c06a542aed21
+2021-09-14 12:23:58,905 DEBUG [ENTITY TRANSFER MODULE]: Request to teleport Sam Adama d3045d90-817f-441d-b446-5293ea959dee home
+2021-09-14 12:23:58,960 DEBUG [HG ENTITY TRANSFER MODULE]: region Capitolium flags: 1031
+2021-09-14 12:23:58,971 DEBUG [ENTITY TRANSFER MODULE]: Teleporting Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev to http://62.171.135.148:9010/ (http://62.171.135.148:9010/) Capitolium/<128, 128, 2550.066>
+2021-09-14 12:23:58,988 DEBUG [REMOTE SIMULATION CONNECTOR]: QueryAccess to http://62.171.135.148:9010/agent/d3045d90-817f-441d-b446-5293ea959dee/5729d57a-5ee0-11e9-8647-d663bd873d93/ returned True, reason , version 0.8/0.8
+2021-09-14 12:23:58,990 DEBUG [ENTITY TRANSFER MODULE]: Dev transfer protocol version to Capitolium is 0.8 / 0.8
+2021-09-14 12:23:58,994 DEBUG [ENTITY TRANSFER MODULE]: Determined that region Capitolium at 1000,1000 size 256,256 needs new child agent for agent Sam Adama from Dev
+2021-09-14 12:23:59,000 DEBUG [HG ENTITY TRANSFER MODULE]: CreateAgent http://62.171.135.148:9010/ http://62.171.135.148:9010/
+2021-09-14 12:23:59,009 DEBUG [REMOTE SIMULATION CONNECTOR]: Creating agent at http://62.171.135.148:9010/
+2021-09-14 12:23:59,053 DEBUG [ENTITY TRANSFER MODULE]: Sending new CAPS seed url http://62.171.135.148:9010/CAPS/77b2af68-1848-4295-b4ce-d39bc358056d0000/ from Dev to Sam Adama
+2021-09-14 12:23:59,291 DEBUG [ENTITY TRANSFER MODULE]: Set release callback URL to http://144.91.119.25:9000/agent/d3045d90-817f-441d-b446-5293ea959dee/204c6bc7-1176-4088-9f33-5cdd89c8bd30/release/ in Dev
+2021-09-14 12:23:59,842 DEBUG [SCENE PRESENCE]: Making Sam Adama a child agent in Dev from root region 1099511628032000
+2021-09-14 12:24:00,031 DEBUG [AGENT HANDLER]: Release d3045d90-817f-441d-b446-5293ea959dee to RegionID: 204c6bc7-1176-4088-9f33-5cdd89c8bd30
+2021-09-14 12:24:00,104 DEBUG [ENTITY TRANSFER MODULE]: Closing agent Sam Adama in Dev after teleport 
+2021-09-14 12:24:00,107 DEBUG [CLIENT]: Close has been called for Sam Adama attached to scene Dev
+2021-09-14 12:24:00,109 DEBUG [JobEngine] Stopping AsyncInUDP-d3045d90-817f-441d-b446-5293ea959dee
+2021-09-14 12:24:00,111 DEBUG [SCENE]: Removing child agent Sam Adama d3045d90-817f-441d-b446-5293ea959dee from Dev
+2021-09-14 12:24:00,113 DEBUG [Scene] The avatar has left the building
+2021-09-14 12:24:00,113 DEBUG [CAPS]: Remove caps for agent d3045d90-817f-441d-b446-5293ea959dee in region Dev
+2021-09-14 12:26:56,025 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 12:29:11,526 DEBUG [WORLD MAP]: Sending map image jpeg
+2021-09-14 13:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 13:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 06:00:00.6824910
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 40 MB
+Heap allocation rate (last/avg): 0/0.001MB/s
+Process memory:      Physical 156 MB 	 Paged 0 MB 	 Virtual 1391 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1393 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 40        21600029       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               2652        21598357       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                  8        21598069       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               2264        21597569       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 68        21597569       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               3656        21595965       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 52        21595901       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               1520        21595845       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 96        21595845       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 32        21593493       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                  0        21593461       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 40        21570552       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+
+2021-09-14 14:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 14:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 07:00:00.6824600
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 42 MB
+Heap allocation rate (last/avg): 0/0.003MB/s
+Process memory:      Physical 156 MB 	 Paged 0 MB 	 Virtual 1391 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1393 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 92        25200028       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)                956        25198356       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 28        25198068       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               2000        25197568       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 96        25197568       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               1900        25195964       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 76        25195900       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)               1248        25195844       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 92        25195844       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 68        25193492       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 48        25193460       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 76        25170551       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+
+2021-09-14 15:00:19,746 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 15:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 08:00:00.6825530
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 43 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 153 MB 	 Paged 0 MB 	 Virtual 1391 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1393 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 12        28800030       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               4161        28798358       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                  8        28798070       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1717        28797570       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 12        28797570       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)                200        28795966       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 40        28795902       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)                985        28795846       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 68        28795846       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 40        28793494       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 32        28793462       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 48        28770553       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+
+2021-09-14 16:00:19,726 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 16:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 09:00:00.6826550
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 44 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 153 MB 	 Paged 0 MB 	 Virtual 1391 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1393 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 76        32400029       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               2428        32398357       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 84        32398069       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1488        32397569       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                  0        32397569       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               3416        32395965       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 44        32395901       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)                780        32395845       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 24        32395845       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                  8        32393493       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 16        32393461       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 24        32370552       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+
+2021-09-14 17:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 17:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 10:00:00.6826560
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 45 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 154 MB 	 Paged 0 MB 	 Virtual 1392 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1393 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 32        36000031       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)                676        35998359       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 64        35998071       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)               1164        35997571       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 88        35997571       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               1704        35995967       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                 16        35995903       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)                524        35995847       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 24        35995847       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 80        35993495       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                  8        35993463       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 68        35970554       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+
+2021-09-14 18:00:19,725 DEBUG DIAGNOSTICS
+
+Time now is 2021-09-14 18:00:19
+Server has been running since Tuesday, 2021-09-14 07:00:19
+That is an elapsed time of 11:00:00.6826740
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 47 MB
+Heap allocation rate (last/avg): 0/0MB/s
+Process memory:      Physical 155 MB 	 Paged 0 MB 	 Virtual 1393 MB
+Peak process memory: Physical 179 MB 	 Paged 0 MB 	 Virtual 1394 MB
+
+Total process Threads 68
+
+12 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+    41              PollServiceWatcherThread                 96        39600029       Normal        Background, WaitSleepJoin
+    44                       MapBlocks (Dev)               3872        39598357       Normal        Background, WaitSleepJoin
+    45                 bulletunmanaged (Dev)                 16        39598069       Normal        Background, WaitSleepJoin
+    46                Incoming Packets (Dev)                876        39597569       Normal        Background, WaitSleepJoin
+    47                Outgoing Packets (Dev)                 96        39597569       Normal        Background, WaitSleepJoin
+    48                       MapBlocks (Var)               4892        39595965       Normal        Background, WaitSleepJoin
+    49                 bulletunmanaged (Var)                  0        39595901       Normal        Background, WaitSleepJoin
+    50                Incoming Packets (Var)                256        39595845       Normal        Background, WaitSleepJoin
+    51                Outgoing Packets (Var)                 96        39595845       Normal        Background, WaitSleepJoin
+    52                       Heartbeat-(Dev)                 40        39593493       Normal                    WaitSleepJoin
+    53                       Heartbeat-(Var)                 56        39593461       Normal                    WaitSleepJoin
+    56              AsyncLSLCmdHandlerThread                 88        39570552       Normal        Background, WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (500 / 2)
+Completion: 0 (1000 / 2)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 80
+Min threads                : 32
+Allocated threads          : 32
+In use threads             : 0
+Work items waiting         : 0
+
+Total process threads: 68
+
+

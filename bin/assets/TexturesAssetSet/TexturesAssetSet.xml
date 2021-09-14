@@ -270,11 +270,17 @@
     <Key Name="fileName" Value="water3.jp2" />
   </Section>
   <Section Name="Sea">
-    <Key Name="assetID" Value="2bfd3884-7e27-69b9-ba3a-3e673f680004" />
+    <Key Name="assetID" Value="482E671B-9244-4B86-A036-68953A898D11" />
     <Key Name="name" Value="Sea" />
     <Key Name="assetType" Value="0" />
     <Key Name="fileName" Value="water3.jp2" />
   </Section>
+  <Section Name="SeaWaterTrasp">
+    <Key Name="assetID" Value="2bfd3884-7e27-69b9-ba3a-3e673f680004" />
+    <Key Name="name" Value="SeaWaterTrasp" />
+    <Key Name="assetType" Value="0" />
+    <Key Name="fileName" Value="seaWaterTransp.j2c" />
+  </Section>  
   <Section Name="wood1 Texture">
     <Key Name="assetID" Value="00000000-0000-2222-3333-100000001043" />
     <Key Name="name" Value="wood1" />
@@ -397,7 +403,7 @@
     <Key Name="assetID" Value="5748decc-f629-461c-9a36-a35a221fe21f"/>
     <Key Name="name" Value="Blank Texture"/>
     <Key Name="assetType" Value="0" />
-    <Key Name="fileName" Value="blank.jpc" />
+    <Key Name="fileName" Value="blank.j2c" />
   </Section>
 
   <Section Name="Default Media Texture">
@@ -770,12 +776,18 @@
      <Key Name="fileName" Value="b4ba225c-373f-446d-9f7e-6cb7b5cf9b3d.j2c"/>
   </Section>
 
-  <!-- Water texture shown when Transparent Water is disabled in the viewer graphics prefs -->
   <Section Name="Water">
-    <Key Name="assetID" Value="43c32285-d658-1793-c123-bf86315de055"/>
+    <Key Name="assetID" Value="DB814CAF-26AC-4D75-977B-A68578FE643D"/>
     <Key Name="name" Value="Water"/>
     <Key Name="assetType" Value="0" />
-    <Key Name="fileName" Value="43c32285-d658-1793-c123-bf86315de055.jp2" />
+    <Key Name="fileName" Value="water.jp2" />
+  </Section>
+
+  <Section Name="seaWaterOpaque">
+    <Key Name="assetID" Value="43c32285-d658-1793-c123-bf86315de055"/>
+    <Key Name="name" Value="seaWaterOpaque"/>
+    <Key Name="assetType" Value="0" />
+    <Key Name="fileName" Value="seaWaterOpaque.j2c" />
   </Section>
   
   <Section Name="FALLB_BAKED_HEAD">
@@ -863,6 +875,12 @@
   <Section Name="DefaultRainbow">
      <Key Name="assetID" Value="11b4c57c-56b3-04ed-1f82-2004363882e4"/>
      <Key Name="name" Value="DefaultRainbow"/>
+     <Key Name="assetType" Value="0" />
+     <Key Name="fileName" Value="rainbow2.j2c"/>
+  </Section>
+  <Section Name="ReverseRainbow">
+     <Key Name="assetID" Value="11b4c57c-56b3-04ed-1f82-2004363883f4"/>
+     <Key Name="name" Value="Rainbow with reverse colors order"/>
      <Key Name="assetType" Value="0" />
      <Key Name="fileName" Value="rainbow.j2c"/>
   </Section>
