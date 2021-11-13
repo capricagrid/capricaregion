@@ -1,2 +1,2 @@
-Caprica Grid 0.9.2.0 Yeti Dev   2021-09-14
-caprica.1studi.ru
+Caprica 0.1.0.0 Voyager G Release
+caprica.xyz

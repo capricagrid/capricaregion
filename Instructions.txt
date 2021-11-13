@@ -1,6 +1,6 @@
 Instructions for Linux Ubuntu 18-20
 For additional info or help, please send IM to Sam Adama resident in-world.
-Or use our contact form on Caprica Hypergrid website: https://caprica.1studi.ru/contact-us/
+Or use our contact form on Caprica Hypergrid website: https://caprica.xyz/contact-us/
 
 Important points.
 
@@ -10,13 +10,13 @@ If the server goes up on a home computer, you must have a static IP. It
 must be accessible from the external network.
 Access from some grids is permanently blocked on Caprica (see website).
 You can get help with server settings from Caprica Hypergrid support. 
-(https://caprica.1studi.ru/support/)
+(https://caprica.xyz/support/)
 
 
 -----------------------------------
 
 Preparing:
-Register your Avatar here: https://cg.1studi.ru/register
+Register your Avatar here: https://g.caprica.xyz/account/register
 
 In your operation sistem:
 sudo apt update && sudo apt upgrade
@@ -31,7 +31,7 @@ git clone https://github.com/capricagrid/capricaregion.git
 
 Step 1.
 Open /opt/capricaregion/bin/Regions/Regions.ini
-Please, check the Map first, before enter region location! https://caprica.1studi.ru/simple-map/
+Please, check the Map first, before enter region location! https://caprica.xyz/simple-map/
 Change Region name, RegionUUID, Location, SizeX;Y, InternalPort and ExternalHostName to your values.
 To generate a UUID for your region, use the Gridlist UUID generator: https://gridlist.ru/uuid/
 Save and exit
@@ -66,7 +66,7 @@ To open the session again, enter the command 'screen -d -r [name of your region]
 Use the help by entering the command 'man screen'
 
 Step 6
-Add the CapricaHypergrid address to your client's grid list as shown in step 2 of this tutorial: https://caprica.1studi.ru/services/addcaprica/
+Add the CapricaHypergrid address to your client's grid list as shown in step 2 of this tutorial: https://caprica.xyz/services/addcaprica/
 
 Step 7
 Login to Caprica Hypergrid with your avatar and find your region on the map by entering your region name. Teleport and make additional settings if desired.
