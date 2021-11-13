@@ -15,13 +15,13 @@ See "[Instructions.txt](https://github.com/capricagrid/capricaregion/blob/master
 ------------
 
 
-Caprica Hypergrid main website: https://caprica.1studi.ru
+Caprica Hypergrid main website: https://caprica.xyz
 
-Caprica Hypergrid web interface: https://cg.1studi.ru
+Caprica Hypergrid web interface: https://g.caprica.xyz
 
-Support center: https://caprica.1studi.ru/support
+Support center: https://caprica.xyz/support
 
-Support chat https://caprica.1studi.ru/chat/
+Support chat https://caprica.xyz/chat/
 
 IRC irc://irc.1studi.ru:+6667/caprica
 
