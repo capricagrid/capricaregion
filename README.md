@@ -53,6 +53,8 @@ For a quick automated setup on Linux you have two options:
   starts the region. The page also shows the log and start/stop buttons.
 - **Console wizard:** `./setup.sh` — same steps interactively in the terminal.
 
+See `REQUIREMENTS.md` for the full software/hardware/network checklist.
+
 **Database:** SQLite is the default — no setup needed, `*.db` files are
 created inside `bin/`. The bundled `OpenSim.Data.SQLite.dll` has no OfflineIM
 backend, so `./setup.sh` disables the OfflineIM module when SQLite is used
