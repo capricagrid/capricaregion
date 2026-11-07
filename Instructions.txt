@@ -118,3 +118,25 @@ Login to Caprica Hypergrid with your avatar and find your region on the map by e
 Step 8
 Enjoy your Virtual World!
 
+
+-----------------------------------
+TROUBLESHOOTING
+-----------------------------------
+
+Region registers on the map but teleport hangs and fails after ~30 seconds?
+-> Your region port is probably open for TCP only. The simulator protocol
+   uses UDP on the SAME port as the HTTP listener. Open both:
+     sudo ufw allow <port>/tcp
+     sudo ufw allow <port>/udp
+   In the region log you will see "Did not find presence ... before timeout"
+   and no "Adding new child scene presence" line.
+
+Region crashes on startup with
+"Could not find a storage interface in the given module OpenSim.Data.SQLite.dll"?
+-> SQLite has no OfflineIM backend. Either re-run ./setup.sh and choose MySQL,
+   or keep SQLite and make sure OpenSim.ini [Messaging] has
+   OfflineMessageModule = "" (setup.sh does this automatically).
+
+Region does not appear on the Caprica map/search?
+-> Check that Regions.ini ExternalHostName is reachable and that the region
+   port TCP is open; the grid registration itself uses HTTP to Caprica.
