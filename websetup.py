@@ -90,7 +90,7 @@ def sub_file(path, pattern, repl, flags=0):
 
 def port_free(port):
     try:
-        out = subprocess.run(["ss", "-ltn"], capture_output=True, text=True, timeout=10).stdout
+        out = subprocess.run(["ss", "-ltn"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=10).stdout
     except Exception:
         return True
     return not re.search(r"[:.]%d\s*$" % port, out, re.M)
@@ -116,7 +116,7 @@ def session_name():
 
 def screen_running(sess):
     try:
-        out = subprocess.run(["screen", "-ls"], capture_output=True, text=True, timeout=10).stdout
+        out = subprocess.run(["screen", "-ls"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=10).stdout
         return re.search(r"\.%s\s" % re.escape(sess), out) is not None or \
                re.search(r"\b%s\b" % re.escape(sess), out) is not None
     except Exception:
@@ -136,7 +136,7 @@ def start_region():
         return False, "OpenSim.exe / screen / mono missing"
     cmd = "cd %s && exec mono OpenSim.exe" % BINDIR
     r = subprocess.run(["screen", "-dmS", sess, "bash", "-c", cmd],
-                       capture_output=True, text=True)
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     if r.returncode != 0:
         return False, "screen failed: %s" % (r.stderr or r.stdout).strip()
     return True, "started in screen session '%s'" % sess
@@ -147,7 +147,7 @@ def stop_region():
     if not region_running():
         return True, "not running"
     r = subprocess.run(["screen", "-S", sess, "-X", "quit"],
-                       capture_output=True, text=True)
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     return r.returncode == 0, (r.stderr or "").strip() or "stopped"
 
 
@@ -291,14 +291,14 @@ ExternalHostName = "{host}"
     # --- firewall ---
     if do_ufw and shutil_which("ufw"):
         try:
-            st = subprocess.run(["ufw", "status"], capture_output=True, text=True, timeout=15).stdout
+            st = subprocess.run(["ufw", "status"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=15).stdout
         except Exception:
             st = ""
         if "Status: active" in st:
             for proto in ("tcp", "udp"):
                 r = subprocess.run(["ufw", "allow", "%s/%s" % (port, proto),
                                     "comment", "caprica region"],
-                                   capture_output=True, text=True)
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
                 notes.append("ufw %s/%s: %s" % (port, proto,
                              "ok" if r.returncode == 0 else "FAILED"))
         else:
