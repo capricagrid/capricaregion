@@ -1,6 +1,6 @@
 Instructions for Linux Ubuntu 18-20
 For additional info or help, please send IM to Sam Adama resident in-world.
-Or use our contact form on Caprica Hypergrid website: https://caprica.xyz/contact-us/
+Or open a support ticket: https://caprica.xyz/support/
 
 IMPORTANT - HTTPS:
 Since November 2026 Caprica public grid services (port 9000) are served over
