@@ -24,6 +24,7 @@ import secrets
 import subprocess
 import sys
 import threading
+import uuid
 from http.server import BaseHTTPRequestHandler
 try:
     from http.server import ThreadingHTTPServer
@@ -176,6 +177,9 @@ def do_install(form):
     """Returns (ok, summary_lines or error)."""
     name = form.get("region_name", "").strip()
     uuid = form.get("region_uuid", "").strip()
+    if not uuid:
+        import uuid as _uuid
+        uuid = str(_uuid.uuid4())
     loc = form.get("location", "").strip()
     size = form.get("size", "").strip()
     prims = form.get("max_prims", "").strip()
@@ -323,32 +327,89 @@ ExternalHostName = "{host}"
 # HTML
 
 CSS = """
-body{font-family:system-ui,Arial,sans-serif;background:#1e1e28;color:#e8e8f0;
-     max-width:860px;margin:24px auto;padding:0 16px}
-h1{font-size:1.4em} h2{font-size:1.1em;margin-top:28px}
-label{display:block;margin:10px 0 3px;font-size:.9em;color:#aab}
-input,select{width:100%;padding:7px;border-radius:6px;border:1px solid #444;
-     background:#12121a;color:#eee;box-sizing:border-box}
-input[type=checkbox]{width:auto}
-button,.btn{display:inline-block;padding:9px 18px;border:0;border-radius:6px;
-     background:#4a7cff;color:#fff;cursor:pointer;text-decoration:none;font-size:.95em}
-button.secondary{background:#444}.btn{background:#2c5cb8}
-.warn{background:#3a2c14;border:1px solid #8a6d1f;padding:10px;border-radius:8px}
-.ok{background:#14301c;border:1px solid #2e7d4f;padding:10px;border-radius:8px}
-.err{background:#3a1414;border:1px solid #a33;padding:10px;border-radius:8px}
-pre{background:#12121a;border:1px solid #333;border-radius:8px;padding:12px;
-     overflow:auto;max-height:340px;font-size:.8em;white-space:pre-wrap}
-table.kv td{padding:4px 12px 4px 0;color:#aab}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+:root{--bg:#030308;--cyan:#00f0ff;--purple:#bf00ff;--magenta:#ff00aa;
+--glass:rgba(8,14,32,.62);--border:rgba(0,240,255,.28);--txt:#e8f6ff}
+*{box-sizing:border-box}
+body{font-family:'Rajdhani',system-ui,sans-serif;background:var(--bg);color:var(--txt);
+margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;
+padding:32px 16px;background-image:radial-gradient(ellipse at 50% -10%,rgba(0,240,255,.08),transparent 55%),
+radial-gradient(ellipse at 85% 110%,rgba(191,0,255,.07),transparent 50%)}
+h1,h2,h3{font-family:'Orbitron','Rajdhani',sans-serif;letter-spacing:2px;margin:0}
+.topbar{width:100%;max-width:860px;display:flex;align-items:center;justify-content:space-between;
+padding:10px 4px;border-bottom:1px solid var(--border);margin-bottom:26px}
+.logo{font-family:'Orbitron';font-weight:700;font-size:17px;letter-spacing:4px;color:var(--cyan);
+text-shadow:0 0 14px rgba(0,240,255,.55)}
+.logo b{color:var(--magenta);text-shadow:0 0 14px rgba(255,0,170,.55)}
+nav a{color:#9fd8e8;text-decoration:none;font-size:14px;letter-spacing:1px;margin-left:18px;
+padding:6px 10px;border:1px solid transparent;border-radius:6px}
+nav a:hover{color:var(--cyan);border-color:var(--border);box-shadow:0 0 12px rgba(0,240,255,.2)}
+.card{width:100%;max-width:860px;background:var(--glass);backdrop-filter:blur(14px);
+border:1px solid var(--border);border-radius:14px;padding:26px 30px;
+box-shadow:0 0 40px rgba(0,240,255,.06),inset 0 0 60px rgba(0,240,255,.03)}
+h1{font-size:22px;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--cyan));
+background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+animation:sheen 6s linear infinite}
+@keyframes sheen{to{background-position:200% 0}}
+h2{font-size:13px;color:var(--cyan);letter-spacing:3px;margin:24px 0 6px;
+border-bottom:1px solid var(--border);padding-bottom:6px}
+label{display:block;margin:12px 0 4px;font-size:14px;font-weight:600;color:#bfe9f5}
+label small{color:#7fa8b8;font-weight:400}
+input,select{width:100%;padding:9px 11px;border-radius:8px;border:1px solid var(--border);
+background:rgba(3,3,8,.7);color:#fff;font-family:'Rajdhani';font-size:16px;outline:none;
+transition:.2s}
+input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 12px rgba(0,240,255,.25)}
+input[readonly]{opacity:.65}
+input[type=checkbox]{width:auto;accent-color:var(--cyan)}
+button,.btn{display:inline-block;padding:11px 26px;border-radius:8px;cursor:pointer;
+font-family:'Orbitron';font-size:13px;letter-spacing:2px;text-decoration:none;
+background:transparent;border:1px solid var(--cyan);color:var(--cyan);transition:.2s}
+button:hover,.btn:hover{background:rgba(0,240,255,.12);box-shadow:0 0 18px rgba(0,240,255,.35)}
+button.secondary{border-color:var(--border);color:#9fd8e8}
+button.danger{border-color:var(--magenta);color:var(--magenta)}
+.btn.big{font-size:16px;padding:16px 34px;letter-spacing:4px;
+box-shadow:0 0 24px rgba(0,240,255,.35),inset 0 0 18px rgba(0,240,255,.12)}
+.btn.big:hover{box-shadow:0 0 40px rgba(0,240,255,.6)}
+.warn{background:rgba(255,170,0,.08);border:1px solid rgba(255,170,0,.4);
+padding:12px 14px;border-radius:8px;margin:14px 0;color:#ffd9a0;font-size:15px}
+.ok{background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.4);
+padding:12px 14px;border-radius:8px;margin:14px 0;color:#9dffce;font-size:15px}
+.err{background:rgba(255,60,90,.08);border:1px solid rgba(255,60,90,.5);
+padding:12px 14px;border-radius:8px;margin:14px 0;color:#ffb3c0;font-size:15px}
+pre{background:rgba(3,3,8,.75);border:1px solid var(--border);border-radius:10px;
+padding:14px;overflow:auto;max-height:360px;font-size:12.5px;line-height:1.45;
+white-space:pre-wrap;color:#bfe9f5}
+table.kv{border-collapse:collapse}
+table.kv td{padding:6px 18px 6px 0;color:#8fb9c8;font-size:15px}
+table.kv td b{color:#fff;font-family:'Orbitron';font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.muted{color:#7fa8b8;font-size:14px}
+code{background:rgba(0,240,255,.1);padding:2px 6px;border-radius:4px;color:var(--cyan)}
 """
+
+FONTS = ("<link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900"
+         "&family=Rajdhani:wght@400;500;600;700&display=swap' rel='stylesheet'>")
 
 
 def page(title, body):
     return ("<!doctype html><html><head><meta charset='utf-8'>"
             "<meta name='viewport' content='width=device-width,initial-scale=1'>"
-            "<title>%s</title><style>%s</style></head><body>%s</body></html>"
-            % (html.escape(title), CSS, body))
+            "%s<title>%s</title><style>%s</style></head><body>%s</body></html>"
+            % (FONTS, html.escape(title), CSS, body))
+
+
+def nav(active):
+    items = [("/install", "INSTALL", "install"), ("/status", "STATUS", "status"),
+             ("/log", "LOG", "log")]
+    links = "".join(
+        "<a href='%s?key=%s'%s>%s</a>" % (href, TOKEN,
+            " style='color:var(--cyan);border-color:var(--border)'" if act == active else "",
+            label)
+        for href, label, act in items)
+    return ("<div class='topbar'><div class='logo'>CAPRICA<b>//</b>REGION SETUP</div>"
+            "<nav>%s</nav></div>" % links)
 
 
 def keyok(qs):
@@ -359,36 +420,43 @@ def authed_form_fields(extra=""):
     return "<input type='hidden' name='key' value='%s'>%s" % (TOKEN, extra)
 
 
-def install_form():
+def install_form(error=None):
+    new_uuid = str(uuid.uuid4())
+    err = "<div class='err'>%s</div>" % html.escape(error) if error else ""
     f = """
-<h1>Caprica region installer</h1>
-<p class='warn'>This is a one-time setup tool. Keep this URL private - anyone
-with the key can reconfigure and restart the region.</p>
+%s
+<div class='card'>
+<h1>Region installer</h1>
+<p class='muted'>Configure and launch your Caprica region. All settings can be
+changed later - files are backed up automatically before every write.</p>
+%s
+<p class='warn'>One-time tool: keep this URL private - anyone with the key can
+reconfigure and restart the region.</p>
 <form method='post' action='/install'>%s
 <div class='grid'>
-<label>Region name (map display name)</label>
+<label>Region name <small>(map display name)</small></label>
 <input name='region_name' required placeholder='MyRegion'>
-<label>Region UUID <a href='https://gridlist.ru/uuid/'>generator</a></label>
-<input name='region_uuid' required placeholder='xxxxxxxx-xxxx-...'>
-<label>Location X,Y <a href='https://caprica.xyz/simple-map/'>pick on map</a></label>
+<label>Region UUID <small>(auto-generated, change only if you know why)</small></label>
+<input name='region_uuid' value='%s' readonly>
+<label>Location X,Y <small><a href='https://caprica.xyz/simple-map/' style='color:var(--cyan)'>pick on the Caprica map</a></small></label>
 <input name='location' value='1000,1000'>
-<label>Size X,Y (256 / 512 / 1024)</label>
+<label>Size X,Y <small>(256 / 512 / 1024)</small></label>
 <input name='size' value='256,256'>
 <label>MaxPrims</label>
 <input name='max_prims' value='25000'>
-<label>Region port (TCP+UDP must be reachable)</label>
+<label>Region port <small>(TCP+UDP must be reachable)</small></label>
 <input name='port' value='9022'>
-<label>External host name or IP (as visitors reach it)</label>
+<label>External host name or IP <small>(as visitors reach it)</small></label>
 <input name='external_host' required placeholder='203.0.113.10 or region.example.com'>
 </div>
-<h2>Caprica services</h2>
+<h2>// Caprica services</h2>
 <label>Public services (port 9000)</label>
 <select name='base_scheme'><option value='https'>https (recommended - TLS only on Caprica side)</option>
 <option value='http'>http (only if Caprica re-enables it)</option></select>
 <label>Private services (port 8003)</label>
 <select name='priv_scheme'><option value='http'>http (current Caprica setting)</option>
 <option value='https'>https (only if Caprica support confirms)</option></select>
-<h2>Database</h2>
+<h2>// Database</h2>
 <label>Storage</label>
 <select name='storage'><option value='sqlite'>SQLite (default - no setup, offline IM disabled)</option>
 <option value='mysql'>MySQL (required for offline IM)</option></select>
@@ -399,21 +467,50 @@ with the key can reconfigure and restart the region.</p>
 <label>MySQL user</label><input name='db_user' value='opensim'>
 <label>MySQL password</label><input name='db_pass' type='password'>
 </div></div>
-<h2>Firewall</h2>
+<h2>// Firewall</h2>
 <label><input type='checkbox' name='ufw' value='1' checked>
 Open PORT/tcp and PORT/udp in ufw (both required!)</label>
-<p><button type='submit'>Install &amp; start region</button></p>
+<div class='actions'><button type='submit'>&#9654; Install &amp; start region</button></div>
 </form>
+</div>
 <script>document.querySelector('[name=storage]').onchange=function(){
 document.getElementById('mysql').style.display=this.value=='mysql'?'block':'none'};</script>
-""" % authed_form_fields()
+""" % (nav("install"), err, authed_form_fields(), new_uuid)
     return page("Caprica region installer", f)
+
+
+def done_page(summary):
+    summ = "".join("<tr><td>%d</td><td><b>%s</b></td></tr>"
+                   % (i + 1, html.escape(str(x))) for i, x in enumerate(summary))
+    f = """
+%s
+<div class='card' style='text-align:center'>
+<h1 style='font-size:26px'>&#10004; Region online</h1>
+<p class='ok' style='display:inline-block;text-align:left'>Installation complete,
+region started in screen.</p>
+<table class='kv' style='margin:14px auto;text-align:left'>%s</table>
+<p class='warn'>First start only: OpenSim asks for an Estate name and your
+avatar's first/last name <b>in the screen console</b>. Attach once with
+<code>screen -r %s</code>, answer the prompts, detach (Ctrl+A, D),
+then look for "Login enabled".</p>
+<div class='actions' style='justify-content:center'>
+<form method='post' action='/shutdown'>%s
+<button class='big' type='submit'>■ FINISH — CLOSE INSTALLER</button></form>
+<a class='btn' href='/status?key=%s'>Status &amp; logs</a>
+</div>
+<p class='muted'>The installer can be restarted any time:
+<code>sudo python3 websetup.py</code></p>
+</div>
+""" % (nav("install"), summ, html.escape(session_name()),
+       authed_form_fields(), html.escape(TOKEN))
+    return page("Installation complete", f)
 
 
 def status_page():
     name = region_name_from_ini() or "(not configured)"
     running = region_running()
-    state = "RUNNING (screen: %s)" % session_name() if running else "STOPPED"
+    state = "<b style='color:#4dffb0'>RUNNING</b> (screen: %s)" % html.escape(session_name()) \
+        if running else "<b style='color:#ff6b6b'>STOPPED</b>"
     flash = ""
     if STATE.get("message"):
         flash += "<div class='ok'><pre>%s</pre></div>" % html.escape(STATE["message"])
@@ -422,28 +519,30 @@ def status_page():
         flash += "<div class='err'>%s</div>" % html.escape(STATE["error"])
         STATE["error"] = ""
     body = flash + """
-<h1>Caprica region</h1>
+<div class='card'>
+<h1>Status</h1>
 <table class='kv'>
 <tr><td>Region</td><td><b>%s</b></td></tr>
-<tr><td>Status</td><td>%s</td></tr>
+<tr><td>State</td><td>%s</td></tr>
 </table>
-<p>
+<div class='actions'>
 <a class='btn' href='/log?key=%s'>View log</a>
 <form method='post' action='/start' style='display:inline'>%s<button>Start</button></form>
 <form method='post' action='/stop' style='display:inline'>%s<button class='secondary'>Stop</button></form>
-<a class='btn' href='/install?key=%s' style='background:#555'>Reconfigure</a>
-<form method='post' action='/shutdown' style='display:inline'>%s<button class='secondary'>Shut down installer</button></form>
-</p>
-<h2>Recent log</h2>
+<a class='btn' href='/install?key=%s'>Reconfigure</a>
+<form method='post' action='/shutdown' style='display:inline'>%s<button class='danger'>Shut down installer</button></form>
+</div>
+<h2>// Recent log</h2>
 <pre>%s</pre>
 <p class='warn'>First start: OpenSim asks for an Estate name and your avatar's
 first/last name <b>in the screen console</b>. Attach once with
 <code>screen -r %s</code>, answer the prompts, then detach (Ctrl+A, D).
 Look for "Login enabled" in the log.</p>
+</div>
 """ % (html.escape(name), state, TOKEN,
        authed_form_fields(), authed_form_fields(), html.escape(TOKEN),
        authed_form_fields(), html.escape(log_tail(80)), html.escape(session_name()))
-    return page("Caprica region", body)
+    return page("Caprica region", nav("status") + body)
 
 
 def log_page(n=200):
@@ -451,9 +550,10 @@ def log_page(n=200):
         n = max(10, min(1000, int(n)))
     except Exception:
         n = 200
-    body = ("<h1>OpenSim.log (last %d lines)</h1><p><a href='/'>back</a></p>"
-            "<pre>%s</pre>" % (n, html.escape(log_tail(n))))
-    return page("Region log", body)
+    body = ("<div class='card'><h1>OpenSim.log</h1><p class='muted'>last %d lines</p>"
+            "<pre>%s</pre><p><a class='btn' href='/status?key=%s'>back</a></p></div>"
+            % (n, html.escape(log_tail(n)), TOKEN))
+    return page("Region log", nav("log") + body)
 
 
 # ---------------------------------------------------------------------------
@@ -487,11 +587,11 @@ class Handler(BaseHTTPRequestHandler):
         if not keyok(qs):
             return self._send(403, page("Forbidden", "<h1>403</h1><p>Bad or missing access key.</p>"))
         if u.path == "/":
-            if region_name_from_ini():
-                return self._send(200, status_page())
             return self._send(200, install_form())
         if u.path == "/install":
             return self._send(200, install_form())
+        if u.path == "/status":
+            return self._send(200, status_page())
         if u.path == "/log":
             return self._send(200, log_page(qs.get("n", ["200"])[0]))
         return self._send(404, page("Not found", "<h1>404</h1>"))
@@ -509,16 +609,15 @@ class Handler(BaseHTTPRequestHandler):
                 ok, res = do_install(form)
             except Exception as e:
                 ok, res = False, "Install failed: %s" % e
-            STATE["installed"] = ok
-            if ok:
-                STATE["message"] = "\n".join(res if isinstance(res, list) else [str(res)])
-                STATE["error"] = ""
-                if ARGS is not None and ARGS.once:
-                    threading.Thread(target=self.server.shutdown, daemon=True).start()
-            else:
-                STATE["error"] = str(res)
-            self._redirect("/?key=%s" % TOKEN)
-            return
+            if not ok:
+                return self._send(200, install_form(error=str(res)))
+            if ARGS is not None and ARGS.once:
+                def _delayed_shutdown():
+                    import time
+                    time.sleep(8)
+                    self.server.shutdown()
+                threading.Thread(target=_delayed_shutdown, daemon=True).start()
+            return self._send(200, done_page(res if isinstance(res, list) else [str(res)]))
         if u.path == "/start":
             ok, msg = start_region()
             STATE["error" if not ok else "message"] = msg
@@ -526,13 +625,15 @@ class Handler(BaseHTTPRequestHandler):
             ok, msg = stop_region()
             STATE["error" if not ok else "message"] = msg
         elif u.path == "/shutdown":
-            self._send(200, page("Bye", "<h1>Installer stopped.</h1>"
-                       "<p>The region keeps running if it was started. "
-                       "Restart the installer any time with "
-                       "<code>sudo python3 websetup.py</code></p>"))
+            self._send(200, page("Installer closed", nav("status") +
+                       "<div class='card' style='text-align:center'>"
+                       "<h1>&#9632; Installer closed</h1>"
+                       "<p class='ok'>The region keeps running if it was started.</p>"
+                       "<p class='muted'>Restart the installer any time: "
+                       "<code>sudo python3 websetup.py</code></p></div>"))
             threading.Thread(target=self.server.shutdown, daemon=True).start()
             return
-        self._redirect("/?key=%s" % TOKEN)
+        self._redirect("/status?key=%s" % TOKEN)
 
 
 def main():
