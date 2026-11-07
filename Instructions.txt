@@ -2,6 +2,24 @@ Instructions for Linux Ubuntu 18-20
 For additional info or help, please send IM to Sam Adama resident in-world.
 Or use our contact form on Caprica Hypergrid website: https://caprica.xyz/contact-us/
 
+IMPORTANT - HTTPS:
+Since November 2026 Caprica public grid services (port 9000) are served over
+HTTPS only. This kit is already configured to use https://g.caprica.xyz:9000
+for all public services (login, assets, profiles, bakes, map tiles).
+Private services on port 8003 remain plain http by design.
+The protocol is controlled by BaseScheme / PrivScheme constants in
+bin/OpenSim.ini [Const] - https is strongly recommended, do not downgrade
+to http unless Caprica support explicitly asks you to.
+Details: see README.md "HTTPS - recommended" section.
+
+QUICK SETUP:
+After cloning the repository you can run the interactive wizard instead of
+manual editing of the config files:
+    cd /opt/capricaregion && ./setup.sh
+It will ask for your region name, UUID, location, ports, external address,
+service protocol (https recommended) and will fill in Regions.ini and
+OpenSim.ini for you. Steps 1-3 below describe the same process manually.
+
 Important points.
 
 It is advisable to raise the server to a VPS of one of the hosters.
