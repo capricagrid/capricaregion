@@ -195,13 +195,14 @@ if ask_yn "Configure MySQL storage instead?" "n" | grep -q yes; then
     backup "$GRIDCOMMON"
     # switch storage provider lines in GridCommon.ini [DatabaseService]
     sed -i -E 's|^\s*;?\s*StorageProvider = "OpenSim.Data.MySQL.dll"|    StorageProvider = "OpenSim.Data.MySQL.dll"|' "$GRIDCOMMON"
-    sed -i -E "s|^\s*;?\s*ConnectionString = \"Data Source=[^\"]*\"|    ConnectionString = \"Data Source=${DB_HOST};Database=${DB_NAME};User ID=${DB_USER};Password=${DB_PASS};SslMode=None;\"|" "$GRIDCOMMON"
+    sed -i -E "s|^\s*;?\s*ConnectionString = \"Data Source=[^\"]*\"|    ConnectionString = \"Data Source=${DB_HOST};Database=${DB_NAME};User ID=${DB_USER};Password=${DB_PASS};Old Guids=true;SslMode=None;\"|" "$GRIDCOMMON"
     # drop the SQLite include so MySQL is actually used
     sed -i -E 's|^\s*Include-Storage = "config-include/storage/SQLiteStandalone.ini"|    ;Include-Storage = "config-include/storage/SQLiteStandalone.ini"|' "$GRIDCOMMON"
     info "GridCommon.ini switched to MySQL (${DB_USER}@${DB_HOST}/${DB_NAME})"
-    warn "create the database and user in MySQL first, and import the schema"
+    info "OpenSim creates the tables automatically on first start."
 else
-    info "keeping SQLite storage"
+    warn "SQLite kept - the region will most likely FAIL at startup"
+    warn "(OfflineIM has no SQLite storage backend). Re-run ./setup.sh and choose MySQL."
 fi
 
 # ---------------------------------------------------------------------------

@@ -48,6 +48,11 @@ itself is not required to connect to Caprica.
 For a quick automated setup on Linux, run `./setup.sh` — it walks you through
 `OpenSim.ini` and `Regions.ini` step by step.
 
+**Database:** MySQL is effectively **required**. The bundled
+`OpenSim.Data.SQLite.dll` has no OfflineIM storage backend, so the region
+crashes on startup under SQLite. `./setup.sh` configures MySQL for you;
+OpenSim creates the tables automatically on first start.
+
 
 ------------
 

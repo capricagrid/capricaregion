@@ -72,10 +72,14 @@ Change Region name, RegionUUID, Location, SizeX;Y, InternalPort and ExternalHost
 To generate a UUID for your region, use the Gridlist UUID generator: https://gridlist.ru/uuid/
 Save and exit
 
-Step 2.  (optional!)
+Step 2.  (REQUIRED - MySQL)
 Open /opt/capricaregion/bin/config-include/GridCommon.ini
-[DatabaseService] Select your preferred database server. By default, Caprica Hypergrid regions use the MySQL database server. Create a MySQL database, and provide a username and password in this config file. 
-Save and exit
+[DatabaseService] MySQL is REQUIRED: the bundled SQLite provider has no OfflineIM
+storage backend and the region will crash on startup with it. Install MySQL
+(sudo apt install mysql-server), create a database and user, uncomment
+StorageProvider/ConnectionString and fill in your credentials. OpenSim creates
+the tables automatically on first start.
+NOTE: ./setup.sh does this step for you interactively.
 
 Step 3   (optional!)
 Open  /opt/capricaregion/bin/OpenSim.ini
@@ -102,7 +106,7 @@ To open the session again, enter the command 'screen -d -r [name of your region]
 Use the help by entering the command 'man screen'
 
 Step 6
-Add the CapricaHypergrid address to your client's grid list - see the Caprica Wiki guide: https://wiki.caprica.xyz/en:getting_started:quick_start:howtostart
+Add the CapricaHypergrid address to your client's grid list as shown in step 2 of this tutorial: https://caprica.xyz/services/addcaprica/
 
 Step 7
 Login to Caprica Hypergrid with your avatar and find your region on the map by entering your region name. Teleport and make additional settings if desired.
