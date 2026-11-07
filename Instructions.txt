@@ -15,7 +15,8 @@ Details: see README.md "HTTPS - recommended" section.
 QUICK SETUP:
 After cloning the repository you can configure the region in your browser
 instead of manual editing of the config files:
-    cd /opt/capricaregion && sudo python3 websetup.py
+    cd /opt/capricaregion && sudo python3 websetup.py --port 8080
+(the port is configurable; avoid 80/443 if Apache/nginx is already running)
 It prints a one-time URL (with a random access key) - open it in your browser.
 The web installer asks for the same data as the console wizard (region name,
 UUID, location, ports, external address, protocol, storage), writes the

@@ -24,7 +24,15 @@ import secrets
 import subprocess
 import sys
 import threading
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.server import BaseHTTPRequestHandler
+try:
+    from http.server import ThreadingHTTPServer
+except ImportError:  # Python < 3.7
+    from http.server import HTTPServer
+    from socketserver import ThreadingMixIn
+
+    class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
+        daemon_threads = True
 from urllib.parse import urlparse, parse_qs
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -545,7 +553,12 @@ def main():
         if not which(cmd):
             print("warning: '%s' not found in PATH" % cmd, file=sys.stderr)
 
-    httpd = ThreadingHTTPServer((ARGS.bind, ARGS.port), Handler)
+    try:
+        httpd = ThreadingHTTPServer((ARGS.bind, ARGS.port), Handler)
+    except OSError as e:
+        sys.exit("Cannot bind %s:%d - %s. Pick another port: "
+                 "--port 8080 (or any free port; avoid 80/443 if Apache/nginx runs)."
+                 % (ARGS.bind, ARGS.port, e))
     # guess the public URL for the banner
     try:
         import socket
