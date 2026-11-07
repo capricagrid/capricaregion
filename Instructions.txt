@@ -72,14 +72,16 @@ Change Region name, RegionUUID, Location, SizeX;Y, InternalPort and ExternalHost
 To generate a UUID for your region, use the Gridlist UUID generator: https://gridlist.ru/uuid/
 Save and exit
 
-Step 2.  (REQUIRED - MySQL)
+Step 2.  (optional - MySQL for offline IM)
 Open /opt/capricaregion/bin/config-include/GridCommon.ini
-[DatabaseService] MySQL is REQUIRED: the bundled SQLite provider has no OfflineIM
-storage backend and the region will crash on startup with it. Install MySQL
+[DatabaseService] SQLite works out of the box - database files (*.db) are
+created inside the region directory (bin/). NOTE: with SQLite the OfflineIM
+module must stay disabled (setup.sh does this automatically), so offline
+messages will NOT work. For offline IM, install MySQL
 (sudo apt install mysql-server), create a database and user, uncomment
-StorageProvider/ConnectionString and fill in your credentials. OpenSim creates
-the tables automatically on first start.
-NOTE: ./setup.sh does this step for you interactively.
+StorageProvider/ConnectionString, fill in credentials, and re-enable
+OfflineMessageModule in OpenSim.ini [Messaging].
+NOTE: ./setup.sh does all of this interactively.
 
 Step 3   (optional!)
 Open  /opt/capricaregion/bin/OpenSim.ini

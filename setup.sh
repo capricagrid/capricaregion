@@ -182,10 +182,18 @@ info "OpenSim.ini now contains:"
 grep -nE '^\s*(BaseScheme|PrivScheme|BaseURL|PrivURL|http_listener_port)' "$OSINI" | sed 's/^/      /'
 
 # ---------------------------------------------------------------------------
-say "6/7 Optional: MySQL storage for region data"
+say "6/7 Database storage"
 
-info "Default storage is SQLite (works out of the box, files in bin/data)."
-if ask_yn "Configure MySQL storage instead?" "n" | grep -q yes; then
+info "SQLite (default): zero setup - database files (*.db) are created"
+info "inside the region directory (bin/). Offline IM is DISABLED: the"
+info "bundled SQLite provider has no OfflineIM backend."
+info "MySQL (optional): enables offline IM - requires a MySQL server."
+info "  Install: sudo apt install mysql-server"
+info "  Then create db+user, e.g.:"
+info "    CREATE DATABASE opensim; CREATE USER 'opensim'@'localhost' IDENTIFIED BY '...';"
+info "    GRANT ALL PRIVILEGES ON opensim.* TO 'opensim'@'localhost';"
+
+if ask_yn "Use MySQL storage? (required for offline IM)" "n" | grep -q yes; then
     DB_HOST="$(ask "MySQL host" "127.0.0.1")"
     DB_NAME="$(ask "Database name" "opensim")"
     DB_USER="$(ask "MySQL user" "opensim")"
@@ -193,16 +201,29 @@ if ask_yn "Configure MySQL storage instead?" "n" | grep -q yes; then
     [ -n "$DB_PASS" ] || die "MySQL password is required"
 
     backup "$GRIDCOMMON"
+    backup "$OSINI"
     # switch storage provider lines in GridCommon.ini [DatabaseService]
     sed -i -E 's|^\s*;?\s*StorageProvider = "OpenSim.Data.MySQL.dll"|    StorageProvider = "OpenSim.Data.MySQL.dll"|' "$GRIDCOMMON"
     sed -i -E "s|^\s*;?\s*ConnectionString = \"Data Source=[^\"]*\"|    ConnectionString = \"Data Source=${DB_HOST};Database=${DB_NAME};User ID=${DB_USER};Password=${DB_PASS};Old Guids=true;SslMode=None;\"|" "$GRIDCOMMON"
     # drop the SQLite include so MySQL is actually used
-    sed -i -E 's|^\s*Include-Storage = "config-include/storage/SQLiteStandalone.ini"|    ;Include-Storage = "config-include/storage/SQLiteStandalone.ini"|' "$GRIDCOMMON"
+    sed -i -E 's|^\s*;?\s*Include-Storage = "config-include/storage/SQLiteStandalone.ini"|    ;Include-Storage = "config-include/storage/SQLiteStandalone.ini"|' "$GRIDCOMMON"
+    # re-enable the OfflineIM module (MySQL provider supports it)
+    sed -i -E 's|^([[:space:]]*)OfflineMessageModule = .*|\1OfflineMessageModule = "Offline Message Module V2"|' "$OSINI"
     info "GridCommon.ini switched to MySQL (${DB_USER}@${DB_HOST}/${DB_NAME})"
-    info "OpenSim creates the tables automatically on first start."
+    info "OpenSim creates the tables automatically on first start; offline IM enabled."
 else
-    warn "SQLite kept - the region will most likely FAIL at startup"
-    warn "(OfflineIM has no SQLite storage backend). Re-run ./setup.sh and choose MySQL."
+    backup "$GRIDCOMMON"
+    backup "$OSINI"
+    # make sure the SQLite include is active
+    sed -i -E 's|^\s*;\s*Include-Storage = "config-include/storage/SQLiteStandalone.ini"|    Include-Storage = "config-include/storage/SQLiteStandalone.ini"|' "$GRIDCOMMON"
+    # comment out MySQL provider lines if they were enabled by a previous run
+    sed -i -E 's|^([[:space:]]*)StorageProvider = "OpenSim.Data.MySQL.dll"|\1;StorageProvider = "OpenSim.Data.MySQL.dll"|' "$GRIDCOMMON"
+    sed -i -E 's|^([[:space:]]*)ConnectionString = "Data Source=|\1;ConnectionString = "Data Source=|' "$GRIDCOMMON"
+    # disable OfflineIM: SQLite provider has no IOfflineIMData backend and
+    # the region would crash on startup otherwise
+    sed -i -E 's|^([[:space:]]*)OfflineMessageModule = .*|\1OfflineMessageModule = "" ; disabled: no SQLite OfflineIM backend|' "$OSINI"
+    info "SQLite storage active (db files will be created in bin/); offline IM disabled."
+    warn "Re-run ./setup.sh and choose MySQL if you need offline messages."
 fi
 
 # ---------------------------------------------------------------------------
