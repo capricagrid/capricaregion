@@ -102,7 +102,7 @@ To open the session again, enter the command 'screen -d -r [name of your region]
 Use the help by entering the command 'man screen'
 
 Step 6
-Add the CapricaHypergrid address to your client's grid list as shown in step 2 of this tutorial: https://caprica.xyz/services/addcaprica/
+Add the CapricaHypergrid address to your client's grid list - see the Caprica Wiki guide: https://wiki.caprica.xyz/en:getting_started:quick_start:howtostart
 
 Step 7
 Login to Caprica Hypergrid with your avatar and find your region on the map by entering your region name. Teleport and make additional settings if desired.
