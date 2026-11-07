@@ -59,6 +59,3 @@ Caprica Hypergrid web interface: https://g.caprica.xyz
 Support center: https://caprica.xyz/support
 
 Support chat https://caprica.xyz/chat/
-
-IRC irc://irc.1studi.ru:+6667/caprica
-
