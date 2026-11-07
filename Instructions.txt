@@ -59,7 +59,9 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 sudo apt install screen
 sudo apt install mono-complete
-sudo ufw allow 9000,8003,8002 (+ port of your region)
+sudo ufw allow 9000,8003,8002
+sudo ufw allow <region_port>/tcp
+sudo ufw allow <region_port>/udp   # UDP is REQUIRED - simulator protocol
 cd /opt
 git clone https://github.com/capricagrid/capricaregion.git
 
@@ -85,11 +87,11 @@ NOTE: ./setup.sh does all of this interactively.
 
 Step 3   (optional!)
 Open  /opt/capricaregion/bin/OpenSim.ini
-in line 48 find  http_listener_port and port number, and change it to your port number. Don't forget, this port must be accessible and not blocked by a firewall.
+in line 48 find  http_listener_port and port number, and change it to your port number. Don't forget, this port must be accessible for BOTH TCP (HTTP) and UDP (simulator) - a TCP-only rule lets the region register but teleports hang and time out.
 Save and exit
 
 Step 4
-Make sure that ports 9000, 8003, 8002, the port you specified in OpenSim.ini configuration file and the port of your region are accessible from outside.
+Make sure that ports 9000, 8003, 8002, the port you specified in OpenSim.ini configuration file and the port of your region are accessible from outside - the region port needs BOTH TCP and UDP open.
 Make sure the settings specified in the "hosts" file are correct:
 127.0.0.1   localhost
 [your external IP]   localhost

@@ -230,12 +230,13 @@ fi
 say "7/7 Firewall and launch"
 
 if command -v ufw >/dev/null 2>&1 && ufw status 2>/dev/null | grep -q 'Status: active'; then
-    if ask_yn "Open port ${PORT}/tcp in ufw?" "Y" | grep -q yes; then
-        ufw allow "${PORT}/tcp" comment 'caprica region' || warn "ufw allow failed - add it manually"
-        info "ufw: ${PORT}/tcp allowed"
+    if ask_yn "Open port ${PORT}/tcp+udp in ufw? (both are required: TCP=HTTP, UDP=simulator)" "Y" | grep -q yes; then
+        ufw allow "${PORT}/tcp" comment 'caprica region' || warn "ufw allow tcp failed - add it manually"
+        ufw allow "${PORT}/udp" comment 'caprica region' || warn "ufw allow udp failed - add it manually"
+        info "ufw: ${PORT}/tcp and ${PORT}/udp allowed"
     fi
 else
-    info "ufw not active - make sure inbound TCP ${PORT} is reachable"
+    info "ufw not active - make sure inbound TCP ${PORT} (HTTP) and UDP ${PORT} (simulator) are reachable"
 fi
 
 cat <<EOF
