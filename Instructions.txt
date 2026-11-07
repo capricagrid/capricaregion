@@ -30,6 +30,24 @@ Access from some grids is permanently blocked on Caprica (see website).
 You can get help with server settings from Caprica Hypergrid support. 
 (https://caprica.xyz/support/)
 
+Running WITHOUT a domain (IP only)?
+A domain name is NOT required - ExternalHostName may be a plain IP address.
+Visitors will reach your region as http://<your-ip>:<port>/ and HG teleports
+work the same way. The connection FROM your region TO Caprica is unaffected:
+it always goes to g.caprica.xyz:9000 over HTTPS regardless of your address.
+
+Notes for IP-only setups:
+- Enter your external IP as ExternalHostName in Regions.ini (setup.sh accepts it).
+- The /etc/hosts entry "<your external IP>   localhost" is REQUIRED - OpenSim
+  resolves its own ExternalHostName locally.
+- Do NOT enable http_listener_ssl for your region's own port: publicly trusted
+  TLS certificates are not issued for bare IP addresses, and a self-signed
+  certificate will cause warnings in viewers. Plain HTTP on your own port is
+  fine - only the Caprica-facing side needs HTTPS (already configured).
+- Make sure ca-certificates is up to date on the server
+  (sudo apt install --reinstall ca-certificates) so the system trusts the
+  Let's Encrypt certificate used by g.caprica.xyz.
+
 
 -----------------------------------
 
