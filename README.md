@@ -45,8 +45,13 @@ PKCS#12 certificate valid for your region's `ExternalHostName`). This is
 optional: visitors can reach your region over plain HTTP, HTTPS for the region
 itself is not required to connect to Caprica.
 
-For a quick automated setup on Linux, run `./setup.sh` — it walks you through
-`OpenSim.ini` and `Regions.ini` step by step.
+For a quick automated setup on Linux you have two options:
+
+- **Web installer (easiest):** `sudo python3 websetup.py` — prints a
+  one-time URL with an access key; open it in your browser. The form covers
+  the same settings, writes the configs, opens the firewall (TCP+UDP) and
+  starts the region. The page also shows the log and start/stop buttons.
+- **Console wizard:** `./setup.sh` — same steps interactively in the terminal.
 
 **Database:** SQLite is the default — no setup needed, `*.db` files are
 created inside `bin/`. The bundled `OpenSim.Data.SQLite.dll` has no OfflineIM

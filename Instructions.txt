@@ -13,12 +13,18 @@ to http unless Caprica support explicitly asks you to.
 Details: see README.md "HTTPS - recommended" section.
 
 QUICK SETUP:
-After cloning the repository you can run the interactive wizard instead of
-manual editing of the config files:
+After cloning the repository you can configure the region in your browser
+instead of manual editing of the config files:
+    cd /opt/capricaregion && sudo python3 websetup.py
+It prints a one-time URL (with a random access key) - open it in your browser.
+The web installer asks for the same data as the console wizard (region name,
+UUID, location, ports, external address, protocol, storage), writes the
+configs, opens the firewall port (TCP+UDP) and starts the region in screen.
+From the same page you can view the log and start/stop the region.
+
+Prefer the console? The interactive wizard does the same:
     cd /opt/capricaregion && ./setup.sh
-It will ask for your region name, UUID, location, ports, external address,
-service protocol (https recommended) and will fill in Regions.ini and
-OpenSim.ini for you. Steps 1-3 below describe the same process manually.
+Steps 1-3 below describe the same process manually.
 
 Important points.
 
